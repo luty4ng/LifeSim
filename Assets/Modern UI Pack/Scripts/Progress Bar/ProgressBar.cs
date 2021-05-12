@@ -10,7 +10,7 @@ namespace Michsky.UI.ModernUIPack
         public float currentPercent;
         public int speed;
         public float maxValue = 100;
-        [SerializeField] private float targetValue;
+        public float targetValue = 100;
 
 
         // Resources
@@ -39,33 +39,30 @@ namespace Michsky.UI.ModernUIPack
         {
             if (isOn == true)
             {
-                if (currentPercent <= maxValue && invert == false)
+                if (currentPercent < targetValue && targetValue - currentPercent >= 0.01f)
+                {
                     currentPercent += speed * Time.deltaTime;
-                else if (currentPercent >= 0 && invert == true)
+                }
+                else if (currentPercent > targetValue && targetValue - currentPercent >= -0.01f)
+                {
                     currentPercent -= speed * Time.deltaTime;
+                }
+                    
 
-                if (currentPercent >= maxValue && speed != 0 && restart == true && invert == false)
+                if (currentPercent >= maxValue && speed != 0 && restart == true)
                     currentPercent = maxValue;
-                else if (currentPercent <= 0 && speed != 0 && restart == true && invert == true)
+                else if (currentPercent <= 0 && speed != 0 && restart == true)
                     currentPercent = 0;
 
                 loadingBar.fillAmount = currentPercent / maxValue;
-
-                if (isPercent == true)
-                    textPercent.text = ((int)currentPercent).ToString("F0");
-                else
-                    textPercent.text = ((int)currentPercent).ToString("F0");
+                textPercent.text = ((int)currentPercent).ToString("F0");
             }
         }
 
         public void UpdateUI()
         {
             loadingBar.fillAmount = currentPercent / maxValue;
-          
-            if (isPercent == true)
-                textPercent.text = ((int)currentPercent).ToString("F0");
-            else
-                textPercent.text = ((int)currentPercent).ToString("F0");
+            textPercent.text = ((int)currentPercent).ToString("F0");
         }
     }
 }
