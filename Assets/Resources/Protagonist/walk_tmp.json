@@ -1,0 +1,789 @@
+{
+	"bones": [
+		{
+			"name": "root"
+		},
+		{
+			"name": "backgroud",
+			"parent": "root",
+			"enabled": true,
+			"x": 960,
+			"y": -960
+		},
+		{
+			"name": "a1l",
+			"parent": "root",
+			"enabled": true,
+			"x": 937.385696411133,
+			"y": -514
+		},
+		{
+			"name": "head",
+			"parent": "body",
+			"enabled": true,
+			"x": 25,
+			"y": -242,
+			"comp": "head",
+			"blendingMode": 5212,
+			"opacity": 100,
+			"anchorPoint": [
+				700,
+				960
+			],
+			"px": 700,
+			"py": 960,
+			"scaleX": 0.8,
+			"scaleY": 0.8
+		},
+		{
+			"name": "a1r",
+			"parent": "root",
+			"enabled": true,
+			"x": 446.635696411133,
+			"y": -514
+		},
+		{
+			"name": "light_grey",
+			"parent": "root",
+			"enabled": true,
+			"x": 960,
+			"y": -960
+		},
+		{
+			"name": "a2l",
+			"parent": "root",
+			"enabled": true,
+			"x": 1207.07518005371,
+			"y": -514
+		},
+		{
+			"name": "a2r",
+			"parent": "root",
+			"enabled": true,
+			"x": 176.946502685547,
+			"y": -514
+		},
+		{
+			"name": "body",
+			"parent": "root",
+			"enabled": true,
+			"x": 702.635696411133,
+			"y": -668.5
+		},
+		{
+			"name": "p1l",
+			"parent": "root",
+			"enabled": true,
+			"x": 778.135696411133,
+			"y": -1067.93934631348
+		},
+		{
+			"name": "p1r",
+			"parent": "root",
+			"enabled": true,
+			"x": 630.135696411133,
+			"y": -1067.93934631348
+		},
+		{
+			"name": "p2r",
+			"parent": "root",
+			"enabled": true,
+			"x": 630.135986328125,
+			"y": -1427
+		},
+		{
+			"name": "p2r_L1",
+			"parent": "root",
+			"enabled": true,
+			"x": 778.135986328125,
+			"y": -1427
+		},
+		{
+			"name": "shoe1",
+			"parent": "root",
+			"enabled": true,
+			"x": 689.260696411133,
+			"y": -1694.77510070801
+		},
+		{
+			"name": "shoe2",
+			"parent": "root",
+			"enabled": true,
+			"x": 837.260696411133,
+			"y": -1694.77510070801
+		},
+		{
+			"name": "tie",
+			"parent": "root",
+			"enabled": true,
+			"x": 707.385696411133,
+			"y": -577.75
+		}
+	],
+	"slots": [
+		{
+			"name": "backgroud",
+			"bone": "backgroud",
+			"attachment": "walk_tmp-assets/grey"
+		},
+		{
+			"name": "shoe2",
+			"bone": "shoe2",
+			"attachment": "walk_tmp-assets/guy/shoe2"
+		},
+		{
+			"name": "light_grey",
+			"bone": "light_grey",
+			"attachment": "walk_tmp-assets/light_grey"
+		},
+		{
+			"name": "p2r_L1",
+			"bone": "p2r_L1",
+			"attachment": "walk_tmp-assets/guy/p2r"
+		},
+		{
+			"name": "p1l",
+			"bone": "p1l",
+			"attachment": "walk_tmp-assets/guy/p1l"
+		},
+		{
+			"name": "shoe1",
+			"bone": "shoe1",
+			"attachment": "walk_tmp-assets/guy/shoe1"
+		},
+		{
+			"name": "p2r",
+			"bone": "p2r",
+			"attachment": "walk_tmp-assets/guy/p2r"
+		},
+		{
+			"name": "p1r",
+			"bone": "p1r",
+			"attachment": "walk_tmp-assets/guy/p1r"
+		},
+		{
+			"name": "body",
+			"bone": "body",
+			"attachment": "walk_tmp-assets/guy/body"
+		},
+		{
+			"name": "a2r",
+			"bone": "a2r",
+			"attachment": "walk_tmp-assets/guy/a2r"
+		},
+		{
+			"name": "a1r",
+			"bone": "a1r",
+			"attachment": "walk_tmp-assets/guy/a1r"
+		},
+		{
+			"name": "a2l",
+			"bone": "a2l",
+			"attachment": "walk_tmp-assets/guy/a2l"
+		},
+		{
+			"name": "a1l",
+			"bone": "a1l",
+			"attachment": "walk_tmp-assets/guy/a1l"
+		},
+		{
+			"name": "tie",
+			"bone": "tie",
+			"attachment": "walk_tmp-assets/guy/tie"
+		}
+	],
+	"skins": {
+		"default": {
+			"backgroud": {
+				"walk_tmp-assets/grey": {
+					"x": 0,
+					"y": 0,
+					"width": 1920,
+					"height": 1920
+				}
+			},
+			"light_grey": {
+				"walk_tmp-assets/light_grey": {
+					"x": 0,
+					"y": 0,
+					"width": 1920,
+					"height": 1920
+				}
+			},
+			"shoe2": {
+				"walk_tmp-assets/guy/shoe2": {
+					"x": 0,
+					"y": -0.27510070800781,
+					"width": 257,
+					"height": 161
+				}
+			},
+			"p2r_L1": {
+				"walk_tmp-assets/guy/p2r": {
+					"x": 0.37867736816406,
+					"y": -0.37867736816406,
+					"width": 165,
+					"height": 485
+				}
+			},
+			"p1l": {
+				"walk_tmp-assets/guy/p1l": {
+					"x": 0,
+					"y": -0.4393310546875,
+					"width": 169,
+					"height": 407
+				}
+			},
+			"shoe1": {
+				"walk_tmp-assets/guy/shoe1": {
+					"x": 0,
+					"y": -0.27510070800781,
+					"width": 257,
+					"height": 161
+				}
+			},
+			"p2r": {
+				"walk_tmp-assets/guy/p2r": {
+					"x": 0.37867736816406,
+					"y": -0.37867736816406,
+					"width": 165,
+					"height": 485
+				}
+			},
+			"p1r": {
+				"walk_tmp-assets/guy/p1r": {
+					"x": 0,
+					"y": -0.4393310546875,
+					"width": 169,
+					"height": 407
+				}
+			},
+			"body": {
+				"walk_tmp-assets/guy/body": {
+					"x": 0,
+					"y": 0,
+					"width": 366,
+					"height": 503
+				}
+			},
+			"a2r": {
+				"walk_tmp-assets/guy/a2r": {
+					"x": 0.18919372558594,
+					"y": 0,
+					"width": 304,
+					"height": 96
+				}
+			},
+			"a1r": {
+				"walk_tmp-assets/guy/a1r": {
+					"x": 0.25,
+					"y": -0.37867736816406,
+					"width": 328,
+					"height": 95
+				}
+			},
+			"a2l": {
+				"walk_tmp-assets/guy/a2l": {
+					"x": 0.18948364257813,
+					"y": 0,
+					"width": 304,
+					"height": 96
+				}
+			},
+			"a1l": {
+				"walk_tmp-assets/guy/a1l": {
+					"x": 0.25,
+					"y": -0.37867736816406,
+					"width": 328,
+					"height": 95
+				}
+			},
+			"tie": {
+				"walk_tmp-assets/guy/tie": {
+					"x": 0.25,
+					"y": -0.25,
+					"width": 118,
+					"height": 272
+				}
+			}
+		}
+	},
+	"animations": {
+		"animation": {
+			"bones": {
+				
+			},
+			"slots": {
+				"backgroud": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": "walk_tmp-assets/grey"
+						}
+					]
+				},
+				"light_grey": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				},
+				"shoe2": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				},
+				"p2r_L1": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				},
+				"p1l": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				},
+				"shoe1": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				},
+				"p2r": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				},
+				"p1r": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				},
+				"body": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				},
+				"a2r": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				},
+				"a1r": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				},
+				"a2l": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				},
+				"a1l": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				},
+				"tie": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				}
+			}
+		},
+		"character": {
+			"bones": {
+				
+			},
+			"slots": {
+				"backgroud": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				},
+				"light_grey": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": "walk_tmp-assets/light_grey"
+						}
+					]
+				},
+				"shoe2": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				},
+				"p2r_L1": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				},
+				"p1l": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				},
+				"shoe1": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				},
+				"p2r": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				},
+				"p1r": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				},
+				"body": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				},
+				"a2r": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				},
+				"a1r": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				},
+				"a2l": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				},
+				"a1l": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				},
+				"tie": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				}
+			}
+		},
+		"concept_guy_2": {
+			"bones": {
+				
+			},
+			"slots": {
+				"backgroud": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				},
+				"light_grey": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				},
+				"shoe2": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": "walk_tmp-assets/guy/shoe2"
+						}
+					]
+				},
+				"p2r_L1": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": "walk_tmp-assets/guy/p2r"
+						}
+					]
+				},
+				"p1l": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": "walk_tmp-assets/guy/p1l"
+						}
+					]
+				},
+				"shoe1": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": "walk_tmp-assets/guy/shoe1"
+						}
+					]
+				},
+				"p2r": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": "walk_tmp-assets/guy/p2r"
+						}
+					]
+				},
+				"p1r": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": "walk_tmp-assets/guy/p1r"
+						}
+					]
+				},
+				"body": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": "walk_tmp-assets/guy/body"
+						}
+					]
+				},
+				"a2r": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": "walk_tmp-assets/guy/a2r"
+						}
+					]
+				},
+				"a1r": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": "walk_tmp-assets/guy/a1r"
+						}
+					]
+				},
+				"a2l": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": "walk_tmp-assets/guy/a2l"
+						}
+					]
+				},
+				"a1l": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": "walk_tmp-assets/guy/a1l"
+						}
+					]
+				},
+				"tie": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": "walk_tmp-assets/guy/tie"
+						}
+					]
+				}
+			}
+		},
+		"head": {
+			"bones": {
+				
+			},
+			"slots": {
+				"backgroud": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				},
+				"light_grey": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				},
+				"shoe2": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				},
+				"p2r_L1": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				},
+				"p1l": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				},
+				"shoe1": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				},
+				"p2r": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				},
+				"p1r": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				},
+				"body": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				},
+				"a2r": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				},
+				"a1r": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				},
+				"a2l": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				},
+				"a1l": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				},
+				"tie": {
+					"attachment": [
+						{
+							"time": 0,
+							"name": null
+						}
+					]
+				}
+			}
+		}
+	}
+}
