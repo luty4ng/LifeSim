@@ -11,28 +11,33 @@ namespace Config.RandEvents
     {
         [LabelText("随机事件列表"), TableList]
         public List<RandEvent> _randEventList;
+        [LabelText("随机事件概率系数（默认1）")]
+        public float multiplier = 1f;
 
         public void TriggerRandEvent(string name)
         {
-            if(_randEventList!=null)
-            {
-                foreach (var item in _randEventList)
-                {
-                    if(item._name!=null && item._name.Trim() == name.Trim())
-                    {
-                        //Debug.Log("检测到事件" + name);
-                        float rand = Random.Range(0.000f, 1.000f);
-                        //Debug.Log("随机数： " + rand.ToString());
-                        if(rand <= item._chance)
-                        {
-                            Debug.Log(name + "事件发生");
-                        }
-                        break;
-                    }
-                }
-            }
+            if(_randEventList==null)
+                return;
             
+            foreach (var item in _randEventList)
+            {
+                if(item._name!=null && item._name.Trim() == name.Trim())
+                {
+                    float rand = Random.Range(0.000f, 1.000f);
+                    float tmpChange = item._chance;
+                    if(!item._positive)
+                        tmpChange = tmpChange * multiplier;
+                    if(rand <= tmpChange)
+                    {
+                        EventCenter.GetInstance().EventTrigger<RandEvent>("随机事件触发", item);
+                        EventCenter.GetInstance().EventTrigger<RandEvent>("随机事件弹窗", item);
+                        Debug.Log(name + "事件发生且弹框");
+                    }
+                    break;
+                }
+            }    
         }
+
     }
 
     public class RandEvent
@@ -43,6 +48,8 @@ namespace Config.RandEvents
         public float _chance;
         [LabelText("正面事件"), FoldoutGroup("事件属性")]
         public bool _positive;
+        [LabelText("所需特质"), FoldoutGroup("事件属性")]
+        public string _traitReq;
         [LabelText("事件描述（弹框）"), FoldoutGroup("事件属性"), TextArea]
         public string _desc;
         [LabelText("精神影响"), FoldoutGroup("事件影响")]

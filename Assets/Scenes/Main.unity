@@ -257,19 +257,184 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 4
     - Name: 
       Entry: 7
       Data: 1|Config.Traits.Trait, Assembly-CSharp
     - Name: _name
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: "\u70ED\u7231\u827A\u672F"
     - Name: _selection
       Entry: 1
       Data: "\u65E0"
     - Name: _condition
       Entry: 6
       Data: 
+    - Name: _sans
+      Entry: 4
+      Data: 3
+    - Name: _motor
+      Entry: 4
+      Data: 0
+    - Name: _nerve
+      Entry: 4
+      Data: 0
+    - Name: _endoc
+      Entry: 4
+      Data: 0
+    - Name: _circul
+      Entry: 4
+      Data: 0
+    - Name: _breath
+      Entry: 4
+      Data: 0
+    - Name: _digest
+      Entry: 4
+      Data: 0
+    - Name: _urinary
+      Entry: 4
+      Data: 0
+    - Name: _reprod
+      Entry: 4
+      Data: 0
+    - Name: _moneyChange
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|Config.Traits.Trait, Assembly-CSharp
+    - Name: _name
+      Entry: 1
+      Data: "\u7ECF\u8425\u5934\u8111"
+    - Name: _selection
+      Entry: 1
+      Data: "\u65E0"
+    - Name: _condition
+      Entry: 6
+      Data: 
+    - Name: _sans
+      Entry: 4
+      Data: 0
+    - Name: _motor
+      Entry: 4
+      Data: 0
+    - Name: _nerve
+      Entry: 4
+      Data: 0
+    - Name: _endoc
+      Entry: 4
+      Data: 0
+    - Name: _circul
+      Entry: 4
+      Data: 0
+    - Name: _breath
+      Entry: 4
+      Data: 0
+    - Name: _digest
+      Entry: 4
+      Data: 0
+    - Name: _urinary
+      Entry: 4
+      Data: 0
+    - Name: _reprod
+      Entry: 4
+      Data: 0
+    - Name: _moneyChange
+      Entry: 4
+      Data: 100
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 3|Config.Traits.Trait, Assembly-CSharp
+    - Name: _name
+      Entry: 1
+      Data: "\u76AE\u7CD9\u8089\u539A"
+    - Name: _selection
+      Entry: 1
+      Data: "\u65E0"
+    - Name: _condition
+      Entry: 6
+      Data: 
+    - Name: _sans
+      Entry: 4
+      Data: 0
+    - Name: _motor
+      Entry: 4
+      Data: 2
+    - Name: _nerve
+      Entry: 4
+      Data: 2
+    - Name: _endoc
+      Entry: 4
+      Data: 2
+    - Name: _circul
+      Entry: 4
+      Data: 2
+    - Name: _breath
+      Entry: 4
+      Data: 2
+    - Name: _digest
+      Entry: 4
+      Data: 2
+    - Name: _urinary
+      Entry: 4
+      Data: 2
+    - Name: _reprod
+      Entry: 4
+      Data: 2
+    - Name: _moneyChange
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 4|Config.Traits.Trait, Assembly-CSharp
+    - Name: _name
+      Entry: 1
+      Data: "\u8FD0\u52A8\u5929\u8D4B"
+    - Name: _selection
+      Entry: 1
+      Data: "\u4E60\u60EF"
+    - Name: _condition
+      Entry: 1
+      Data: "\u5065\u8EAB\u8FBE\u4EBA"
+    - Name: _sans
+      Entry: 4
+      Data: 0
+    - Name: _motor
+      Entry: 4
+      Data: 3
+    - Name: _nerve
+      Entry: 4
+      Data: 0
+    - Name: _endoc
+      Entry: 4
+      Data: 0
+    - Name: _circul
+      Entry: 4
+      Data: 0
+    - Name: _breath
+      Entry: 4
+      Data: 0
+    - Name: _digest
+      Entry: 4
+      Data: 0
+    - Name: _urinary
+      Entry: 4
+      Data: 0
+    - Name: _reprod
+      Entry: 4
+      Data: 0
+    - Name: _moneyChange
+      Entry: 4
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -9848,7 +10013,7 @@ MonoBehaviour:
       Data: 0
     - Name: m_StringArgument
       Entry: 1
-      Data: "\u80A0\u80C3\u75BE\u75C5"
+      Data: "\u80C3\u80A0\u75BE\u75C5"
     - Name: m_BoolArgument
       Entry: 5
       Data: false
@@ -12020,6 +12185,7 @@ Transform:
   - {fileID: 859534969}
   - {fileID: 1083123603}
   - {fileID: 642993705}
+  - {fileID: 1899551105}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12170,25 +12336,589 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 12
     - Name: 
       Entry: 7
       Data: 1|Config.Buffs.Buff, Assembly-CSharp
     - Name: _name
-      Entry: 6
+      Entry: 1
+      Data: "\u61D2\u60F0"
+    - Name: _remainYears
+      Entry: 4
+      Data: 10
+    - Name: _canCure
+      Entry: 5
+      Data: false
+    - Name: _moneyToCure
+      Entry: 4
+      Data: 0
+    - Name: _sans
+      Entry: 4
+      Data: 1
+    - Name: _motor
+      Entry: 4
+      Data: -1
+    - Name: _nerve
+      Entry: 4
+      Data: 0
+    - Name: _endoc
+      Entry: 4
+      Data: -1
+    - Name: _circul
+      Entry: 4
+      Data: 0
+    - Name: _breath
+      Entry: 4
+      Data: 0
+    - Name: _digest
+      Entry: 4
+      Data: 0
+    - Name: _urinary
+      Entry: 4
+      Data: 0
+    - Name: _reprod
+      Entry: 4
+      Data: 0
+    - Name: _money
+      Entry: 4
+      Data: 0
+    - Name: _moneyChange
+      Entry: 4
+      Data: 50
+    - Name: 
+      Entry: 8
       Data: 
-    - Name: _years
+    - Name: 
+      Entry: 7
+      Data: 2|Config.Buffs.Buff, Assembly-CSharp
+    - Name: _name
+      Entry: 1
+      Data: "\u8FD0\u52A8\u635F\u4F24"
+    - Name: _remainYears
+      Entry: 4
+      Data: 5
+    - Name: _canCure
+      Entry: 5
+      Data: true
+    - Name: _moneyToCure
+      Entry: 4
+      Data: 500
+    - Name: _sans
+      Entry: 4
+      Data: -1
+    - Name: _motor
+      Entry: 4
+      Data: -3
+    - Name: _nerve
+      Entry: 4
+      Data: 0
+    - Name: _endoc
+      Entry: 4
+      Data: 0
+    - Name: _circul
+      Entry: 4
+      Data: 0
+    - Name: _breath
+      Entry: 4
+      Data: 0
+    - Name: _digest
+      Entry: 4
+      Data: 0
+    - Name: _urinary
+      Entry: 4
+      Data: 0
+    - Name: _reprod
+      Entry: 4
+      Data: 0
+    - Name: _money
+      Entry: 4
+      Data: 0
+    - Name: _moneyChange
+      Entry: 4
+      Data: 50
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 3|Config.Buffs.Buff, Assembly-CSharp
+    - Name: _name
+      Entry: 1
+      Data: "\u89C6\u529B\u51CF\u9000"
+    - Name: _remainYears
       Entry: 4
       Data: 0
     - Name: _canCure
       Entry: 5
-      Data: false
+      Data: true
+    - Name: _moneyToCure
+      Entry: 4
+      Data: 200
     - Name: _sans
       Entry: 4
-      Data: 0
+      Data: -1
     - Name: _motor
       Entry: 4
       Data: 0
+    - Name: _nerve
+      Entry: 4
+      Data: 0
+    - Name: _endoc
+      Entry: 4
+      Data: 0
+    - Name: _circul
+      Entry: 4
+      Data: 0
+    - Name: _breath
+      Entry: 4
+      Data: 0
+    - Name: _digest
+      Entry: 4
+      Data: 0
+    - Name: _urinary
+      Entry: 4
+      Data: 0
+    - Name: _reprod
+      Entry: 4
+      Data: 0
+    - Name: _money
+      Entry: 4
+      Data: 0
+    - Name: _moneyChange
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 4|Config.Buffs.Buff, Assembly-CSharp
+    - Name: _name
+      Entry: 1
+      Data: "\u98DF\u4E4B\u65E0\u5473"
+    - Name: _remainYears
+      Entry: 4
+      Data: 5
+    - Name: _canCure
+      Entry: 5
+      Data: false
+    - Name: _moneyToCure
+      Entry: 4
+      Data: 0
+    - Name: _sans
+      Entry: 4
+      Data: -1
+    - Name: _motor
+      Entry: 4
+      Data: 0
+    - Name: _nerve
+      Entry: 4
+      Data: 0
+    - Name: _endoc
+      Entry: 4
+      Data: 0
+    - Name: _circul
+      Entry: 4
+      Data: 0
+    - Name: _breath
+      Entry: 4
+      Data: 0
+    - Name: _digest
+      Entry: 4
+      Data: 0
+    - Name: _urinary
+      Entry: 4
+      Data: 0
+    - Name: _reprod
+      Entry: 4
+      Data: 0
+    - Name: _money
+      Entry: 4
+      Data: 0
+    - Name: _moneyChange
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 5|Config.Buffs.Buff, Assembly-CSharp
+    - Name: _name
+      Entry: 1
+      Data: "\u80C3\u80A0\u75BE\u75C5"
+    - Name: _remainYears
+      Entry: 4
+      Data: 0
+    - Name: _canCure
+      Entry: 5
+      Data: true
+    - Name: _moneyToCure
+      Entry: 4
+      Data: 100
+    - Name: _sans
+      Entry: 4
+      Data: -1
+    - Name: _motor
+      Entry: 4
+      Data: 0
+    - Name: _nerve
+      Entry: 4
+      Data: 0
+    - Name: _endoc
+      Entry: 4
+      Data: -1
+    - Name: _circul
+      Entry: 4
+      Data: 0
+    - Name: _breath
+      Entry: 4
+      Data: 0
+    - Name: _digest
+      Entry: 4
+      Data: -3
+    - Name: _urinary
+      Entry: 4
+      Data: -1
+    - Name: _reprod
+      Entry: 4
+      Data: 0
+    - Name: _money
+      Entry: 4
+      Data: 0
+    - Name: _moneyChange
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 6|Config.Buffs.Buff, Assembly-CSharp
+    - Name: _name
+      Entry: 1
+      Data: "\u80A5\u80D6"
+    - Name: _remainYears
+      Entry: 4
+      Data: 0
+    - Name: _canCure
+      Entry: 5
+      Data: true
+    - Name: _moneyToCure
+      Entry: 4
+      Data: 100
+    - Name: _sans
+      Entry: 4
+      Data: -1
+    - Name: _motor
+      Entry: 4
+      Data: -2
+    - Name: _nerve
+      Entry: 4
+      Data: -1
+    - Name: _endoc
+      Entry: 4
+      Data: -1
+    - Name: _circul
+      Entry: 4
+      Data: 0
+    - Name: _breath
+      Entry: 4
+      Data: -1
+    - Name: _digest
+      Entry: 4
+      Data: -2
+    - Name: _urinary
+      Entry: 4
+      Data: 0
+    - Name: _reprod
+      Entry: 4
+      Data: -1
+    - Name: _money
+      Entry: 4
+      Data: -50
+    - Name: _moneyChange
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 7|Config.Buffs.Buff, Assembly-CSharp
+    - Name: _name
+      Entry: 1
+      Data: "\u5FC3\u810F\u75BE\u75C5"
+    - Name: _remainYears
+      Entry: 4
+      Data: 0
+    - Name: _canCure
+      Entry: 5
+      Data: true
+    - Name: _moneyToCure
+      Entry: 4
+      Data: 1000
+    - Name: _sans
+      Entry: 4
+      Data: -2
+    - Name: _motor
+      Entry: 4
+      Data: -3
+    - Name: _nerve
+      Entry: 4
+      Data: -1
+    - Name: _endoc
+      Entry: 4
+      Data: 0
+    - Name: _circul
+      Entry: 4
+      Data: -3
+    - Name: _breath
+      Entry: 4
+      Data: 0
+    - Name: _digest
+      Entry: 4
+      Data: 0
+    - Name: _urinary
+      Entry: 4
+      Data: 0
+    - Name: _reprod
+      Entry: 4
+      Data: 0
+    - Name: _money
+      Entry: 4
+      Data: 0
+    - Name: _moneyChange
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 8|Config.Buffs.Buff, Assembly-CSharp
+    - Name: _name
+      Entry: 1
+      Data: "\u7CBE\u795E\u8870\u5F31"
+    - Name: _remainYears
+      Entry: 4
+      Data: 5
+    - Name: _canCure
+      Entry: 5
+      Data: false
+    - Name: _moneyToCure
+      Entry: 4
+      Data: 0
+    - Name: _sans
+      Entry: 4
+      Data: -1
+    - Name: _motor
+      Entry: 4
+      Data: 0
+    - Name: _nerve
+      Entry: 4
+      Data: 0
+    - Name: _endoc
+      Entry: 4
+      Data: 0
+    - Name: _circul
+      Entry: 4
+      Data: 0
+    - Name: _breath
+      Entry: 4
+      Data: 0
+    - Name: _digest
+      Entry: 4
+      Data: 0
+    - Name: _urinary
+      Entry: 4
+      Data: 0
+    - Name: _reprod
+      Entry: 4
+      Data: 0
+    - Name: _money
+      Entry: 4
+      Data: 0
+    - Name: _moneyChange
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 9|Config.Buffs.Buff, Assembly-CSharp
+    - Name: _name
+      Entry: 1
+      Data: "\u809D\u810F\u75BE\u75C5"
+    - Name: _remainYears
+      Entry: 4
+      Data: 0
+    - Name: _canCure
+      Entry: 5
+      Data: true
+    - Name: _moneyToCure
+      Entry: 4
+      Data: 500
+    - Name: _sans
+      Entry: 4
+      Data: -1
+    - Name: _motor
+      Entry: 4
+      Data: 0
+    - Name: _nerve
+      Entry: 4
+      Data: 0
+    - Name: _endoc
+      Entry: 4
+      Data: -3
+    - Name: _circul
+      Entry: 4
+      Data: 0
+    - Name: _breath
+      Entry: 4
+      Data: 0
+    - Name: _digest
+      Entry: 4
+      Data: 0
+    - Name: _urinary
+      Entry: 4
+      Data: 0
+    - Name: _reprod
+      Entry: 4
+      Data: 0
+    - Name: _money
+      Entry: 4
+      Data: 0
+    - Name: _moneyChange
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 10|Config.Buffs.Buff, Assembly-CSharp
+    - Name: _name
+      Entry: 1
+      Data: "\u80BA\u90E8\u75BE\u75C5"
+    - Name: _remainYears
+      Entry: 4
+      Data: 0
+    - Name: _canCure
+      Entry: 5
+      Data: true
+    - Name: _moneyToCure
+      Entry: 4
+      Data: 500
+    - Name: _sans
+      Entry: 4
+      Data: -1
+    - Name: _motor
+      Entry: 4
+      Data: 0
+    - Name: _nerve
+      Entry: 4
+      Data: 0
+    - Name: _endoc
+      Entry: 4
+      Data: 0
+    - Name: _circul
+      Entry: 4
+      Data: 0
+    - Name: _breath
+      Entry: 4
+      Data: -3
+    - Name: _digest
+      Entry: 4
+      Data: 0
+    - Name: _urinary
+      Entry: 4
+      Data: 0
+    - Name: _reprod
+      Entry: 4
+      Data: 0
+    - Name: _money
+      Entry: 4
+      Data: 0
+    - Name: _moneyChange
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 11|Config.Buffs.Buff, Assembly-CSharp
+    - Name: _name
+      Entry: 1
+      Data: "\u751F\u6B96\u75BE\u75C5"
+    - Name: _remainYears
+      Entry: 4
+      Data: 0
+    - Name: _canCure
+      Entry: 5
+      Data: true
+    - Name: _moneyToCure
+      Entry: 4
+      Data: 500
+    - Name: _sans
+      Entry: 4
+      Data: -2
+    - Name: _motor
+      Entry: 4
+      Data: 0
+    - Name: _nerve
+      Entry: 4
+      Data: 0
+    - Name: _endoc
+      Entry: 4
+      Data: 0
+    - Name: _circul
+      Entry: 4
+      Data: 0
+    - Name: _breath
+      Entry: 4
+      Data: 0
+    - Name: _digest
+      Entry: 4
+      Data: 0
+    - Name: _urinary
+      Entry: 4
+      Data: 0
+    - Name: _reprod
+      Entry: 4
+      Data: -3
+    - Name: _money
+      Entry: 4
+      Data: 0
+    - Name: _moneyChange
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 12|Config.Buffs.Buff, Assembly-CSharp
+    - Name: _name
+      Entry: 1
+      Data: "\u8170\u808C\u52B3\u635F"
+    - Name: _remainYears
+      Entry: 4
+      Data: 0
+    - Name: _canCure
+      Entry: 5
+      Data: true
+    - Name: _moneyToCure
+      Entry: 4
+      Data: 100
+    - Name: _sans
+      Entry: 4
+      Data: -1
+    - Name: _motor
+      Entry: 4
+      Data: -2
     - Name: _nerve
       Entry: 4
       Data: 0
@@ -17525,7 +18255,12 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 802510780}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -17550,12 +18285,15 @@ MonoBehaviour:
     - Name: _positive
       Entry: 5
       Data: true
+    - Name: _traitReq
+      Entry: 6
+      Data: 
     - Name: _desc
       Entry: 1
-      Data: "\u670B\u53CB\u6002\u607F\u4F60\u53BB\u4E70\u5F69\u7968\uFF0C\u4F60\u62B1\u7740\u8BD5\u8BD5\u770B\u7684\u5FC3\u60C5\u4E70\u4E86\u4E00\u5F20\uFF0C\u6CA1\u60F3\u5230\u7ADF\u7136\u4E2D\u4E86500\u4E07\u3002\r\n"
+      Data: "\u670B\u53CB\u6002\u607F\u4F60\u53BB\u4E70\u5F69\u7968\uFF0C\u4F60\u62B1\u7740\u8BD5\u8BD5\u770B\u7684\u5FC3\u60C5\u4E70\u4E86\u4E00\u5F20\uFF0C\u6CA1\u60F3\u5230\u7ADF\u7136\u4E2D\u4E86500\u4E07\u3002\r"
     - Name: _sans
       Entry: 4
-      Data: 0
+      Data: 2
     - Name: _motor
       Entry: 4
       Data: 0
@@ -17582,7 +18320,7 @@ MonoBehaviour:
       Data: 0
     - Name: _money
       Entry: 4
-      Data: 0
+      Data: 5000000
     - Name: _moneyChange
       Entry: 4
       Data: 0
@@ -17604,15 +18342,18 @@ MonoBehaviour:
     - Name: _positive
       Entry: 5
       Data: false
-    - Name: _desc
+    - Name: _traitReq
       Entry: 6
       Data: 
+    - Name: _desc
+      Entry: 1
+      Data: "\u201C\u4ECA\u5929\u8981\u518D\u52A01000\u4E2A\u6DF1\u8E72\uFF01\u201D\uFF0C\u7ED3\u679C\u663E\u800C\u6613\u89C1\u3002\r"
     - Name: _sans
       Entry: 4
-      Data: 0
+      Data: -1
     - Name: _motor
       Entry: 4
-      Data: 0
+      Data: -2
     - Name: _nerve
       Entry: 4
       Data: 0
@@ -17641,277 +18382,71 @@ MonoBehaviour:
       Entry: 4
       Data: 0
     - Name: _buff
-      Entry: 6
+      Entry: 7
+      Data: 3|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
+    - Name: m_PersistentCalls
+      Entry: 7
+      Data: 4|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
+    - Name: m_Calls
+      Entry: 7
+      Data: 5|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
+        UnityEngine.CoreModule]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 6|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
+    - Name: m_Target
+      Entry: 10
+      Data: 0
+    - Name: m_MethodName
+      Entry: 1
+      Data: TriggerBuff
+    - Name: m_Mode
+      Entry: 3
+      Data: 5
+    - Name: m_Arguments
+      Entry: 7
+      Data: 7|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
+    - Name: m_ObjectArgument
+      Entry: 10
+      Data: 1
+    - Name: m_ObjectArgumentAssemblyTypeName
+      Entry: 1
+      Data: UnityEngine.Object, UnityEngine
+    - Name: m_IntArgument
+      Entry: 3
+      Data: 0
+    - Name: m_FloatArgument
+      Entry: 4
+      Data: 0
+    - Name: m_StringArgument
+      Entry: 1
+      Data: "\u8FD0\u52A8\u635F\u4F24"
+    - Name: m_BoolArgument
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_CallState
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
       Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
-      Entry: 7
-      Data: 3|Config.RandEvents.RandEvent, Assembly-CSharp
-    - Name: _name
-      Entry: 1
-      Data: "\u6F2B\u753B\u70C2\u5C3E "
-    - Name: _chance
-      Entry: 4
-      Data: 0.25
-    - Name: _positive
-      Entry: 5
-      Data: false
-    - Name: _desc
-      Entry: 6
-      Data: 
-    - Name: _sans
-      Entry: 4
-      Data: 0
-    - Name: _motor
-      Entry: 4
-      Data: 0
-    - Name: _nerve
-      Entry: 4
-      Data: 0
-    - Name: _endoc
-      Entry: 4
-      Data: 0
-    - Name: _circul
-      Entry: 4
-      Data: 0
-    - Name: _breath
-      Entry: 4
-      Data: 0
-    - Name: _digest
-      Entry: 4
-      Data: 0
-    - Name: _urinary
-      Entry: 4
-      Data: 0
-    - Name: _reprod
-      Entry: 4
-      Data: 0
-    - Name: _money
-      Entry: 4
-      Data: 0
-    - Name: _moneyChange
-      Entry: 4
-      Data: 0
-    - Name: _buff
-      Entry: 6
-      Data: 
-    - Name: 
       Entry: 8
       Data: 
     - Name: 
-      Entry: 7
-      Data: 4|Config.RandEvents.RandEvent, Assembly-CSharp
-    - Name: _name
-      Entry: 1
-      Data: "\u89C6\u529B\u51CF\u9000 "
-    - Name: _chance
-      Entry: 4
-      Data: 0.2
-    - Name: _positive
-      Entry: 5
-      Data: false
-    - Name: _desc
-      Entry: 6
-      Data: 
-    - Name: _sans
-      Entry: 4
-      Data: 0
-    - Name: _motor
-      Entry: 4
-      Data: 0
-    - Name: _nerve
-      Entry: 4
-      Data: 0
-    - Name: _endoc
-      Entry: 4
-      Data: 0
-    - Name: _circul
-      Entry: 4
-      Data: 0
-    - Name: _breath
-      Entry: 4
-      Data: 0
-    - Name: _digest
-      Entry: 4
-      Data: 0
-    - Name: _urinary
-      Entry: 4
-      Data: 0
-    - Name: _reprod
-      Entry: 4
-      Data: 0
-    - Name: _money
-      Entry: 4
-      Data: 0
-    - Name: _moneyChange
-      Entry: 4
-      Data: 0
-    - Name: _buff
-      Entry: 6
-      Data: 
-    - Name: 
       Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 5|Config.RandEvents.RandEvent, Assembly-CSharp
-    - Name: _name
-      Entry: 1
-      Data: "\u610F\u5916\u4E8B\u6545 "
-    - Name: _chance
-      Entry: 4
-      Data: 0.1
-    - Name: _positive
-      Entry: 5
-      Data: false
-    - Name: _desc
-      Entry: 6
-      Data: 
-    - Name: _sans
-      Entry: 4
-      Data: 0
-    - Name: _motor
-      Entry: 4
-      Data: 0
-    - Name: _nerve
-      Entry: 4
-      Data: 0
-    - Name: _endoc
-      Entry: 4
-      Data: 0
-    - Name: _circul
-      Entry: 4
-      Data: 0
-    - Name: _breath
-      Entry: 4
-      Data: 0
-    - Name: _digest
-      Entry: 4
-      Data: 0
-    - Name: _urinary
-      Entry: 4
-      Data: 0
-    - Name: _reprod
-      Entry: 4
-      Data: 0
-    - Name: _money
-      Entry: 4
-      Data: 0
-    - Name: _moneyChange
-      Entry: 4
-      Data: 0
-    - Name: _buff
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 6|Config.RandEvents.RandEvent, Assembly-CSharp
-    - Name: _name
-      Entry: 1
-      Data: "\u660E\u661F\u4E11\u95FB "
-    - Name: _chance
-      Entry: 4
-      Data: 0.2
-    - Name: _positive
-      Entry: 5
-      Data: false
-    - Name: _desc
-      Entry: 6
-      Data: 
-    - Name: _sans
-      Entry: 4
-      Data: 0
-    - Name: _motor
-      Entry: 4
-      Data: 0
-    - Name: _nerve
-      Entry: 4
-      Data: 0
-    - Name: _endoc
-      Entry: 4
-      Data: 0
-    - Name: _circul
-      Entry: 4
-      Data: 0
-    - Name: _breath
-      Entry: 4
-      Data: 0
-    - Name: _digest
-      Entry: 4
-      Data: 0
-    - Name: _urinary
-      Entry: 4
-      Data: 0
-    - Name: _reprod
-      Entry: 4
-      Data: 0
-    - Name: _money
-      Entry: 4
-      Data: 0
-    - Name: _moneyChange
-      Entry: 4
-      Data: 0
-    - Name: _buff
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 7|Config.RandEvents.RandEvent, Assembly-CSharp
-    - Name: _name
-      Entry: 1
-      Data: "\u80A1\u4EF7\u66B4\u8DCC "
-    - Name: _chance
-      Entry: 4
-      Data: 0.5
-    - Name: _positive
-      Entry: 5
-      Data: false
-    - Name: _desc
-      Entry: 6
-      Data: 
-    - Name: _sans
-      Entry: 4
-      Data: 0
-    - Name: _motor
-      Entry: 4
-      Data: 0
-    - Name: _nerve
-      Entry: 4
-      Data: 0
-    - Name: _endoc
-      Entry: 4
-      Data: 0
-    - Name: _circul
-      Entry: 4
-      Data: 0
-    - Name: _breath
-      Entry: 4
-      Data: 0
-    - Name: _digest
-      Entry: 4
-      Data: 0
-    - Name: _urinary
-      Entry: 4
-      Data: 0
-    - Name: _reprod
-      Entry: 4
-      Data: 0
-    - Name: _money
-      Entry: 4
-      Data: 0
-    - Name: _moneyChange
-      Entry: 4
-      Data: 0
-    - Name: _buff
-      Entry: 6
       Data: 
     - Name: 
       Entry: 8
@@ -17921,19 +18456,321 @@ MonoBehaviour:
       Data: 8|Config.RandEvents.RandEvent, Assembly-CSharp
     - Name: _name
       Entry: 1
-      Data: "\u906D\u9047\u9A97\u5C40 "
+      Data: "\u6F2B\u753B\u70C2\u5C3E "
     - Name: _chance
       Entry: 4
-      Data: 0.5
+      Data: 0.25
     - Name: _positive
       Entry: 5
       Data: false
+    - Name: _traitReq
+      Entry: 1
+      Data: "\u70ED\u7231\u827A\u672F"
     - Name: _desc
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: "\u201C\u53F2\u8BD7\u7EA7\u70C2\u5C3E\uFF01\u4E0D\uFF01\u6211\u4E0D\u80FD\u63A5\u53D7\uFF01\u545C\u545C\u4E09\u7B20\u2026\u2026\u201D\r"
     - Name: _sans
       Entry: 4
+      Data: -8
+    - Name: _motor
+      Entry: 4
       Data: 0
+    - Name: _nerve
+      Entry: 4
+      Data: 0
+    - Name: _endoc
+      Entry: 4
+      Data: 0
+    - Name: _circul
+      Entry: 4
+      Data: 0
+    - Name: _breath
+      Entry: 4
+      Data: 0
+    - Name: _digest
+      Entry: 4
+      Data: 0
+    - Name: _urinary
+      Entry: 4
+      Data: 0
+    - Name: _reprod
+      Entry: 4
+      Data: 0
+    - Name: _money
+      Entry: 4
+      Data: 0
+    - Name: _moneyChange
+      Entry: 4
+      Data: 0
+    - Name: _buff
+      Entry: 7
+      Data: 9|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
+    - Name: m_PersistentCalls
+      Entry: 7
+      Data: 10|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
+    - Name: m_Calls
+      Entry: 7
+      Data: 11|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
+        UnityEngine.CoreModule]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 12|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
+    - Name: m_Target
+      Entry: 10
+      Data: 0
+    - Name: m_MethodName
+      Entry: 1
+      Data: TriggerBuff
+    - Name: m_Mode
+      Entry: 3
+      Data: 5
+    - Name: m_Arguments
+      Entry: 7
+      Data: 13|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
+    - Name: m_ObjectArgument
+      Entry: 10
+      Data: 2
+    - Name: m_ObjectArgumentAssemblyTypeName
+      Entry: 1
+      Data: UnityEngine.Object, UnityEngine
+    - Name: m_IntArgument
+      Entry: 3
+      Data: 0
+    - Name: m_FloatArgument
+      Entry: 4
+      Data: 0
+    - Name: m_StringArgument
+      Entry: 1
+      Data: "\u7CBE\u795E\u8870\u5F31"
+    - Name: m_BoolArgument
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_CallState
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 14|Config.RandEvents.RandEvent, Assembly-CSharp
+    - Name: _name
+      Entry: 1
+      Data: "\u89C6\u529B\u51CF\u9000 "
+    - Name: _chance
+      Entry: 4
+      Data: 0.2
+    - Name: _positive
+      Entry: 5
+      Data: false
+    - Name: _traitReq
+      Entry: 6
+      Data: 
+    - Name: _desc
+      Entry: 1
+      Data: "\u201C\u6DF1\u591C\u770B\u4E66\u4E00\u65F6\u723D\uFF0C\u4E00\u76F4\u770B\u4E66\u4E00\u76F4\u723D\u2026\u2026\u201D\r"
+    - Name: _sans
+      Entry: 4
+      Data: -1
+    - Name: _motor
+      Entry: 4
+      Data: 0
+    - Name: _nerve
+      Entry: 4
+      Data: -1
+    - Name: _endoc
+      Entry: 4
+      Data: 0
+    - Name: _circul
+      Entry: 4
+      Data: 0
+    - Name: _breath
+      Entry: 4
+      Data: 0
+    - Name: _digest
+      Entry: 4
+      Data: 0
+    - Name: _urinary
+      Entry: 4
+      Data: 0
+    - Name: _reprod
+      Entry: 4
+      Data: 0
+    - Name: _money
+      Entry: 4
+      Data: 0
+    - Name: _moneyChange
+      Entry: 4
+      Data: 0
+    - Name: _buff
+      Entry: 7
+      Data: 15|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
+    - Name: m_PersistentCalls
+      Entry: 7
+      Data: 16|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
+    - Name: m_Calls
+      Entry: 7
+      Data: 17|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
+        UnityEngine.CoreModule]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 18|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
+    - Name: m_Target
+      Entry: 10
+      Data: 0
+    - Name: m_MethodName
+      Entry: 1
+      Data: TriggerBuff
+    - Name: m_Mode
+      Entry: 3
+      Data: 5
+    - Name: m_Arguments
+      Entry: 7
+      Data: 19|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
+    - Name: m_ObjectArgument
+      Entry: 10
+      Data: 3
+    - Name: m_ObjectArgumentAssemblyTypeName
+      Entry: 1
+      Data: UnityEngine.Object, UnityEngine
+    - Name: m_IntArgument
+      Entry: 3
+      Data: 0
+    - Name: m_FloatArgument
+      Entry: 4
+      Data: 0
+    - Name: m_StringArgument
+      Entry: 1
+      Data: "\u89C6\u529B\u51CF\u9000"
+    - Name: m_BoolArgument
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_CallState
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 20|Config.RandEvents.RandEvent, Assembly-CSharp
+    - Name: _name
+      Entry: 1
+      Data: "\u610F\u5916\u4E8B\u6545 "
+    - Name: _chance
+      Entry: 4
+      Data: 0.1
+    - Name: _positive
+      Entry: 5
+      Data: false
+    - Name: _traitReq
+      Entry: 6
+      Data: 
+    - Name: _desc
+      Entry: 1
+      Data: "\u88AB\u8FCE\u9762\u800C\u6765\u7684\u6CE5\u5934\u8F66\u649E\u4E0A\uFF0C\u4F60\u8FDB\u5165\u7684\u4E0D\u662F\u5F02\u4E16\u754C\uFF0C\u800C\u662F\u533B\u9662\u3002\r"
+    - Name: _sans
+      Entry: 4
+      Data: -5
+    - Name: _motor
+      Entry: 4
+      Data: -5
+    - Name: _nerve
+      Entry: 4
+      Data: -5
+    - Name: _endoc
+      Entry: 4
+      Data: -5
+    - Name: _circul
+      Entry: 4
+      Data: -5
+    - Name: _breath
+      Entry: 4
+      Data: -5
+    - Name: _digest
+      Entry: 4
+      Data: -5
+    - Name: _urinary
+      Entry: 4
+      Data: -5
+    - Name: _reprod
+      Entry: 4
+      Data: -5
+    - Name: _money
+      Entry: 4
+      Data: -10000
+    - Name: _moneyChange
+      Entry: 4
+      Data: 0
+    - Name: _buff
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 21|Config.RandEvents.RandEvent, Assembly-CSharp
+    - Name: _name
+      Entry: 1
+      Data: "\u660E\u661F\u4E11\u95FB "
+    - Name: _chance
+      Entry: 4
+      Data: 0.2
+    - Name: _positive
+      Entry: 5
+      Data: false
+    - Name: _traitReq
+      Entry: 6
+      Data: 
+    - Name: _desc
+      Entry: 1
+      Data: "\u201C\u8BA9\u6211\u770B\u770B\u662F\u8C01\u7684\u623F\u5B50\u584C\u4E86\u2026\u2026\u201D\uFF0C\u968F\u540E\u4F60\u7B11\u4E0D\u51FA\u6765\u4E86\u3002\r"
+    - Name: _sans
+      Entry: 4
+      Data: -8
     - Name: _motor
       Entry: 4
       Data: 0
@@ -17972,7 +18809,185 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 9|Config.RandEvents.RandEvent, Assembly-CSharp
+      Data: 22|Config.RandEvents.RandEvent, Assembly-CSharp
+    - Name: _name
+      Entry: 1
+      Data: "\u80A1\u4EF7\u66B4\u8DCC "
+    - Name: _chance
+      Entry: 4
+      Data: 0.5
+    - Name: _positive
+      Entry: 5
+      Data: false
+    - Name: _traitReq
+      Entry: 6
+      Data: 
+    - Name: _desc
+      Entry: 1
+      Data: "\u201C\u90FD\u522B\u62E6\u7740\u6211\uFF0C\u6211\u8981\u4E0A\u5929\u53F0\uFF01\u201D\r"
+    - Name: _sans
+      Entry: 4
+      Data: 0
+    - Name: _motor
+      Entry: 4
+      Data: 0
+    - Name: _nerve
+      Entry: 4
+      Data: 0
+    - Name: _endoc
+      Entry: 4
+      Data: 0
+    - Name: _circul
+      Entry: 4
+      Data: 0
+    - Name: _breath
+      Entry: 4
+      Data: 0
+    - Name: _digest
+      Entry: 4
+      Data: 0
+    - Name: _urinary
+      Entry: 4
+      Data: 0
+    - Name: _reprod
+      Entry: 4
+      Data: 0
+    - Name: _money
+      Entry: 4
+      Data: -10000
+    - Name: _moneyChange
+      Entry: 4
+      Data: 0
+    - Name: _buff
+      Entry: 7
+      Data: 23|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
+    - Name: m_PersistentCalls
+      Entry: 7
+      Data: 24|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
+    - Name: m_Calls
+      Entry: 7
+      Data: 25|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
+        UnityEngine.CoreModule]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 26|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
+    - Name: m_Target
+      Entry: 10
+      Data: 0
+    - Name: m_MethodName
+      Entry: 1
+      Data: TriggerBuff
+    - Name: m_Mode
+      Entry: 3
+      Data: 5
+    - Name: m_Arguments
+      Entry: 7
+      Data: 27|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
+    - Name: m_ObjectArgument
+      Entry: 10
+      Data: 4
+    - Name: m_ObjectArgumentAssemblyTypeName
+      Entry: 1
+      Data: UnityEngine.Object, UnityEngine
+    - Name: m_IntArgument
+      Entry: 3
+      Data: 0
+    - Name: m_FloatArgument
+      Entry: 4
+      Data: 0
+    - Name: m_StringArgument
+      Entry: 1
+      Data: "\u7CBE\u795E\u8870\u5F31"
+    - Name: m_BoolArgument
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_CallState
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 28|Config.RandEvents.RandEvent, Assembly-CSharp
+    - Name: _name
+      Entry: 1
+      Data: "\u906D\u9047\u9A97\u5C40 "
+    - Name: _chance
+      Entry: 4
+      Data: 0.5
+    - Name: _positive
+      Entry: 5
+      Data: false
+    - Name: _traitReq
+      Entry: 6
+      Data: 
+    - Name: _desc
+      Entry: 1
+      Data: "\u201C\u4F60\u4EEC\u53EF\u522B\u4E0D\u4FE1\uFF0C\u8FD9\u4E2A\u6838\u80FD\u8D85\u5BFC\u91CF\u5B50\u6309\u6469\u4EEA\u80FD\u5305\u6CBB\u767E\u75C5\uFF01\u54A6\uFF0C\u5B83\u600E\u4E48\u5192\u70DF\u4E86\u554A\u2026\u2026\u201D\r"
+    - Name: _sans
+      Entry: 4
+      Data: -5
+    - Name: _motor
+      Entry: 4
+      Data: -1
+    - Name: _nerve
+      Entry: 4
+      Data: -1
+    - Name: _endoc
+      Entry: 4
+      Data: -1
+    - Name: _circul
+      Entry: 4
+      Data: -1
+    - Name: _breath
+      Entry: 4
+      Data: -1
+    - Name: _digest
+      Entry: 4
+      Data: -1
+    - Name: _urinary
+      Entry: 4
+      Data: -1
+    - Name: _reprod
+      Entry: 4
+      Data: 0
+    - Name: _money
+      Entry: 4
+      Data: -5000
+    - Name: _moneyChange
+      Entry: 4
+      Data: 0
+    - Name: _buff
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 29|Config.RandEvents.RandEvent, Assembly-CSharp
     - Name: _name
       Entry: 1
       Data: "\u9E1F\u53BB\u7B3C\u7A7A "
@@ -17982,12 +18997,15 @@ MonoBehaviour:
     - Name: _positive
       Entry: 5
       Data: false
-    - Name: _desc
+    - Name: _traitReq
       Entry: 6
       Data: 
+    - Name: _desc
+      Entry: 1
+      Data: "\u201C\u7237\u7237\uFF0C\u4F60\u7684\u73CD\u73E0\u9E1F\u98DE\u8D70\u5566\uFF01\u201D\r"
     - Name: _sans
       Entry: 4
-      Data: 0
+      Data: -3
     - Name: _motor
       Entry: 4
       Data: 0
@@ -18026,7 +19044,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 10|Config.RandEvents.RandEvent, Assembly-CSharp
+      Data: 30|Config.RandEvents.RandEvent, Assembly-CSharp
     - Name: _name
       Entry: 1
       Data: "\u5927\u8F93\u7279\u8F93 "
@@ -18036,12 +19054,15 @@ MonoBehaviour:
     - Name: _positive
       Entry: 5
       Data: false
-    - Name: _desc
+    - Name: _traitReq
       Entry: 6
       Data: 
+    - Name: _desc
+      Entry: 1
+      Data: "\u201C\u6251\u8857\u4ED4\uFF0C\u518D\u8F93\u4E0B\u53BB\u8FDE\u5E95\u88E4\u90FD\u6CA1\u5F97\u7A7F\u4E86\u3002\u201D\r"
     - Name: _sans
       Entry: 4
-      Data: 0
+      Data: -3
     - Name: _motor
       Entry: 4
       Data: 0
@@ -18068,7 +19089,7 @@ MonoBehaviour:
       Data: 0
     - Name: _money
       Entry: 4
-      Data: 0
+      Data: -1000
     - Name: _moneyChange
       Entry: 4
       Data: 0
@@ -18084,6 +19105,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+  multiplier: 1
 --- !u!1 &1084429310
 GameObject:
   m_ObjectHideFlags: 0
@@ -28239,6 +29261,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1890314928}
   m_CullTransparentMesh: 0
+--- !u!1 &1899551104
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1899551105}
+  m_Layer: 0
+  m_Name: "Hint\uFF08\u4FDD\u7559\uFF09"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1899551105
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899551104}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 786746565}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1913111506
 GameObject:
   m_ObjectHideFlags: 0

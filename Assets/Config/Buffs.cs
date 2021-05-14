@@ -21,6 +21,7 @@ namespace Config.Buffs
                     if(item._name!=null && item._name.Trim() == name.Trim())
                     {
                         Debug.Log("检测到BUFF" + name);
+                        EventCenter.GetInstance().EventTrigger<Buff>("新Buff触发", item);
                         break;
                     }
                 }
@@ -32,9 +33,11 @@ namespace Config.Buffs
     {
         public string _name;
         [LabelText("持续年限"), FoldoutGroup("BUFF属性")]
-        public float _years;
+        public float _remainYears;
         [LabelText("可被治愈"), FoldoutGroup("BUFF属性")]
         public bool _canCure;
+        [LabelText("治疗价格"), FoldoutGroup("BUFF属性")]
+        public float _moneyToCure;
         [LabelText("精神影响"), FoldoutGroup("BUFF影响")]
         public float _sans;
         [LabelText("运动系统影响"), FoldoutGroup("BUFF影响")]

@@ -4,20 +4,14 @@ using UnityEngine;
 using UnityEngine.Events;
 using Sirenix.OdinInspector;
 
-using Config.Buffs;
-using Config.Habbits;
-using Config.Traits;
-using Config.RandEvents;
-using Config.Behavious;
-
 public class Protagonist : MonoBehaviour
 {
     public Animator animator;
-    public Habbits habbits;
-    public Behaviours behaviours;
-    public RandEvents randEvents;
-    public Buffs buffs;
-    public Traits traits;
+    public Config.Habbits.Habbits habbits;
+    public Config.Behavious.Behaviours behaviours;
+    public Config.RandEvents.RandEvents randEvents;
+    public Config.Buffs.Buffs buffs;
+    public Config.Traits.Traits traits;
     
 
     [Header("整体设定"), Space]
@@ -61,16 +55,18 @@ public class Protagonist : MonoBehaviour
     private Dictionary<string, string> _habbitSelect = new Dictionary<string, string>();
     private List<string> _behaviourSelect = new List<string>();
     private Dictionary<string, float> _behavBook = new Dictionary<string, float>(); 
-    private List<string> _traits = new List<string>();
+    private Dictionary<string,string> _traitList = new Dictionary<string,string>();
+    private Dictionary<string, Config.Buffs.Buff> _buffList = new Dictionary<string, Config.Buffs.Buff>();
+    private Dictionary<string, float> _buffCount = new Dictionary<string, float>();
     
     void Awake()
     {
         GameObject pools = GameObject.Find("Pools");
-        habbits = pools.GetComponentInChildren<Habbits>();
-        behaviours = pools.GetComponentInChildren<Behaviours>();
-        randEvents = pools.GetComponentInChildren<RandEvents>();
-        buffs = pools.GetComponentInChildren<Buffs>();
-        traits = pools.GetComponentInChildren<Traits>();
+        habbits = pools.GetComponentInChildren<Config.Habbits.Habbits>();
+        behaviours = pools.GetComponentInChildren<Config.Behavious.Behaviours>();
+        randEvents = pools.GetComponentInChildren<Config.RandEvents.RandEvents>();
+        buffs = pools.GetComponentInChildren<Config.Buffs.Buffs>();
+        traits = pools.GetComponentInChildren<Config.Traits.Traits>();
     }
 
     void Start()
@@ -82,7 +78,10 @@ public class Protagonist : MonoBehaviour
                 _behavBook.Add(behav._name, 0f);
             _behavBook[behav._name] = 0f;
         }
+        EventCenter.GetInstance().AddEventListener<Config.RandEvents.RandEvent>("随机事件触发", UpdateByEvents);
+        EventCenter.GetInstance().AddEventListener<Config.Buffs.Buff>("新Buff触发", UpdateBuffList);
         EventCenter.GetInstance().AddEventListener("UpdateData", UpdateData);
+        EventCenter.GetInstance().AddEventListener("UpdateExistBuff", UpdateByBuffList);
     }
 
     public float GetAge() => _age;
@@ -120,7 +119,7 @@ public class Protagonist : MonoBehaviour
             if(transmitBehav.Contains(behavName))
             {
                 _behavBook[behavName] += 1f;
-                Debug.Log("【在】"+behavName);
+                //Debug.Log("【在】"+behavName);
             }
             else
             {
@@ -143,6 +142,12 @@ public class Protagonist : MonoBehaviour
         }
         return null;
     } 
+    private void UpdateByDefault()
+    {
+        _age += 1f;
+        float thisMoneyChange = moneyChange;
+        _ownMoney += thisMoneyChange;
+    }
 
     public void UpdateByBehaviour(Config.Behavious.Behaviour tmpBehaviour)
     {
@@ -171,7 +176,7 @@ public class Protagonist : MonoBehaviour
             }
         }
     }
-    public void UpdateByHabbit(Habbit tmpHabbit)
+    public void UpdateByHabbit(Config.Habbits.Habbit tmpHabbit)
     {
         _overallSans += tmpHabbit._sans;
         _motor += tmpHabbit._motor;
@@ -189,6 +194,66 @@ public class Protagonist : MonoBehaviour
             tmpHabbit._randEvent.Invoke();
         }
     }
+
+    public void UpdateByEvents(Config.RandEvents.RandEvent tmpEvents)
+    {
+        if(tmpEvents._traitReq.Length > 1 && !_traitList.ContainsKey(tmpEvents._traitReq))
+            return;
+        _overallSans += tmpEvents._sans;
+        _motor += tmpEvents._motor;
+        _nerve += tmpEvents._nerve;
+        _endoc += tmpEvents._endoc;
+        _circul += tmpEvents._circul;
+        _breath += tmpEvents._breath;
+        _digest += tmpEvents._digest;
+        _urinary += tmpEvents._urinary;
+        _reprod += tmpEvents._reprod;
+        _ownMoney += tmpEvents._money;
+
+        if(tmpEvents._buff!=null)
+        {
+            tmpEvents._buff.Invoke();
+        }
+    }
+    public void UpdateByBuffList()
+    {
+        if(_buffList == null)
+            return;
+        
+        foreach (var buffName in _buffList.Keys)
+        {
+            if(_buffCount[buffName] <= 0f)
+            {
+                _buffCount.Remove(buffName);
+                _buffList.Remove(buffName);
+            }
+            _overallSans += _buffList[buffName]._sans;
+            _motor += _buffList[buffName]._motor;
+            _nerve += _buffList[buffName]._nerve;
+            _endoc += _buffList[buffName]._endoc;
+            _circul += _buffList[buffName]._circul;
+            _breath += _buffList[buffName]._breath;
+            _digest += _buffList[buffName]._digest;
+            _urinary += _buffList[buffName]._urinary;
+            _reprod += _buffList[buffName]._reprod;
+            _ownMoney += _buffList[buffName]._money;
+            _buffCount[buffName] -= 1f;
+        }
+    }
+    public void UpdateBuffList(Config.Buffs.Buff tmpBuff)
+    {
+        if(_buffCount.ContainsKey(tmpBuff._name) && _buffList.ContainsKey(tmpBuff._name))
+        {
+            _buffCount[tmpBuff._name] = tmpBuff._remainYears;
+            return;
+        }
+        _buffList.Add(tmpBuff._name, tmpBuff);
+        if(tmpBuff._remainYears == 0f)
+            _buffCount.Add(tmpBuff._name, tmpBuff._remainYears + 100f);
+        else
+            _buffCount.Add(tmpBuff._name, tmpBuff._remainYears);
+    }
+
     public void CheckCondition()
     {
         if( _overallSans < 0 || _motor < 0 || _nerve < 0 || _endoc < 0 || _circul < 0 || _breath < 0 || _digest < 0 || _urinary < 0 || _reprod < 0)
@@ -207,10 +272,22 @@ public class Protagonist : MonoBehaviour
     }
     public void UpdateData()
     {
-        _age += 1f;
-        float thisMoneyChange = moneyChange;
+        // 优先更新当前BUFF集合的影响
+        UpdateByBuffList();
 
-        _ownMoney += thisMoneyChange;
+        // 更新工作模式带来的概率系数影响
+        if(_habbitSelect["Work"] == "究极卷王")
+        {
+            randEvents.multiplier = 2f;
+        }
+        else if(_habbitSelect["Work"] == "准时下班")
+        {
+            randEvents.multiplier = 1f;
+        }
+        else if(_habbitSelect["Work"] == "摸鱼选手")
+        {
+            randEvents.multiplier = 0.5f;
+        }
 
         // 更新习惯带来的影响
         foreach (var selected in _habbitSelect)
@@ -235,10 +312,9 @@ public class Protagonist : MonoBehaviour
                 }
             }
         }
-
-
-
-
+        // 更新默认设定的影响
+        UpdateByDefault();
+        // 修正超出上下限的值
         CheckCondition();
 
     }
