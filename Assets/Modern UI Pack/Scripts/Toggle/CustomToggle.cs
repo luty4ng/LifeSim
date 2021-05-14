@@ -1,22 +1,26 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 namespace Michsky.UI.ModernUIPack
 {
     [RequireComponent(typeof(Toggle))]
     [RequireComponent(typeof(Animator))]
     public class CustomToggle : MonoBehaviour
     {
-        [HideInInspector] public Toggle toggleObject;
-        [HideInInspector] public Animator toggleAnimator;
+        public Toggle toggleObject;
+        public Animator toggleAnimator;
+        public TextMeshProUGUI toggleSelection;
 
-        void Start()
+        void Awake()
         {
             if (toggleObject == null)
                 toggleObject = gameObject.GetComponent<Toggle>();
            
             if (toggleAnimator == null)
                 toggleAnimator = toggleObject.GetComponent<Animator>();
+            
+            if(toggleSelection == null)
+                toggleSelection = this.GetComponentInChildren<TextMeshProUGUI>();
 
             toggleObject.onValueChanged.AddListener(UpdateStateDynamic);
             UpdateState();

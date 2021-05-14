@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RandomEvent : MonoBehaviour
+public class TraitPanel : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private Protagonist _protagonist;
     void Start()
     {
-        
+        _protagonist = GameManager.instance.playerAgent.GetComponent<Protagonist>();
     }
 
     // Update is called once per frame

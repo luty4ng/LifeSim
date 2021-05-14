@@ -60,7 +60,7 @@ namespace Michsky.UI.ModernUIPack
             }
 
             if (label != null && labelHelper != null)
-                SetupSelector();
+                StartCoroutine(SetupSelectorIEnum());
 
             if (invokeAtStart == true)
             {
@@ -68,7 +68,12 @@ namespace Michsky.UI.ModernUIPack
                 selectorEvent.Invoke(index);
             }
         }
-
+        IEnumerator SetupSelectorIEnum()
+        {
+            yield return null;
+            SetupSelector();
+            
+        }
         public void SetupSelector()
         {
             if (itemList.Count != 0)

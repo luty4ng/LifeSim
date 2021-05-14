@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
-    public GameObject playerAgent;
-    public GameObject canvasAgent;
+    public Protagonist playerAgent;
     public static GameManager instance {get; private set;}
     private void Awake()
     {

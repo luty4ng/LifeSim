@@ -43,9 +43,13 @@ namespace Michsky.UI.ModernUIPack
                 {
                     currentPercent += speed * Time.deltaTime;
                 }
-                else if (currentPercent > targetValue && targetValue - currentPercent >= -0.01f)
+                else if (currentPercent > targetValue && targetValue - currentPercent <= -0.01f)
                 {
                     currentPercent -= speed * Time.deltaTime;
+                }
+                else
+                {
+                    currentPercent = Mathf.Round(currentPercent);
                 }
                     
 
