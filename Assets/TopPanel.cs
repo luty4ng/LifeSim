@@ -10,6 +10,8 @@ public class TopPanel : MonoBehaviour
     void Start()
     {
         _protagonist = GameManager.instance.playerAgent.GetComponent<Protagonist>();
+        _moneyOnUI.text = _protagonist.GetMoney().ToString();
+        _ageOnUI.text = _protagonist.GetAge().ToString();
         EventCenter.GetInstance().AddEventListener("UpdateUI", () => {
             _moneyOnUI.text = _protagonist.GetMoney().ToString();
             _ageOnUI.text = _protagonist.GetAge().ToString();

@@ -13,7 +13,6 @@ namespace Config.Buffs
 
         public void TriggerBuff(string name)
         {
-            Debug.Log("暂时检测到BUFF" + name);
             if(_buffList!=null)
             {
                 foreach (var item in _buffList)

@@ -7,16 +7,10 @@ using UnityEngine.Events;
 
 namespace Michsky.UI.ModernUIPack
 {
-    public class ModalWindowManager : MonoBehaviour
+    public class ModalWindowManagerCustom : MonoBehaviour
     {
         // Resources
-        public Image windowIcon;
-        public List<TextMeshProUGUI> titleList;
-        public List<TextMeshProUGUI> descList;
-        public TextMeshProUGUI windowTitle;
-        public TextMeshProUGUI windowDescription;
         public Button confirmButton;
-        public Button cancelButton;
         public Animator mwAnimator;
 
         // Content
@@ -26,8 +20,6 @@ namespace Michsky.UI.ModernUIPack
 
         // Events
         public UnityEvent onConfirm;
-        public UnityEvent onCancel;
-
         // Settings
         public bool sharpAnimations = false;
         public bool useCustomValues = false;
@@ -41,27 +33,12 @@ namespace Michsky.UI.ModernUIPack
 
             if (confirmButton != null)
                 confirmButton.onClick.AddListener(onConfirm.Invoke);
-
-            if (cancelButton != null)
-                cancelButton.onClick.AddListener(onCancel.Invoke);
-
-            if (useCustomValues == false)
-                UpdateUI();
+    
         }
 
         public void UpdateUI()
         {
-            try
-            {
-                windowIcon.sprite = icon;
-                windowTitle.text = titleText;
-                windowDescription.text = descriptionText;
-            }
 
-            catch
-            {
-                Debug.LogWarning("Modal Window - Cannot update the content due to missing variables.", this);
-            }
         }
 
         public void OpenWindow()

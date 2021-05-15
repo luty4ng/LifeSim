@@ -14,38 +14,60 @@ public class Protagonist : MonoBehaviour
     public Config.Traits.Traits traits;
     
 
-    [Header("整体设定"), Space]
+    [Header("角色基础设定"), Space]
     [LabelText("健康值上限")]
     public float maxHealth;
     [LabelText("精神值上限")]
     public float maxSans;
     [LabelText("各模块值上限")]
     public float maxMoudle;
-    [LabelText("每回合恢复健康（默认）")]
-    public float healthChange;
-    [LabelText("每回合恢复精神（默认）")]
+    [LabelText("每回合恢复模块值（默认）")]
+    public float moduleChange;
+    [LabelText("每回合恢复精神值（默认）")]
     public float sansChange;
     [LabelText("每回合金钱变化（默认）")]
     public float moneyChange;
-    [LabelText("中年期年龄")]
+    [LabelText("角色特性数目")]
+    public float traitNum = 2;
+
+    [Header("年龄区间设定"), Space]
+    [LabelText("【中年期】年龄（分界点）")]
     public float middleAge;
-    [LabelText("老年期年龄")]
+    [LabelText("【老年期】年龄（分界点）")]
     public float olderAge;
+
+    [Header("模块区间设定"), Space]
+    [LabelText("【正常】模块值（分界点）")]
+    public float normalModule = 10f;
+    [LabelText("【健康】模块值（分界点）")]
+    public float healthyModule = 20f;
+    
+    [Header("初始化设定"), Space]
+    [LabelText("初始年龄")]
+    public float initAge;
+    [LabelText("初始健康值")]
+    public float initHealth;
+    [LabelText("初始模块值")]
+    public float initModule;
+    [LabelText("初始精神值")]
+    public float initSans;
+    [LabelText("初始金钱")]
+    public float initMoney;
     private string[] habbitselection = new string[4];
     public void Init()
     {
-        _age = 18f;
-        _ownMoney = 0f;
-        _motor = 25f;
-        _nerve = 25f;
-        _endoc = 25f;
-        _circul = 25f; 
-        _breath = 25f; 
-        _digest = 25f; 
-        _urinary = 25f;
-        _reprod = 25f;
-        _overallSans = 25f;
-        _overallHealth = 25f;
+        _age = initAge;
+        _ownMoney = initMoney;
+        _motor = initModule;
+        _nerve = initModule;
+        _endoc = initModule;
+        _circul = initModule; 
+        _breath = initModule; 
+        _digest = initModule; 
+        _urinary = initModule;
+        _reprod = initModule;
+        _overallSans = initSans;
+        _overallHealth = initHealth;
     }
     private float _ownMoney;
     private float _age;
@@ -56,8 +78,8 @@ public class Protagonist : MonoBehaviour
     private List<string> _behaviourSelect = new List<string>();
     private Dictionary<string, float> _behavBook = new Dictionary<string, float>(); 
     private Dictionary<string,string> _traitList = new Dictionary<string,string>();
-    private Dictionary<string, Config.Buffs.Buff> _buffList = new Dictionary<string, Config.Buffs.Buff>();
-    private Dictionary<string, float> _buffCount = new Dictionary<string, float>();
+    [ShowInInspector, FoldoutGroup("DEBUG")] private Dictionary<string, Config.Buffs.Buff> _buffList = new Dictionary<string, Config.Buffs.Buff>();
+    [ShowInInspector, FoldoutGroup("DEBUG")] private Dictionary<string, float> _buffCount = new Dictionary<string, float>();
     
     void Awake()
     {
@@ -67,28 +89,40 @@ public class Protagonist : MonoBehaviour
         randEvents = pools.GetComponentInChildren<Config.RandEvents.RandEvents>();
         buffs = pools.GetComponentInChildren<Config.Buffs.Buffs>();
         traits = pools.GetComponentInChildren<Config.Traits.Traits>();
+
+        List<Config.Traits.Trait> tmpTraitList = new List<Config.Traits.Trait>(traits._traitList);
+        for (int i = 0; i < traitNum; i++)
+        {
+            int tmpIndex = Random.Range(0, (int)(tmpTraitList.Count-1));
+            _traitList.Add(tmpTraitList[tmpIndex]._name, tmpTraitList[tmpIndex]._desc);
+            tmpTraitList.RemoveAt(tmpIndex);
+        }
+        Init();
     }
 
     void Start()
     {
-        Init();
+        
         foreach (var behav in behaviours._behaviourList)
         {
             if(!_behavBook.ContainsKey(behav._name))
                 _behavBook.Add(behav._name, 0f);
             _behavBook[behav._name] = 0f;
         }
-        EventCenter.GetInstance().AddEventListener<Config.RandEvents.RandEvent>("随机事件触发", UpdateByEvents);
+        
+        EventCenter.GetInstance().AddEventListener<Config.RandEvents.RandEvent>("随机事件影响", UpdateByEvents);
         EventCenter.GetInstance().AddEventListener<Config.Buffs.Buff>("新Buff触发", UpdateBuffList);
         EventCenter.GetInstance().AddEventListener("UpdateData", UpdateData);
-        EventCenter.GetInstance().AddEventListener("UpdateExistBuff", UpdateByBuffList);
+        // EventCenter.GetInstance().AddEventListener("UpdateExistBuff", UpdateByBuffList);
     }
 
     public float GetAge() => _age;
     public float GetMoney() => _ownMoney;
     public float GetSans() => _overallSans;
-    public float GetHealth()=> _overallHealth;
+    public float GetHealth() => _overallHealth;
     public float[] GetModule() => new float[8]{ _motor, _nerve, _endoc, _circul, _breath, _digest, _urinary, _reprod };
+    public Dictionary<string, string> GetTraitsList() => new Dictionary<string, string>(_traitList);
+    public Dictionary<string, float> GetBuffCount() => new Dictionary<string, float>(_buffCount);
     public string GetStage()
     {
         if(_age < middleAge)
@@ -142,11 +176,54 @@ public class Protagonist : MonoBehaviour
         }
         return null;
     } 
+
+    private float CalculHealth()
+    {
+        int breakM = 0, normalM = 0, healthyM = 0;
+        List<float> tmpModules = new List<float>(){ _motor, _nerve, _endoc, _circul, _breath, _digest, _urinary, _reprod };
+        foreach (var module in tmpModules)
+        {
+            breakM = module < normalModule ? breakM + 1 : breakM;
+            normalM = module >= normalModule && module < healthyModule ? normalM + 1 : normalM;
+            healthyM = module >= healthyModule ? healthyM + 1 : healthyM;
+        }
+        float tmpHealthChange;
+        if(breakM > 0)
+        {
+            if(breakM <= 2)
+                tmpHealthChange = -1f;
+            else if(breakM >2 && breakM <=5)
+                tmpHealthChange = -5f;
+            else// if(breakM > 5)
+                tmpHealthChange = -10f;
+        }
+        else if(breakM==0)
+        {
+            if(healthyM <= 2)
+                tmpHealthChange = 1f;
+            else if(healthyM >2 && healthyM <=5)
+                tmpHealthChange = 2f;
+            else// if(breakM > 5)
+                tmpHealthChange = 5f;
+        }
+        else
+            tmpHealthChange = 0f;
+        return tmpHealthChange;
+    }
     private void UpdateByDefault()
     {
         _age += 1f;
-        float thisMoneyChange = moneyChange;
-        _ownMoney += thisMoneyChange;
+        _ownMoney += moneyChange;
+        _motor += moduleChange;
+        _nerve += moduleChange;
+        _endoc += moduleChange;
+        _circul += moduleChange;
+        _breath += moduleChange;
+        _digest += moduleChange;
+        _urinary += moduleChange;
+        _reprod += moduleChange;
+        _ownMoney += moduleChange;
+        _overallHealth += CalculHealth(); 
     }
 
     public void UpdateByBehaviour(Config.Behavious.Behaviour tmpBehaviour)
@@ -197,8 +274,11 @@ public class Protagonist : MonoBehaviour
 
     public void UpdateByEvents(Config.RandEvents.RandEvent tmpEvents)
     {
-        if(tmpEvents._traitReq.Length > 1 && !_traitList.ContainsKey(tmpEvents._traitReq))
-            return;
+        Debug.Log(tmpEvents._name);
+        if(tmpEvents._traitReq != null)
+            if(!_traitList.ContainsKey(tmpEvents._traitReq))
+                return;
+        
         _overallSans += tmpEvents._sans;
         _motor += tmpEvents._motor;
         _nerve += tmpEvents._nerve;
@@ -219,14 +299,14 @@ public class Protagonist : MonoBehaviour
     {
         if(_buffList == null)
             return;
-        
-        foreach (var buffName in _buffList.Keys)
+
+        if(_buffList.Count == 0)
+            return;
+
+        Dictionary<string, float> tmpList = new Dictionary<string, float>(_buffCount);
+
+        foreach (var buffName in tmpList.Keys)
         {
-            if(_buffCount[buffName] <= 0f)
-            {
-                _buffCount.Remove(buffName);
-                _buffList.Remove(buffName);
-            }
             _overallSans += _buffList[buffName]._sans;
             _motor += _buffList[buffName]._motor;
             _nerve += _buffList[buffName]._nerve;
@@ -238,29 +318,38 @@ public class Protagonist : MonoBehaviour
             _reprod += _buffList[buffName]._reprod;
             _ownMoney += _buffList[buffName]._money;
             _buffCount[buffName] -= 1f;
+
+            if(_buffCount[buffName] <= 0f)
+            {
+                _buffCount.Remove(buffName);
+                _buffList.Remove(buffName);
+                EventCenter.GetInstance().EventTrigger<string>("DestroyBuffObj", buffName);
+            }
         }
     }
     public void UpdateBuffList(Config.Buffs.Buff tmpBuff)
     {
         if(_buffCount.ContainsKey(tmpBuff._name) && _buffList.ContainsKey(tmpBuff._name))
         {
-            _buffCount[tmpBuff._name] = tmpBuff._remainYears;
+            _buffCount[tmpBuff._name] = tmpBuff._remainYears == 0f ? 100f : tmpBuff._remainYears;
             return;
         }
         _buffList.Add(tmpBuff._name, tmpBuff);
         if(tmpBuff._remainYears == 0f)
-            _buffCount.Add(tmpBuff._name, tmpBuff._remainYears + 100f);
+            _buffCount.Add(tmpBuff._name, 100f);
         else
             _buffCount.Add(tmpBuff._name, tmpBuff._remainYears);
     }
 
     public void CheckCondition()
     {
-        if( _overallSans < 0 || _motor < 0 || _nerve < 0 || _endoc < 0 || _circul < 0 || _breath < 0 || _digest < 0 || _urinary < 0 || _reprod < 0)
+        if( _overallHealth < 0 || _overallSans < 0 || _motor < 0 || _nerve < 0 || _endoc < 0 || _circul < 0 || _breath < 0 || _digest < 0 || _urinary < 0 || _reprod < 0)
         {
             Debug.Log("GAME OVER");
+            EventCenter.GetInstance().EventTrigger("GAMEOVER");
         }
         _overallSans = _overallSans > 30 ? 30 : _overallSans;
+        _overallHealth = _overallHealth > 30 ? 30 : _overallHealth;
         _motor = _motor > 30 ? 30 : _motor;
         _nerve = _nerve > 30 ? 30 : _nerve;
         _endoc = _endoc > 30 ? 30 : _endoc;

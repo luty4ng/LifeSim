@@ -19,12 +19,14 @@ namespace Config.Traits
     public class Trait
     {
         
-        private static string[] selection = new string[] {"无","习惯","BUFF","随机事件","固定事件"}; 
+        private static string[] selection = new string[] {"无","习惯","固定事件"}; 
         public string _name;
-        [LabelText("条件变量"), ValueDropdown("selection"), FoldoutGroup("条件")]
+        [LabelText("条件变量"), ValueDropdown("selection"), FoldoutGroup("条件及描述")]
         public string _selection;
-        [LabelText("条件选择"), FoldoutGroup("条件")]
+        [LabelText("条件选择"), FoldoutGroup("条件及描述")]
         public string _condition;
+        [LabelText("特性描述"), TextArea, FoldoutGroup("条件及描述")]
+        public string _desc;
         [LabelText("精神恢复"), FoldoutGroup("特性效果")]
         public float _sans;
         [LabelText("运动模块恢复"), FoldoutGroup("特性效果")]

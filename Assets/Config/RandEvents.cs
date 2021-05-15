@@ -29,9 +29,9 @@ namespace Config.RandEvents
                         tmpChange = tmpChange * multiplier;
                     if(rand <= tmpChange)
                     {
-                        EventCenter.GetInstance().EventTrigger<RandEvent>("随机事件触发", item);
+                        EventCenter.GetInstance().EventTrigger<RandEvent>("随机事件影响", item);
                         EventCenter.GetInstance().EventTrigger<RandEvent>("随机事件弹窗", item);
-                        Debug.Log(name + "事件发生且弹框");
+                        //Debug.Log(name + "事件发生且弹框");
                     }
                     break;
                 }
