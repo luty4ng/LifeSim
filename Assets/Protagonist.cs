@@ -6,7 +6,6 @@ using Sirenix.OdinInspector;
 
 public class Protagonist : MonoBehaviour
 {
-    public Animator animator;
     public Config.Habbits.Habbits habbits;
     public Config.Behavious.Behaviours behaviours;
     public Config.RandEvents.RandEvents randEvents;
@@ -25,8 +24,7 @@ public class Protagonist : MonoBehaviour
     public float moduleChange;
     [LabelText("每回合恢复精神值（默认）")]
     public float sansChange;
-    [LabelText("每回合金钱变化（默认）")]
-    public float moneyChange;
+    
     [LabelText("角色特性数目")]
     public float traitNum = 2;
 
@@ -53,8 +51,24 @@ public class Protagonist : MonoBehaviour
     public float initSans;
     [LabelText("初始金钱")]
     public float initMoney;
-    private string[] habbitselection = new string[4];
-    public void Init()
+
+    private bool _canChangeHabbit = true;
+    [ShowInInspector, FoldoutGroup("DEBUG")] private bool _forceMoneyChange;
+    private float _forceMoneyChangeValue = 0;
+    private float _ownMoney;
+    private float _age;
+    private float _overallHealth;
+    private float _overallSans;
+    private float _motor, _nerve, _endoc, _circul, _breath, _digest, _urinary, _reprod;
+    private Dictionary<string, string> _habbitSelect = new Dictionary<string, string>();
+    private List<string> _behaviourSelect = new List<string>();
+    [ShowInInspector, FoldoutGroup("DEBUG")] private Dictionary<string, float> _behavBook = new Dictionary<string, float>(); 
+    [ShowInInspector, FoldoutGroup("DEBUG")] private Dictionary<string, Config.Traits.Trait> _traitList = new Dictionary<string, Config.Traits.Trait>();
+    [ShowInInspector, FoldoutGroup("DEBUG")] private Dictionary<string, Config.Buffs.Buff> _buffList = new Dictionary<string, Config.Buffs.Buff>();
+    [ShowInInspector, FoldoutGroup("DEBUG")] private Dictionary<string, float> _buffCount = new Dictionary<string, float>();
+    [ShowInInspector, FoldoutGroup("DEBUG"), DisplayAsString ]private float _motorPer, _nervePer, _endocPer, _circulPer, _breathPer, _digestPer, _urinaryPer, _reprodPer, _moneyPer, _sansPer;
+    
+    private void Init()
     {
         _age = initAge;
         _ownMoney = initMoney;
@@ -69,18 +83,6 @@ public class Protagonist : MonoBehaviour
         _overallSans = initSans;
         _overallHealth = initHealth;
     }
-    private float _ownMoney;
-    private float _age;
-    private float _overallHealth;
-    private float _overallSans;
-    private float _motor, _nerve, _endoc, _circul, _breath, _digest, _urinary, _reprod;
-    private Dictionary<string, string> _habbitSelect = new Dictionary<string, string>();
-    private List<string> _behaviourSelect = new List<string>();
-    private Dictionary<string, float> _behavBook = new Dictionary<string, float>(); 
-    private Dictionary<string,string> _traitList = new Dictionary<string,string>();
-    [ShowInInspector, FoldoutGroup("DEBUG")] private Dictionary<string, Config.Buffs.Buff> _buffList = new Dictionary<string, Config.Buffs.Buff>();
-    [ShowInInspector, FoldoutGroup("DEBUG")] private Dictionary<string, float> _buffCount = new Dictionary<string, float>();
-    
     void Awake()
     {
         GameObject pools = GameObject.Find("Pools");
@@ -94,7 +96,7 @@ public class Protagonist : MonoBehaviour
         for (int i = 0; i < traitNum; i++)
         {
             int tmpIndex = Random.Range(0, (int)(tmpTraitList.Count-1));
-            _traitList.Add(tmpTraitList[tmpIndex]._name, tmpTraitList[tmpIndex]._desc);
+            _traitList.Add(tmpTraitList[tmpIndex]._name, tmpTraitList[tmpIndex]);
             tmpTraitList.RemoveAt(tmpIndex);
         }
         Init();
@@ -121,8 +123,19 @@ public class Protagonist : MonoBehaviour
     public float GetSans() => _overallSans;
     public float GetHealth() => _overallHealth;
     public float[] GetModule() => new float[8]{ _motor, _nerve, _endoc, _circul, _breath, _digest, _urinary, _reprod };
-    public Dictionary<string, string> GetTraitsList() => new Dictionary<string, string>(_traitList);
     public Dictionary<string, float> GetBuffCount() => new Dictionary<string, float>(_buffCount);
+    public Dictionary<string, string> GetTraitsList()
+    {
+        Dictionary<string, string> traitDesc = new Dictionary<string, string>();
+        foreach (var trait in _traitList)
+        {
+            if(!traitDesc.ContainsKey(trait.Key))
+            {
+                traitDesc.Add(trait.Key, trait.Value._desc);
+            }
+        }
+        return traitDesc;
+    }
     public string GetStage()
     {
         if(_age < middleAge)
@@ -134,6 +147,25 @@ public class Protagonist : MonoBehaviour
     }
     public void UpdateHabbitSelect(string eat, string sleep, string sport, string work)
     {
+        if(_age == initAge)
+        {
+            _habbitSelect.Add("Eat", eat);
+            _habbitSelect.Add("Sleep", sleep);
+            _habbitSelect.Add("Sport", sport);
+            _habbitSelect.Add("Work", work);
+            _canChangeHabbit = true;
+            return;
+        }
+        _canChangeHabbit = _age == middleAge || _age == olderAge ? true : false;
+        if(_habbitSelect["Eat"] != eat || _habbitSelect["Sleep"] != sleep || _habbitSelect["Sport"] != sport || _habbitSelect["Work"] != work)
+        {
+            if(!_canChangeHabbit && !_traitList.ContainsKey("意志坚定"))
+            {
+                Debug.Log("习惯适应期");
+                buffs.TriggerBuff("习惯适应期");
+            }
+        }
+        
         _habbitSelect["Eat"] = eat;
         _habbitSelect["Sleep"] = sleep;
         _habbitSelect["Sport"] = sport;
@@ -141,7 +173,7 @@ public class Protagonist : MonoBehaviour
     }
 
     public void UpdateBehaviourSelect(List<string> transmitBehav)
-    {
+    {    
         if(_behaviourSelect.Count > 0)
             _behaviourSelect.Clear();
         _behaviourSelect = transmitBehav;
@@ -159,7 +191,12 @@ public class Protagonist : MonoBehaviour
             {
                 if(GetBehavByName(behavName)._stopYear <= _behavBook[behavName] && GetBehavByName(behavName)._stopYear!=0)
                 {
-                    Debug.Log(behavName + "戒断反应");
+                    if(!_traitList.ContainsKey("意志坚定"))
+                    {
+                        Debug.Log(behavName + "戒断反应");
+                        buffs.TriggerBuff("戒断反应");
+                    }
+                    
                 }
                 //_behavBook[behavName] = 0f;
             }
@@ -213,89 +250,122 @@ public class Protagonist : MonoBehaviour
     private void UpdateByDefault()
     {
         _age += 1f;
-        _ownMoney += moneyChange;
-        _motor += moduleChange;
-        _nerve += moduleChange;
-        _endoc += moduleChange;
-        _circul += moduleChange;
-        _breath += moduleChange;
-        _digest += moduleChange;
-        _urinary += moduleChange;
-        _reprod += moduleChange;
-        _ownMoney += moduleChange;
+        _sansPer += sansChange;
+        _motorPer += moduleChange;
+        _nervePer += moduleChange;
+        _endocPer += moduleChange;
+        _circulPer += moduleChange;
+        _breathPer += moduleChange;
+        _digestPer += moduleChange;
+        _urinaryPer += moduleChange;
+        _reprodPer += moduleChange;
         _overallHealth += CalculHealth(); 
     }
 
-    public void UpdateByBehaviour(Config.Behavious.Behaviour tmpBehaviour)
+    private void UpdateByBehaviour()
     {
-        _overallSans += tmpBehaviour._sans;
-        _motor += tmpBehaviour._motor;
-        _nerve += tmpBehaviour._nerve;
-        _endoc += tmpBehaviour._endoc;
-        _circul += tmpBehaviour._circul;
-        _breath += tmpBehaviour._breath;
-        _digest += tmpBehaviour._digest;
-        _urinary += tmpBehaviour._urinary;
-        _reprod += tmpBehaviour._reprod;
-        _ownMoney += tmpBehaviour._money;
-
-        if(tmpBehaviour._randEvent!=null)
+        foreach (var selected in _behaviourSelect)
         {
-            tmpBehaviour._randEvent.Invoke();
-        }
-
-        if(_behavBook.ContainsKey(tmpBehaviour._name))
-        {
-            //Debug.Log("是否"+_behavBook[tmpBehaviour._name]+" > "+tmpBehaviour._buffYear + "  ??");
-            if(_behavBook[tmpBehaviour._name] > tmpBehaviour._buffYear && tmpBehaviour._buffYear != 0f)
+            foreach (var behav in behaviours._behaviourList)
             {
-                tmpBehaviour._buff.Invoke();
+                if(behav._name.Trim() == selected.Trim())
+                {
+                    _sansPer += behav._sans;
+                    _motorPer += behav._motor;
+                    _nervePer += behav._nerve;
+                    _endocPer += behav._endoc;
+                    _circulPer += behav._circul;
+                    _breathPer += behav._breath;
+                    _digestPer += behav._digest;
+                    _urinaryPer += behav._urinary;
+                    _reprodPer += behav._reprod;
+                    _moneyPer += behav._money;
+
+                    if(behav._randEvent!=null)
+                    {
+                        behav._randEvent.Invoke();
+                    }
+
+                    if(_behavBook.ContainsKey(behav._name))
+                    {
+                        //Debug.Log("是否"+_behavBook[behav._name]+" > "+behav._buffYear + "  ??");
+                        if(_behavBook[behav._name] > behav._buffYear && behav._buffYear != 0f)
+                        {
+                            behav._buff.Invoke();
+                        }
+                    }
+                }
             }
         }
     }
-    public void UpdateByHabbit(Config.Habbits.Habbit tmpHabbit)
-    {
-        _overallSans += tmpHabbit._sans;
-        _motor += tmpHabbit._motor;
-        _nerve += tmpHabbit._nerve;
-        _endoc += tmpHabbit._endoc;
-        _circul += tmpHabbit._circul;
-        _breath += tmpHabbit._breath;
-        _digest += tmpHabbit._digest;
-        _urinary += tmpHabbit._urinary;
-        _reprod += tmpHabbit._reprod;
-        _ownMoney += tmpHabbit._money;
 
-        if(tmpHabbit._randEvent!=null)
+    private void UpdateByHabbit()
+    {
+        
+        foreach (var selected in _habbitSelect)
         {
-            tmpHabbit._randEvent.Invoke();
+            foreach (var habbit in habbits.habbitDic[selected.Key])
+            { 
+                if(habbit._name.Trim() == selected.Value.Trim())
+                {
+                    _sansPer += habbit._sans;
+                    _motorPer += habbit._motor;
+                    _nervePer += habbit._nerve;
+                    _endocPer += habbit._endoc;
+                    _circulPer += habbit._circul;
+                    _breathPer += habbit._breath;
+                    _digestPer += habbit._digest;
+                    _urinaryPer += habbit._urinary;
+                    _reprodPer += habbit._reprod;
+                    _moneyPer += habbit._money;
+
+                    if(habbit._randEvent!=null)
+                    {
+                        habbit._randEvent.Invoke();
+                    }
+                }
+            }
+        }
+    }
+    private void UpdateByNonRestrictedEvents()
+    {
+        foreach (var tmpEvent in randEvents._randEventList)
+        {
+            if(!tmpEvent._isCondition)
+            {
+                if(tmpEvent._availibleStage.Trim() == GetStage() ||
+                    (tmpEvent._availibleStage.Trim() == "青中年期" && (GetStage() == "青年期" || GetStage() == "中年期")) ||
+                    (tmpEvent._availibleStage.Trim() == "中老年期" && (GetStage() == "中年期" || GetStage() == "老年期")))
+                    {
+                        randEvents.TriggerRandEvent(tmpEvent._name);
+                    }
+            }
         }
     }
 
-    public void UpdateByEvents(Config.RandEvents.RandEvent tmpEvents)
+    private void UpdateByEvents(Config.RandEvents.RandEvent tmpEvents)
     {
-        Debug.Log(tmpEvents._name);
         if(tmpEvents._traitReq != null)
             if(!_traitList.ContainsKey(tmpEvents._traitReq))
                 return;
         
-        _overallSans += tmpEvents._sans;
-        _motor += tmpEvents._motor;
-        _nerve += tmpEvents._nerve;
-        _endoc += tmpEvents._endoc;
-        _circul += tmpEvents._circul;
-        _breath += tmpEvents._breath;
-        _digest += tmpEvents._digest;
-        _urinary += tmpEvents._urinary;
-        _reprod += tmpEvents._reprod;
-        _ownMoney += tmpEvents._money;
+        _sansPer += tmpEvents._sans;
+        _motorPer += tmpEvents._motor;
+        _nervePer += tmpEvents._nerve;
+        _endocPer += tmpEvents._endoc;
+        _circulPer += tmpEvents._circul;
+        _breathPer += tmpEvents._breath;
+        _digestPer += tmpEvents._digest;
+        _urinaryPer += tmpEvents._urinary;
+        _reprodPer += tmpEvents._reprod;
+        _moneyPer += tmpEvents._money;
 
         if(tmpEvents._buff!=null)
         {
             tmpEvents._buff.Invoke();
         }
     }
-    public void UpdateByBuffList()
+    private void UpdateByBuffList()
     {
         if(_buffList == null)
             return;
@@ -307,16 +377,20 @@ public class Protagonist : MonoBehaviour
 
         foreach (var buffName in tmpList.Keys)
         {
-            _overallSans += _buffList[buffName]._sans;
-            _motor += _buffList[buffName]._motor;
-            _nerve += _buffList[buffName]._nerve;
-            _endoc += _buffList[buffName]._endoc;
-            _circul += _buffList[buffName]._circul;
-            _breath += _buffList[buffName]._breath;
-            _digest += _buffList[buffName]._digest;
-            _urinary += _buffList[buffName]._urinary;
-            _reprod += _buffList[buffName]._reprod;
-            _ownMoney += _buffList[buffName]._money;
+            _sansPer += _buffList[buffName]._sans;
+            _motorPer += _buffList[buffName]._motor;
+            _nervePer += _buffList[buffName]._nerve;
+            _endocPer += _buffList[buffName]._endoc;
+            _circulPer += _buffList[buffName]._circul;
+            _breathPer += _buffList[buffName]._breath;
+            _digestPer += _buffList[buffName]._digest;
+            _urinaryPer += _buffList[buffName]._urinary;
+            _reprodPer += _buffList[buffName]._reprod;
+            _moneyPer += _buffList[buffName]._money;
+
+            _forceMoneyChange = _buffList[buffName]._moneyChange == 0 ? false : true;
+            _forceMoneyChangeValue = _buffList[buffName]._moneyChange == -1 ? 0f : _buffList[buffName]._moneyChange;
+
             _buffCount[buffName] -= 1f;
 
             if(_buffCount[buffName] <= 0f)
@@ -327,7 +401,7 @@ public class Protagonist : MonoBehaviour
             }
         }
     }
-    public void UpdateBuffList(Config.Buffs.Buff tmpBuff)
+    private void UpdateBuffList(Config.Buffs.Buff tmpBuff)
     {
         if(_buffCount.ContainsKey(tmpBuff._name) && _buffList.ContainsKey(tmpBuff._name))
         {
@@ -341,8 +415,33 @@ public class Protagonist : MonoBehaviour
             _buffCount.Add(tmpBuff._name, tmpBuff._remainYears);
     }
 
-    public void CheckCondition()
+
+    private void InitTempData()
     {
+        _motorPer = 0f;
+        _nervePer = 0f;
+        _endocPer = 0f;
+        _circulPer = 0f;
+        _breathPer = 0f;
+        _digestPer = 0f;
+        _urinaryPer = 0f;
+        _reprodPer = 0f;
+        _moneyPer = 0f;
+        _sansPer = 0f;
+    }
+    private void CheckAndUpdateConditionData()
+    {
+        _overallSans += _sansPer;
+        _motor += _motorPer;
+        _nerve += _nervePer;
+        _endoc += _endocPer;
+        _circul += _circulPer;
+        _breath += _breathPer;
+        _digest += _digestPer;
+        _urinary += _urinaryPer;
+        _reprod += _reprodPer;
+        _ownMoney += _sansPer;
+
         if( _overallHealth < 0 || _overallSans < 0 || _motor < 0 || _nerve < 0 || _endoc < 0 || _circul < 0 || _breath < 0 || _digest < 0 || _urinary < 0 || _reprod < 0)
         {
             Debug.Log("GAME OVER");
@@ -359,10 +458,57 @@ public class Protagonist : MonoBehaviour
         _urinary = _urinary > 30 ? 30 : _urinary;
         _reprod = _reprod > 30 ? 30 : _reprod;
     }
-    public void UpdateData()
+
+    private void CheckForceChange()
     {
-        // 优先更新当前BUFF集合的影响
-        UpdateByBuffList();
+        if(_forceMoneyChange)
+            _moneyPer = _forceMoneyChangeValue;
+    }
+
+    private void UpdateTrait(Config.Traits.Trait tmpTrait)
+    {
+        _sansPer += tmpTrait._sans;
+        _motorPer += tmpTrait._motor;
+        _nervePer += tmpTrait._nerve;
+        _endocPer += tmpTrait._endoc;
+        _circulPer += tmpTrait._circul;
+        _breathPer += tmpTrait._breath;
+        _digestPer += tmpTrait._digest;
+        _urinaryPer += tmpTrait._urinary;
+        _reprodPer += tmpTrait._reprod;
+        _moneyPer += tmpTrait._moneyChange;
+    }
+    private void UpdateByTrait()
+    {
+        foreach (var trait in _traitList)
+        {
+            if(trait.Value._conditionVariable == "特殊事件")
+            {
+                continue;
+            }
+            else if(trait.Value._conditionVariable == "习惯")
+            {
+                if(!_habbitSelect.ContainsValue(trait.Value._condition.Trim()))
+                {
+                    continue;
+                }
+            }
+            else if(trait.Value._conditionVariable == "固定事件")
+            {
+                if(! _behaviourSelect.Contains(trait.Value._condition.Trim()))
+                {
+                    continue;
+                }
+            }
+            UpdateTrait(trait.Value);
+        }
+    }
+    public void UpdateData()
+    { 
+        InitTempData();
+        /*
+            无法进行序列化的特殊方法的更新  ↓
+        */
 
         // 更新工作模式带来的概率系数影响
         if(_habbitSelect["Work"] == "究极卷王")
@@ -378,33 +524,16 @@ public class Protagonist : MonoBehaviour
             randEvents.multiplier = 0.5f;
         }
 
-        // 更新习惯带来的影响
-        foreach (var selected in _habbitSelect)
-        {
-            foreach (var habbit in habbits.habbitDic[selected.Key])
-            { 
-                if(habbit._name.Trim() == selected.Value.Trim())
-                {
-                    UpdateByHabbit(habbit);
-                }
-            }
-        }
-
-        // 更新行为带来的影响
-        foreach (var selected in _behaviourSelect)
-        {
-            foreach (var behav in behaviours._behaviourList)
-            {
-                if(behav._name.Trim() == selected.Trim())
-                {
-                    UpdateByBehaviour(behav);
-                }
-            }
-        }
-        // 更新默认设定的影响
-        UpdateByDefault();
-        // 修正超出上下限的值
-        CheckCondition();
-
+        /*
+            序列化框架内的更新  ↓
+        */
+        UpdateByBuffList(); // 根据BUFF更新数据
+        UpdateByHabbit();   // 根据习惯更新数据
+        UpdateByBehaviour();    // 根据固定事件更新数据
+        UpdateByDefault();  // 根据默认设定更新影响
+        UpdateByTrait();   // 根据特性更新数据
+        UpdateByNonRestrictedEvents();  //有概率触发非限制事件
+        CheckForceChange();  //检查有没有强制的数据变化
+        CheckAndUpdateConditionData();  // 检查并更新Condition值
     }
 }

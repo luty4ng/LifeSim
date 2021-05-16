@@ -13,18 +13,23 @@ namespace Config.Buffs
 
         public void TriggerBuff(string name)
         {
-            if(_buffList!=null)
+            if(_buffList==null)
             {
-                foreach (var item in _buffList)
+                Debug.Log("BUFF池为空.");
+                return;
+            }
+                
+            foreach (var item in _buffList)
+            {
+                if(item._name!=null && item._name.Trim() == name.Trim())
                 {
-                    if(item._name!=null && item._name.Trim() == name.Trim())
-                    {
-                        Debug.Log("检测到BUFF" + name);
-                        EventCenter.GetInstance().EventTrigger<Buff>("新Buff触发", item);
-                        break;
-                    }
+                    Debug.Log("检测到BUFF" + name);
+                    EventCenter.GetInstance().EventTrigger<Buff>("新Buff触发", item);
+                    return;
                 }
             }
+            Debug.Log("没有找到BUFF，名称：" + name + ". 请检查触发器和BUFF池中的名称是否一致.");
+            
         }
     }
 

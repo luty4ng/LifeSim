@@ -51,7 +51,6 @@ public class ConditionPanel : MonoBehaviour
 
     void UpdateOnUI()
     {
-        Debug.Log("Condition Update UI");
         module = _protagonist.GetModule();
         _progressBar["PB - Health"].targetValue = _protagonist.GetHealth();
         _progressBar["PB - Sans"].targetValue = _protagonist.GetSans();

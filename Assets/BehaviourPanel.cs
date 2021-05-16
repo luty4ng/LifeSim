@@ -24,7 +24,9 @@ public class BehaviourPanel : MonoBehaviour
             }
             _protagonist.UpdateBehaviourSelect(tmpBehav);
         });
+
         EventCenter.GetInstance().AddEventListener("UpdateUI", UpdateBehavPanel);
+        
         _protagonist = GameManager.instance.playerAgent.GetComponent<Protagonist>();
         viewers = transform.GetComponentsInChildren<CustomToggle>();
 
