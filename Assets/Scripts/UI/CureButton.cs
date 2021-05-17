@@ -5,14 +5,8 @@ using UnityEngine;
 public class CureButton : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+    public void Cure()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        EventCenter.GetInstance().EventTrigger("Cure");
     }
 }

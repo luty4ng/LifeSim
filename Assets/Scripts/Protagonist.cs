@@ -115,7 +115,7 @@ public class Protagonist : MonoBehaviour
         EventCenter.GetInstance().AddEventListener<Config.RandEvents.RandEvent>("随机事件影响", UpdateByEvents);
         EventCenter.GetInstance().AddEventListener<Config.Buffs.Buff>("新Buff触发", UpdateBuffList);
         EventCenter.GetInstance().AddEventListener("UpdateData", UpdateData);
-        // EventCenter.GetInstance().AddEventListener("UpdateExistBuff", UpdateByBuffList);
+        EventCenter.GetInstance().AddEventListener("Cure", Cure);
     }
 
     public float GetAge() => _age;
@@ -214,6 +214,21 @@ public class Protagonist : MonoBehaviour
         return null;
     } 
 
+    void Cure()
+    {
+        Dictionary<string, Config.Buffs.Buff> tmpList = new Dictionary<string, Config.Buffs.Buff>(_buffList);
+        foreach (var buff in tmpList)
+        {
+            if(buff.Value._canCure)
+            {
+                _ownMoney -= buff.Value._moneyToCure;
+            }
+            _buffCount.Remove(buff.Key);
+            _buffList.Remove(buff.Key);
+            EventCenter.GetInstance().EventTrigger<string>("DestroyBuffObj", buff.Key);
+        }
+        EventCenter.GetInstance().EventTrigger("UpdateUI");
+    }
     private float CalculHealth()
     {
         int breakM = 0, normalM = 0, healthyM = 0;
@@ -318,7 +333,6 @@ public class Protagonist : MonoBehaviour
                     _urinaryPer += habbit._urinary;
                     _reprodPer += habbit._reprod;
                     _moneyPer += habbit._money;
-
                     if(habbit._randEvent!=null)
                     {
                         habbit._randEvent.Invoke();
@@ -440,7 +454,7 @@ public class Protagonist : MonoBehaviour
         _digest += _digestPer;
         _urinary += _urinaryPer;
         _reprod += _reprodPer;
-        _ownMoney += _sansPer;
+        _ownMoney += _moneyPer;
 
         if( _overallHealth < 0 || _overallSans < 0 || _motor < 0 || _nerve < 0 || _endoc < 0 || _circul < 0 || _breath < 0 || _digest < 0 || _urinary < 0 || _reprod < 0)
         {
@@ -533,6 +547,7 @@ public class Protagonist : MonoBehaviour
         UpdateByDefault();  // 根据默认设定更新影响
         UpdateByTrait();   // 根据特性更新数据
         UpdateByNonRestrictedEvents();  //有概率触发非限制事件
+        
         CheckForceChange();  //检查有没有强制的数据变化
         CheckAndUpdateConditionData();  // 检查并更新Condition值
     }

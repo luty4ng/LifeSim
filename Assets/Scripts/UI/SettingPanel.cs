@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TinyUI_Manager : MonoBehaviour
+public class SettingPanel : MonoBehaviour
 {
 
     public GameObject pauseProp;
