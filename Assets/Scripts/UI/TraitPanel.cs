@@ -13,6 +13,7 @@ public class TraitPanel : MonoBehaviour
 
         foreach (var name in _protagonist.GetTraitsList().Keys)
         {
+
             GameObject traitContent = ResourceManager.GetInstance().Load<GameObject>("UI/traitUI");
             traitContent.transform.SetParent(this.transform);
             traitContent.transform.localScale = Vector3.one;

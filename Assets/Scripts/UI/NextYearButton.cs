@@ -14,6 +14,7 @@ public class NextYearButton : MonoBehaviour
         EventCenter.GetInstance().EventTrigger("UpdateData");
         // 更新下回合UI变更
         EventCenter.GetInstance().EventTrigger("UpdateUI");
+        EventCenter.GetInstance().EventTrigger("UpdateICON");
         // 更新人物动画（如有必要）
         EventCenter.GetInstance().EventTrigger("UpdateAnimation");
     }

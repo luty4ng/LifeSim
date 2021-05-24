@@ -735,7 +735,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1849353201}
-  - {fileID: 1003384213}
   - {fileID: 502254960}
   - {fileID: 1082910625}
   m_Father: {fileID: 1520368000}
@@ -2414,9 +2413,9 @@ RectTransform:
   m_Father: {fileID: 184109605}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 125, y: -25}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 176, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &153172508
@@ -4232,9 +4231,9 @@ RectTransform:
   m_Father: {fileID: 1144845973}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 125, y: -25}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 176, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &250241232
@@ -4366,9 +4365,9 @@ RectTransform:
   m_Father: {fileID: 2050493462}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 125, y: -25}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 176, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &257702110
@@ -4628,7 +4627,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 363.7, y: -192.5}
+  m_AnchoredPosition: {x: 363.7, y: 198}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &271821019
@@ -7641,7 +7640,7 @@ RectTransform:
   m_Children:
   - {fileID: 1949668119}
   m_Father: {fileID: 8873219}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7791,7 +7790,7 @@ Transform:
   m_LocalScale: {x: 0.19495656, y: 0.19495656, z: 0.19495656}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &530794016
 SpriteRenderer:
@@ -7829,8 +7828,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1520254017
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5cea83094b77569428d001f402c6245b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -11305,7 +11304,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &774458525
 GameObject:
@@ -11622,7 +11621,7 @@ Transform:
   - {fileID: 1083123603}
   - {fileID: 642993705}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &794568256
 GameObject:
@@ -12554,7 +12553,7 @@ MonoBehaviour:
       Data: 0
     - Name: _sans
       Entry: 4
-      Data: -2
+      Data: -4
     - Name: _motor
       Entry: 4
       Data: -1
@@ -12605,7 +12604,7 @@ MonoBehaviour:
       Data: 0
     - Name: _sans
       Entry: 4
-      Data: -2
+      Data: -4
     - Name: _motor
       Entry: 4
       Data: -1
@@ -12891,7 +12890,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -356, y: -192.5}
+  m_AnchoredPosition: {x: -356, y: 198}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &835904850
@@ -14945,9 +14944,9 @@ RectTransform:
   m_Father: {fileID: 1322232480}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 125, y: -25}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 176, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &879734494
@@ -16905,80 +16904,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _protagonist: {fileID: 0}
---- !u!1 &1003384212
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1003384213}
-  - component: {fileID: 1003384215}
-  - component: {fileID: 1003384214}
-  m_Layer: 5
-  m_Name: Notification
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1003384213
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1003384212}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8873219}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 388, y: 0}
-  m_SizeDelta: {x: 80, y: 80}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1003384214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1003384212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e55e4ef66043a8747866894761ac06be, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1003384215
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1003384212}
-  m_CullTransparentMesh: 0
 --- !u!1 &1007538528
 GameObject:
   m_ObjectHideFlags: 0
@@ -17538,7 +17463,7 @@ RectTransform:
   m_Children:
   - {fileID: 494961629}
   m_Father: {fileID: 8873219}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -17706,7 +17631,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 18
+      Data: 26
     - Name: 
       Entry: 7
       Data: 1|Config.RandEvents.RandEvent, Assembly-CSharp
@@ -17719,6 +17644,9 @@ MonoBehaviour:
     - Name: _chanceMultiplier
       Entry: 4
       Data: 1
+    - Name: _happenNum
+      Entry: 3
+      Data: 99
     - Name: _positive
       Entry: 5
       Data: true
@@ -17804,6 +17732,9 @@ MonoBehaviour:
     - Name: _chanceMultiplier
       Entry: 4
       Data: 1
+    - Name: _happenNum
+      Entry: 3
+      Data: 2
     - Name: _positive
       Entry: 5
       Data: false
@@ -17931,6 +17862,9 @@ MonoBehaviour:
     - Name: _chanceMultiplier
       Entry: 4
       Data: 1
+    - Name: _happenNum
+      Entry: 3
+      Data: 1
     - Name: _positive
       Entry: 5
       Data: false
@@ -18015,6 +17949,9 @@ MonoBehaviour:
       Data: 0.2
     - Name: _chanceMultiplier
       Entry: 4
+      Data: 1
+    - Name: _happenNum
+      Entry: 3
       Data: 1
     - Name: _positive
       Entry: 5
@@ -18143,6 +18080,9 @@ MonoBehaviour:
     - Name: _chanceMultiplier
       Entry: 4
       Data: 1
+    - Name: _happenNum
+      Entry: 3
+      Data: 99
     - Name: _positive
       Entry: 5
       Data: false
@@ -18206,6 +18146,9 @@ MonoBehaviour:
     - Name: _chanceMultiplier
       Entry: 4
       Data: 1
+    - Name: _happenNum
+      Entry: 3
+      Data: 2
     - Name: _positive
       Entry: 5
       Data: false
@@ -18269,6 +18212,9 @@ MonoBehaviour:
     - Name: _chanceMultiplier
       Entry: 4
       Data: 1
+    - Name: _happenNum
+      Entry: 3
+      Data: 99
     - Name: _positive
       Entry: 5
       Data: false
@@ -18396,6 +18342,9 @@ MonoBehaviour:
     - Name: _chanceMultiplier
       Entry: 4
       Data: 1
+    - Name: _happenNum
+      Entry: 3
+      Data: 99
     - Name: _positive
       Entry: 5
       Data: false
@@ -18458,6 +18407,9 @@ MonoBehaviour:
       Data: 0.05
     - Name: _chanceMultiplier
       Entry: 4
+      Data: 1
+    - Name: _happenNum
+      Entry: 3
       Data: 1
     - Name: _positive
       Entry: 5
@@ -18522,6 +18474,9 @@ MonoBehaviour:
     - Name: _chanceMultiplier
       Entry: 4
       Data: 1
+    - Name: _happenNum
+      Entry: 3
+      Data: 99
     - Name: _positive
       Entry: 5
       Data: false
@@ -18584,6 +18539,9 @@ MonoBehaviour:
       Data: 0.05
     - Name: _chanceMultiplier
       Entry: 4
+      Data: 1
+    - Name: _happenNum
+      Entry: 3
       Data: 1
     - Name: _positive
       Entry: 5
@@ -18648,6 +18606,9 @@ MonoBehaviour:
     - Name: _chanceMultiplier
       Entry: 4
       Data: 1
+    - Name: _happenNum
+      Entry: 3
+      Data: 99
     - Name: _positive
       Entry: 5
       Data: true
@@ -18711,6 +18672,9 @@ MonoBehaviour:
     - Name: _chanceMultiplier
       Entry: 4
       Data: 1
+    - Name: _happenNum
+      Entry: 3
+      Data: 99
     - Name: _positive
       Entry: 5
       Data: false
@@ -18774,6 +18738,9 @@ MonoBehaviour:
     - Name: _chanceMultiplier
       Entry: 4
       Data: 1
+    - Name: _happenNum
+      Entry: 3
+      Data: 99
     - Name: _positive
       Entry: 5
       Data: true
@@ -18837,6 +18804,9 @@ MonoBehaviour:
     - Name: _chanceMultiplier
       Entry: 4
       Data: 1
+    - Name: _happenNum
+      Entry: 3
+      Data: 1
     - Name: _positive
       Entry: 5
       Data: true
@@ -18854,7 +18824,7 @@ MonoBehaviour:
       Data: "\u5C3D\u7BA1\u906D\u9047\u4E86\u79CD\u79CD\u632B\u6298\uFF0C\u4F60\u4F9D\u7136\u575A\u6301\u81EA\u5DF1\u7684\u4FE1\u5FF5\uFF0C\u7EC8\u4E8E\u83B7\u5F97\u4E86\u56DE\u62A5\u3002\r"
     - Name: _sans
       Entry: 4
-      Data: 5
+      Data: 3
     - Name: _motor
       Entry: 4
       Data: 0
@@ -18900,6 +18870,9 @@ MonoBehaviour:
     - Name: _chanceMultiplier
       Entry: 4
       Data: 1
+    - Name: _happenNum
+      Entry: 3
+      Data: 99
     - Name: _positive
       Entry: 5
       Data: false
@@ -18917,7 +18890,7 @@ MonoBehaviour:
       Data: "\u5929\u6709\u4E0D\u6D4B\u98CE\u4E91\uFF0C\u4F60\u60A3\u4E0A\u4E86\u764C\u75C7\u3002\r"
     - Name: _sans
       Entry: 4
-      Data: -5
+      Data: -15
     - Name: _motor
       Entry: 4
       Data: -5
@@ -19023,10 +18996,13 @@ MonoBehaviour:
       Data: "\u8F7B\u5EA6\u4F20\u67D3\u75C5 "
     - Name: _chance
       Entry: 4
-      Data: 0.05
+      Data: 0.1
     - Name: _chanceMultiplier
       Entry: 4
       Data: 1
+    - Name: _happenNum
+      Entry: 3
+      Data: 99
     - Name: _positive
       Entry: 5
       Data: false
@@ -19044,7 +19020,7 @@ MonoBehaviour:
       Data: "\u5929\u6709\u4E0D\u6D4B\u98CE\u4E91\uFF0C\u4F60\u60A3\u4E0A\u4E86\u8F7B\u5EA6\u4F20\u67D3\u75C5\u3002\r"
     - Name: _sans
       Entry: 4
-      Data: -1
+      Data: -3
     - Name: _motor
       Entry: 4
       Data: -1
@@ -19150,10 +19126,13 @@ MonoBehaviour:
       Data: "\u70C8\u6027\u4F20\u67D3\u75C5 "
     - Name: _chance
       Entry: 4
-      Data: 0.01
+      Data: 0.05
     - Name: _chanceMultiplier
       Entry: 4
       Data: 1
+    - Name: _happenNum
+      Entry: 3
+      Data: 99
     - Name: _positive
       Entry: 5
       Data: false
@@ -19171,7 +19150,7 @@ MonoBehaviour:
       Data: "\u5929\u6709\u4E0D\u6D4B\u98CE\u4E91\uFF0C\u4F60\u60A3\u4E0A\u4E86\u70C8\u6027\u4F20\u67D3\u75C5\u3002\r"
     - Name: _sans
       Entry: 4
-      Data: -4
+      Data: -8
     - Name: _motor
       Entry: 4
       Data: -4
@@ -19265,6 +19244,534 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 55|Config.RandEvents.RandEvent, Assembly-CSharp
+    - Name: _name
+      Entry: 1
+      Data: "\u4EB2\u4EBA\u79BB\u4E16"
+    - Name: _chance
+      Entry: 4
+      Data: 0.001
+    - Name: _chanceMultiplier
+      Entry: 4
+      Data: 1
+    - Name: _happenNum
+      Entry: 3
+      Data: 1
+    - Name: _positive
+      Entry: 5
+      Data: false
+    - Name: _isCondition
+      Entry: 5
+      Data: false
+    - Name: _traitReq
+      Entry: 6
+      Data: 
+    - Name: _availibleStage
+      Entry: 1
+      Data: "\u5168\u9636\u6BB5"
+    - Name: _desc
+      Entry: 1
+      Data: "\u751F\u6B7B\u6709\u547D\uFF0C\u4E0D\u51CF\u5176\u60B2\u3002\r"
+    - Name: _sans
+      Entry: 4
+      Data: -8
+    - Name: _motor
+      Entry: 4
+      Data: 0
+    - Name: _nerve
+      Entry: 4
+      Data: 0
+    - Name: _endoc
+      Entry: 4
+      Data: 0
+    - Name: _circul
+      Entry: 4
+      Data: 0
+    - Name: _breath
+      Entry: 4
+      Data: 0
+    - Name: _digest
+      Entry: 4
+      Data: 0
+    - Name: _urinary
+      Entry: 4
+      Data: 0
+    - Name: _reprod
+      Entry: 4
+      Data: 0
+    - Name: _money
+      Entry: 4
+      Data: 0
+    - Name: _buff
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 56|Config.RandEvents.RandEvent, Assembly-CSharp
+    - Name: _name
+      Entry: 1
+      Data: "\u9152\u7CBE\u4E2D\u6BD2"
+    - Name: _chance
+      Entry: 4
+      Data: 0.1
+    - Name: _chanceMultiplier
+      Entry: 4
+      Data: 1
+    - Name: _happenNum
+      Entry: 3
+      Data: 99
+    - Name: _positive
+      Entry: 5
+      Data: false
+    - Name: _isCondition
+      Entry: 5
+      Data: true
+    - Name: _traitReq
+      Entry: 6
+      Data: 
+    - Name: _availibleStage
+      Entry: 1
+      Data: "\u5168\u9636\u6BB5"
+    - Name: _desc
+      Entry: 1
+      Data: "\u996E\u9152\u867D\u89E3\u5FE7\uFF0C\u53EF\u4E0D\u8981\u8D2A\u676F\u54E6\u3002\r"
+    - Name: _sans
+      Entry: 4
+      Data: -5
+    - Name: _motor
+      Entry: 4
+      Data: -3
+    - Name: _nerve
+      Entry: 4
+      Data: -2
+    - Name: _endoc
+      Entry: 4
+      Data: -1
+    - Name: _circul
+      Entry: 4
+      Data: -1
+    - Name: _breath
+      Entry: 4
+      Data: -1
+    - Name: _digest
+      Entry: 4
+      Data: -1
+    - Name: _urinary
+      Entry: 4
+      Data: -1
+    - Name: _reprod
+      Entry: 4
+      Data: -1
+    - Name: _money
+      Entry: 4
+      Data: -100
+    - Name: _buff
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 57|Config.RandEvents.RandEvent, Assembly-CSharp
+    - Name: _name
+      Entry: 1
+      Data: "\u5C0F\u5E78\u8FD0"
+    - Name: _chance
+      Entry: 4
+      Data: 0.1
+    - Name: _chanceMultiplier
+      Entry: 4
+      Data: 1
+    - Name: _happenNum
+      Entry: 3
+      Data: 5
+    - Name: _positive
+      Entry: 5
+      Data: true
+    - Name: _isCondition
+      Entry: 5
+      Data: false
+    - Name: _traitReq
+      Entry: 6
+      Data: 
+    - Name: _availibleStage
+      Entry: 1
+      Data: "\u5168\u9636\u6BB5"
+    - Name: _desc
+      Entry: 1
+      Data: "\u770B\u5230\u4E00\u53EA\u53EF\u7231\u7684\u5C0F\u732B\u3001\u542C\u5230\u4E00\u9996\u597D\u542C\u7684\u6B4C\u2026\u2026\u7B80\u5355\u7684\u751F\u6D3B\u4E2D\u80FD\u751F\u957F\u51FA\u786E\u4FE1\u7684\u5E78\u798F\u3002\r\n"
+    - Name: _sans
+      Entry: 4
+      Data: 2
+    - Name: _motor
+      Entry: 4
+      Data: 0
+    - Name: _nerve
+      Entry: 4
+      Data: 0
+    - Name: _endoc
+      Entry: 4
+      Data: 0
+    - Name: _circul
+      Entry: 4
+      Data: 0
+    - Name: _breath
+      Entry: 4
+      Data: 0
+    - Name: _digest
+      Entry: 4
+      Data: 0
+    - Name: _urinary
+      Entry: 4
+      Data: 0
+    - Name: _reprod
+      Entry: 4
+      Data: 0
+    - Name: _money
+      Entry: 4
+      Data: 0
+    - Name: _buff
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 58|Config.RandEvents.RandEvent, Assembly-CSharp
+    - Name: _name
+      Entry: 1
+      Data: "\u7403\u961F\u53D6\u80DC"
+    - Name: _chance
+      Entry: 4
+      Data: 0.1
+    - Name: _chanceMultiplier
+      Entry: 4
+      Data: 1
+    - Name: _happenNum
+      Entry: 3
+      Data: 99
+    - Name: _positive
+      Entry: 5
+      Data: true
+    - Name: _isCondition
+      Entry: 5
+      Data: false
+    - Name: _traitReq
+      Entry: 6
+      Data: 
+    - Name: _availibleStage
+      Entry: 1
+      Data: "\u5168\u9636\u6BB5"
+    - Name: _desc
+      Entry: 1
+      Data: "\u8BA9\u6211\u4EEC\u606D\u559C\u201C\u7687\u5BB6\u5DF4\u585E\u7F57\u90A3\u961F\u201D\u8D62\u5F97\u672C\u8D5B\u5B63\u7684\u6B27\u51A0\u51A0\u519B\uFF01\r"
+    - Name: _sans
+      Entry: 4
+      Data: 2
+    - Name: _motor
+      Entry: 4
+      Data: 0
+    - Name: _nerve
+      Entry: 4
+      Data: 0
+    - Name: _endoc
+      Entry: 4
+      Data: 0
+    - Name: _circul
+      Entry: 4
+      Data: 0
+    - Name: _breath
+      Entry: 4
+      Data: 0
+    - Name: _digest
+      Entry: 4
+      Data: 0
+    - Name: _urinary
+      Entry: 4
+      Data: 0
+    - Name: _reprod
+      Entry: 4
+      Data: 0
+    - Name: _money
+      Entry: 4
+      Data: 0
+    - Name: _buff
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 59|Config.RandEvents.RandEvent, Assembly-CSharp
+    - Name: _name
+      Entry: 1
+      Data: "\u611F\u60C5\u53D7\u632B"
+    - Name: _chance
+      Entry: 4
+      Data: 0.1
+    - Name: _chanceMultiplier
+      Entry: 4
+      Data: 1
+    - Name: _happenNum
+      Entry: 3
+      Data: 3
+    - Name: _positive
+      Entry: 5
+      Data: false
+    - Name: _isCondition
+      Entry: 5
+      Data: false
+    - Name: _traitReq
+      Entry: 6
+      Data: 
+    - Name: _availibleStage
+      Entry: 1
+      Data: "\u5168\u9636\u6BB5"
+    - Name: _desc
+      Entry: 1
+      Data: "\u71D5\u5B50\uFF0C\u6CA1\u6709\u4F60\u6211\u600E\u4E48\u6D3B\u554A\uFF01\u4F60\u5E26\u6211\u8D70\u5427\uFF01\r"
+    - Name: _sans
+      Entry: 4
+      Data: -8
+    - Name: _motor
+      Entry: 4
+      Data: 0
+    - Name: _nerve
+      Entry: 4
+      Data: 0
+    - Name: _endoc
+      Entry: 4
+      Data: 0
+    - Name: _circul
+      Entry: 4
+      Data: 0
+    - Name: _breath
+      Entry: 4
+      Data: 0
+    - Name: _digest
+      Entry: 4
+      Data: 0
+    - Name: _urinary
+      Entry: 4
+      Data: 0
+    - Name: _reprod
+      Entry: 4
+      Data: 0
+    - Name: _money
+      Entry: 4
+      Data: 0
+    - Name: _buff
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 60|Config.RandEvents.RandEvent, Assembly-CSharp
+    - Name: _name
+      Entry: 1
+      Data: "\u7231\u8C46\u7ED3\u5A5A"
+    - Name: _chance
+      Entry: 4
+      Data: 0.1
+    - Name: _chanceMultiplier
+      Entry: 4
+      Data: 1
+    - Name: _happenNum
+      Entry: 3
+      Data: 1
+    - Name: _positive
+      Entry: 5
+      Data: false
+    - Name: _isCondition
+      Entry: 5
+      Data: false
+    - Name: _traitReq
+      Entry: 6
+      Data: 
+    - Name: _availibleStage
+      Entry: 1
+      Data: "\u9752\u5E74\u671F"
+    - Name: _desc
+      Entry: 1
+      Data: "\u661F\u6E90\u8001\u8D3C\uFF0C\u593A\u59BB\u4E4B\u4EC7\u4E0D\u5171\u6234\u5929\uFF01\r"
+    - Name: _sans
+      Entry: 4
+      Data: -5
+    - Name: _motor
+      Entry: 4
+      Data: 0
+    - Name: _nerve
+      Entry: 4
+      Data: 0
+    - Name: _endoc
+      Entry: 4
+      Data: 0
+    - Name: _circul
+      Entry: 4
+      Data: 0
+    - Name: _breath
+      Entry: 4
+      Data: 0
+    - Name: _digest
+      Entry: 4
+      Data: 0
+    - Name: _urinary
+      Entry: 4
+      Data: 0
+    - Name: _reprod
+      Entry: 4
+      Data: 0
+    - Name: _money
+      Entry: 4
+      Data: 0
+    - Name: _buff
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 61|Config.RandEvents.RandEvent, Assembly-CSharp
+    - Name: _name
+      Entry: 1
+      Data: "\u751F\u6D3B\u538B\u529B"
+    - Name: _chance
+      Entry: 4
+      Data: 0.1
+    - Name: _chanceMultiplier
+      Entry: 4
+      Data: 1
+    - Name: _happenNum
+      Entry: 3
+      Data: 2
+    - Name: _positive
+      Entry: 5
+      Data: false
+    - Name: _isCondition
+      Entry: 5
+      Data: false
+    - Name: _traitReq
+      Entry: 6
+      Data: 
+    - Name: _availibleStage
+      Entry: 1
+      Data: "\u4E2D\u5E74\u671F"
+    - Name: _desc
+      Entry: 1
+      Data: "\u201C\u8001\u4EBA\u8EAB\u4F53\u4E0D\u65B9\u4FBF\u8981\u4EBA\u7167\u987E\uFF0C\u5B69\u5B50\u4E0A\u5B66\u8865\u4E60\u73ED\u8981\u4EA4\u5B66\u8D39\uFF0C\u7231\u4EBA\u53C8\u603B\u548C\u6211\u5435\u67B6\uFF0C\u5509\u2026\u2026\u201D\r"
+    - Name: _sans
+      Entry: 4
+      Data: -8
+    - Name: _motor
+      Entry: 4
+      Data: -1
+    - Name: _nerve
+      Entry: 4
+      Data: -1
+    - Name: _endoc
+      Entry: 4
+      Data: 0
+    - Name: _circul
+      Entry: 4
+      Data: 0
+    - Name: _breath
+      Entry: 4
+      Data: 0
+    - Name: _digest
+      Entry: 4
+      Data: 0
+    - Name: _urinary
+      Entry: 4
+      Data: 0
+    - Name: _reprod
+      Entry: 4
+      Data: 0
+    - Name: _money
+      Entry: 4
+      Data: -1000
+    - Name: _buff
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 62|Config.RandEvents.RandEvent, Assembly-CSharp
+    - Name: _name
+      Entry: 1
+      Data: "\u7231\u4EBA\u51FA\u8F68"
+    - Name: _chance
+      Entry: 4
+      Data: 0.1
+    - Name: _chanceMultiplier
+      Entry: 4
+      Data: 1
+    - Name: _happenNum
+      Entry: 3
+      Data: 1
+    - Name: _positive
+      Entry: 5
+      Data: false
+    - Name: _isCondition
+      Entry: 5
+      Data: false
+    - Name: _traitReq
+      Entry: 6
+      Data: 
+    - Name: _availibleStage
+      Entry: 1
+      Data: "\u4E2D\u5E74\u671F"
+    - Name: _desc
+      Entry: 1
+      Data: "\u201C\u7238\u7238\uFF0C\u4F60\u51FA\u5DEE\u7684\u65F6\u5019\u9694\u58C1\u7684\u738B\u53D4\u53D4\u7ECF\u5E38\u6765\u6211\u4EEC\u5BB6\u91CC\u73A9\u54E6\uFF01\u201D\r"
+    - Name: _sans
+      Entry: 4
+      Data: -10
+    - Name: _motor
+      Entry: 4
+      Data: 0
+    - Name: _nerve
+      Entry: 4
+      Data: 0
+    - Name: _endoc
+      Entry: 4
+      Data: 0
+    - Name: _circul
+      Entry: 4
+      Data: 0
+    - Name: _breath
+      Entry: 4
+      Data: 0
+    - Name: _digest
+      Entry: 4
+      Data: 0
+    - Name: _urinary
+      Entry: 4
+      Data: 0
+    - Name: _reprod
+      Entry: 4
+      Data: 0
+    - Name: _money
+      Entry: 4
+      Data: 0
+    - Name: _buff
+      Entry: 6
       Data: 
     - Name: 
       Entry: 8
@@ -20155,6 +20662,107 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1159300414}
   m_CullTransparentMesh: 0
+--- !u!1 &1159494321
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1159494324}
+  - component: {fileID: 1159494323}
+  - component: {fileID: 1159494322}
+  m_Layer: 0
+  m_Name: BehaviourIcon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &1159494322
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159494321}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8120bc2a3ec0a974a88204c5915ea503, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!212 &1159494323
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159494321}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 1598533493
+  m_SortingLayer: 4
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: eabe20900fb0fda4fb39f07dce9ad5bb, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 19.2, y: 10.8}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1159494324
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159494321}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.7018894, y: -1.2157049, z: 1.9854786}
+  m_LocalScale: {x: 0.28187, y: 0.28187, z: 0.28187}
+  m_Children: []
+  m_Father: {fileID: 2041751695}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1168458391
 GameObject:
   m_ObjectHideFlags: 0
@@ -22460,6 +23068,107 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1323293637}
   m_CullTransparentMesh: 0
+--- !u!1 &1328024107
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1328024110}
+  - component: {fileID: 1328024109}
+  - component: {fileID: 1328024108}
+  m_Layer: 0
+  m_Name: IconBackGound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &1328024108
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328024107}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9f2eb8eebd72a1846b9508b8549b2732, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!212 &1328024109
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328024107}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 1598533493
+  m_SortingLayer: 4
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 19.2, y: 10.8}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1328024110
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328024107}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.7018894, y: -1.2157049, z: 1.9854786}
+  m_LocalScale: {x: 0.28187, y: 0.28187, z: 0.28187}
+  m_Children: []
+  m_Father: {fileID: 2041751695}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1339175356
 GameObject:
   m_ObjectHideFlags: 0
@@ -23542,9 +24251,9 @@ RectTransform:
   m_Father: {fileID: 333231021}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 125, y: -25}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 176, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1424337257
@@ -24635,10 +25344,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1080, y: 1920}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -24655,7 +25364,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 1635487851}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -27803,9 +28512,9 @@ RectTransform:
   m_Father: {fileID: 78109212}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 125, y: -25}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 176, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1844280184
@@ -28454,7 +29163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5529412, g: 0.9882353, b: 1, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -28978,6 +29687,107 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1928315833}
   m_CullTransparentMesh: 0
+--- !u!1 &1928350418
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1928350421}
+  - component: {fileID: 1928350420}
+  - component: {fileID: 1928350419}
+  m_Layer: 0
+  m_Name: WorldSpaceCanvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &1928350419
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928350418}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8120bc2a3ec0a974a88204c5915ea503, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!212 &1928350420
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928350418}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 1920644569
+  m_SortingLayer: 1
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 951352f31055aae46b6e9786313c632d, type: 3}
+  m_Color: {r: 0.4716981, g: 0.4716981, b: 0.4716981, a: 0.72156864}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 19.2, y: 10.8}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1928350421
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928350418}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.07, y: 2.82, z: -0.71965384}
+  m_LocalScale: {x: 0.6515927, y: 0.33280268, z: 0.2802549}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1949668118
 GameObject:
   m_ObjectHideFlags: 0
@@ -30121,6 +30931,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2036716195}
   m_CullTransparentMesh: 0
+--- !u!1 &2041751694
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2041751695}
+  - component: {fileID: 2041751696}
+  m_Layer: 0
+  m_Name: BehavIcon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2041751695
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041751694}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.38, y: 3.68, z: -2.7051325}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1159494324}
+  - {fileID: 1328024110}
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2041751696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041751694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78c8b938dfbcae5449e06dd24af95603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iconBGAnimator: {fileID: 1328024108}
+  iconAnimator: {fileID: 1159494322}
 --- !u!1 &2044270477
 GameObject:
   m_ObjectHideFlags: 0

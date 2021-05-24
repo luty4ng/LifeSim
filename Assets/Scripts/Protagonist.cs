@@ -86,12 +86,12 @@ public class Protagonist : MonoBehaviour
     void Awake()
     {
         GameObject pools = GameObject.Find("Pools");
+        traits = pools.GetComponentInChildren<Config.Traits.Traits>();
         habbits = pools.GetComponentInChildren<Config.Habbits.Habbits>();
         behaviours = pools.GetComponentInChildren<Config.Behavious.Behaviours>();
         randEvents = pools.GetComponentInChildren<Config.RandEvents.RandEvents>();
         buffs = pools.GetComponentInChildren<Config.Buffs.Buffs>();
-        traits = pools.GetComponentInChildren<Config.Traits.Traits>();
-
+         
         List<Config.Traits.Trait> tmpTraitList = new List<Config.Traits.Trait>(traits._traitList);
         for (int i = 0; i < traitNum; i++)
         {
@@ -123,6 +123,7 @@ public class Protagonist : MonoBehaviour
     public float GetSans() => _overallSans;
     public float GetHealth() => _overallHealth;
     public float[] GetModule() => new float[8]{ _motor, _nerve, _endoc, _circul, _breath, _digest, _urinary, _reprod };
+    public List<string> GetBehavSelect() => _behaviourSelect;
     public Dictionary<string, float> GetBuffCount() => new Dictionary<string, float>(_buffCount);
     public Dictionary<string, string> GetTraitsList()
     {
@@ -171,7 +172,7 @@ public class Protagonist : MonoBehaviour
         _habbitSelect["Sport"] = sport;
         _habbitSelect["Work"] = work;
     }
-
+    
     public void UpdateBehaviourSelect(List<string> transmitBehav)
     {    
         if(_behaviourSelect.Count > 0)
@@ -260,6 +261,8 @@ public class Protagonist : MonoBehaviour
         }
         else
             tmpHealthChange = 0f;
+
+        Debug.Log(tmpHealthChange);
         return tmpHealthChange;
     }
     private void UpdateByDefault()
@@ -349,9 +352,11 @@ public class Protagonist : MonoBehaviour
             {
                 if(tmpEvent._availibleStage.Trim() == GetStage() ||
                     (tmpEvent._availibleStage.Trim() == "青中年期" && (GetStage() == "青年期" || GetStage() == "中年期")) ||
-                    (tmpEvent._availibleStage.Trim() == "中老年期" && (GetStage() == "中年期" || GetStage() == "老年期")))
+                    (tmpEvent._availibleStage.Trim() == "中老年期" && (GetStage() == "中年期" || GetStage() == "老年期")) ||
+                    tmpEvent._availibleStage.Trim() == "全阶段")
                     {
                         randEvents.TriggerRandEvent(tmpEvent._name);
+                        tmpEvent._happenNum-=1;
                     }
             }
         }
@@ -456,7 +461,7 @@ public class Protagonist : MonoBehaviour
         _reprod += _reprodPer;
         _ownMoney += _moneyPer;
 
-        if( _overallHealth < 0 || _overallSans < 0 || _motor < 0 || _nerve < 0 || _endoc < 0 || _circul < 0 || _breath < 0 || _digest < 0 || _urinary < 0 || _reprod < 0)
+        if( _overallHealth < 0 || _overallSans < 0)
         {
             Debug.Log("GAME OVER");
             EventCenter.GetInstance().EventTrigger("GAMEOVER");

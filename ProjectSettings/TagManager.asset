@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BackGound-More
+    uniqueID: 1920644569
+    locked: 0
+  - name: BackGound
+    uniqueID: 208604187
+    locked: 0
+  - name: Player
+    uniqueID: 2774713279
+    locked: 0
+  - name: FrontGround
+    uniqueID: 1598533493
+    locked: 0

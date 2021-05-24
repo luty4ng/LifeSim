@@ -24,8 +24,11 @@ namespace Config.RandEvents
             
             foreach (var item in _randEventList)
             {
+                if(item._happenNum <= 0)
+                    continue;
                 if(item._name!=null && item._name.Trim() == name.Trim())
                 {
+                    
                     float rand = Random.Range(0.000f, 1.000f);
                     float tmpChange = item._chance;
                     if(!item._positive)
@@ -52,6 +55,8 @@ namespace Config.RandEvents
         public float _chance;
         [LabelText("下降乘数"), FoldoutGroup("事件属性")]
         public float _chanceMultiplier = 1;
+        [LabelText("可发生次数"), FoldoutGroup("事件属性")]
+        public int _happenNum = 99;
         [LabelText("正面事件"), FoldoutGroup("事件属性")]
         public bool _positive;
         [LabelText("前置事件"), FoldoutGroup("事件属性")]
