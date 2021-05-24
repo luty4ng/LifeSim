@@ -9470,7 +9470,7 @@ MonoBehaviour:
       Data: "\u91CD\u53E3"
     - Name: _sans
       Entry: 4
-      Data: 1
+      Data: 0
     - Name: _motor
       Entry: 4
       Data: -1
@@ -10122,7 +10122,7 @@ MonoBehaviour:
       Data: "\u5065\u8EAB\u8FBE\u4EBA"
     - Name: _sans
       Entry: 4
-      Data: 1
+      Data: 0
     - Name: _motor
       Entry: 4
       Data: 1
@@ -13172,7 +13172,7 @@ MonoBehaviour:
       Data: 4
     - Name: _sans
       Entry: 4
-      Data: 2
+      Data: 1
     - Name: _motor
       Entry: 4
       Data: 0
@@ -13312,7 +13312,7 @@ MonoBehaviour:
       Data: 4
     - Name: _sans
       Entry: 4
-      Data: 2
+      Data: 1
     - Name: _motor
       Entry: 4
       Data: 0
@@ -13430,7 +13430,7 @@ MonoBehaviour:
       Data: 4
     - Name: _sans
       Entry: 4
-      Data: 2
+      Data: 1
     - Name: _motor
       Entry: 4
       Data: -1
@@ -13784,7 +13784,7 @@ MonoBehaviour:
       Data: 0
     - Name: _sans
       Entry: 4
-      Data: 2
+      Data: 1
     - Name: _motor
       Entry: 4
       Data: -1
@@ -13902,7 +13902,7 @@ MonoBehaviour:
       Data: 0
     - Name: _sans
       Entry: 4
-      Data: 2
+      Data: 1
     - Name: _motor
       Entry: 4
       Data: 0
@@ -14020,7 +14020,7 @@ MonoBehaviour:
       Data: 4
     - Name: _sans
       Entry: 4
-      Data: 2
+      Data: 1
     - Name: _motor
       Entry: 4
       Data: -1
@@ -14138,7 +14138,7 @@ MonoBehaviour:
       Data: 4
     - Name: _sans
       Entry: 4
-      Data: 2
+      Data: 1
     - Name: _motor
       Entry: 4
       Data: -1
@@ -14332,7 +14332,7 @@ MonoBehaviour:
       Data: 0
     - Name: _sans
       Entry: 4
-      Data: 2
+      Data: 1
     - Name: _motor
       Entry: 4
       Data: 0
@@ -14450,7 +14450,7 @@ MonoBehaviour:
       Data: 0
     - Name: _sans
       Entry: 4
-      Data: 2
+      Data: 1
     - Name: _motor
       Entry: 4
       Data: 1
@@ -14568,7 +14568,7 @@ MonoBehaviour:
       Data: 0
     - Name: _sans
       Entry: 4
-      Data: 2
+      Data: 1
     - Name: _motor
       Entry: 4
       Data: 0
@@ -14686,7 +14686,7 @@ MonoBehaviour:
       Data: 0
     - Name: _sans
       Entry: 4
-      Data: 2
+      Data: 1
     - Name: _motor
       Entry: 4
       Data: 0
