@@ -2413,9 +2413,9 @@ RectTransform:
   m_Father: {fileID: 184109605}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 125, y: -25}
   m_SizeDelta: {x: 176, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &153172508
@@ -4231,9 +4231,9 @@ RectTransform:
   m_Father: {fileID: 1144845973}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 125, y: -25}
   m_SizeDelta: {x: 176, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &250241232
@@ -4365,9 +4365,9 @@ RectTransform:
   m_Father: {fileID: 2050493462}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 125, y: -25}
   m_SizeDelta: {x: 176, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &257702110
@@ -9266,9 +9266,11 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
     - {fileID: 1083123604}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
     - {fileID: 0}
     SerializedBytesString: 
     Prefab: {fileID: 0}
@@ -9857,9 +9859,6 @@ MonoBehaviour:
       Entry: 4
       Data: 0
     - Name: _randEvent
-      Entry: 6
-      Data: 
-    - Name: _buff
       Entry: 7
       Data: 30|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
     - Name: m_PersistentCalls
@@ -9877,6 +9876,73 @@ MonoBehaviour:
       Data: 33|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
     - Name: m_Target
       Entry: 10
+      Data: 5
+    - Name: m_MethodName
+      Entry: 1
+      Data: TriggerRandEvent
+    - Name: m_Mode
+      Entry: 3
+      Data: 5
+    - Name: m_Arguments
+      Entry: 7
+      Data: 34|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
+    - Name: m_ObjectArgument
+      Entry: 10
+      Data: 6
+    - Name: m_ObjectArgumentAssemblyTypeName
+      Entry: 1
+      Data: UnityEngine.Object, UnityEngine
+    - Name: m_IntArgument
+      Entry: 3
+      Data: 0
+    - Name: m_FloatArgument
+      Entry: 4
+      Data: 0
+    - Name: m_StringArgument
+      Entry: 1
+      Data: "\u4E0A\u73ED\u8FDF\u5230"
+    - Name: m_BoolArgument
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_CallState
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _buff
+      Entry: 7
+      Data: 35|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
+    - Name: m_PersistentCalls
+      Entry: 7
+      Data: 36|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
+    - Name: m_Calls
+      Entry: 7
+      Data: 37|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
+        UnityEngine.CoreModule]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 38|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
+    - Name: m_Target
+      Entry: 10
       Data: 0
     - Name: m_MethodName
       Entry: 1
@@ -9886,10 +9952,10 @@ MonoBehaviour:
       Data: 5
     - Name: m_Arguments
       Entry: 7
-      Data: 34|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
+      Data: 39|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
     - Name: m_ObjectArgument
       Entry: 10
-      Data: 5
+      Data: 7
     - Name: m_ObjectArgumentAssemblyTypeName
       Entry: 1
       Data: UnityEngine.Object, UnityEngine
@@ -9949,14 +10015,14 @@ MonoBehaviour:
       Data: Sport
     - Name: $v
       Entry: 7
-      Data: 35|System.Collections.Generic.List`1[[Config.Habbits.Habbit, Assembly-CSharp]],
+      Data: 40|System.Collections.Generic.List`1[[Config.Habbits.Habbit, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 3
     - Name: 
       Entry: 7
-      Data: 36|Config.Habbits.Sport, Assembly-CSharp
+      Data: 41|Config.Habbits.Sport, Assembly-CSharp
     - Name: _name
       Entry: 1
       Data: "\u4ECE\u4E0D\u8FD0\u52A8"
@@ -9991,24 +10057,88 @@ MonoBehaviour:
       Entry: 4
       Data: 0
     - Name: _randEvent
-      Entry: 6
-      Data: 
-    - Name: _buff
       Entry: 7
-      Data: 37|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
+      Data: 42|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
     - Name: m_PersistentCalls
       Entry: 7
-      Data: 38|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
+      Data: 43|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
     - Name: m_Calls
       Entry: 7
-      Data: 39|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
+      Data: 44|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
         UnityEngine.CoreModule]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 40|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
+      Data: 45|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
+    - Name: m_Target
+      Entry: 10
+      Data: 5
+    - Name: m_MethodName
+      Entry: 1
+      Data: TriggerRandEvent
+    - Name: m_Mode
+      Entry: 3
+      Data: 5
+    - Name: m_Arguments
+      Entry: 7
+      Data: 46|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
+    - Name: m_ObjectArgument
+      Entry: 10
+      Data: 8
+    - Name: m_ObjectArgumentAssemblyTypeName
+      Entry: 1
+      Data: UnityEngine.Object, UnityEngine
+    - Name: m_IntArgument
+      Entry: 3
+      Data: 0
+    - Name: m_FloatArgument
+      Entry: 4
+      Data: 0
+    - Name: m_StringArgument
+      Entry: 1
+      Data: "\u5173\u8282\u632B\u4F24"
+    - Name: m_BoolArgument
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_CallState
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _buff
+      Entry: 7
+      Data: 47|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
+    - Name: m_PersistentCalls
+      Entry: 7
+      Data: 48|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
+    - Name: m_Calls
+      Entry: 7
+      Data: 49|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
+        UnityEngine.CoreModule]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 50|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
     - Name: m_Target
       Entry: 10
       Data: 0
@@ -10020,10 +10150,10 @@ MonoBehaviour:
       Data: 5
     - Name: m_Arguments
       Entry: 7
-      Data: 41|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
+      Data: 51|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
     - Name: m_ObjectArgument
       Entry: 10
-      Data: 6
+      Data: 9
     - Name: m_ObjectArgumentAssemblyTypeName
       Entry: 1
       Data: UnityEngine.Object, UnityEngine
@@ -10068,7 +10198,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 42|Config.Habbits.Sport, Assembly-CSharp
+      Data: 52|Config.Habbits.Sport, Assembly-CSharp
     - Name: _name
       Entry: 1
       Data: "\u9002\u5F53\u8FD0\u52A8"
@@ -10116,7 +10246,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 43|Config.Habbits.Sport, Assembly-CSharp
+      Data: 53|Config.Habbits.Sport, Assembly-CSharp
     - Name: _name
       Entry: 1
       Data: "\u5065\u8EAB\u8FBE\u4EBA"
@@ -10152,23 +10282,23 @@ MonoBehaviour:
       Data: 0
     - Name: _randEvent
       Entry: 7
-      Data: 44|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
+      Data: 54|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
     - Name: m_PersistentCalls
       Entry: 7
-      Data: 45|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
+      Data: 55|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
     - Name: m_Calls
       Entry: 7
-      Data: 46|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
+      Data: 56|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
         UnityEngine.CoreModule]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 47|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
+      Data: 57|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
     - Name: m_Target
       Entry: 10
-      Data: 7
+      Data: 5
     - Name: m_MethodName
       Entry: 1
       Data: TriggerRandEvent
@@ -10177,10 +10307,10 @@ MonoBehaviour:
       Data: 5
     - Name: m_Arguments
       Entry: 7
-      Data: 48|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
+      Data: 58|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
     - Name: m_ObjectArgument
       Entry: 10
-      Data: 8
+      Data: 10
     - Name: m_ObjectArgumentAssemblyTypeName
       Entry: 1
       Data: UnityEngine.Object, UnityEngine
@@ -10243,14 +10373,14 @@ MonoBehaviour:
       Data: Work
     - Name: $v
       Entry: 7
-      Data: 49|System.Collections.Generic.List`1[[Config.Habbits.Habbit, Assembly-CSharp]],
+      Data: 59|System.Collections.Generic.List`1[[Config.Habbits.Habbit, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 3
     - Name: 
       Entry: 7
-      Data: 50|Config.Habbits.Work, Assembly-CSharp
+      Data: 60|Config.Habbits.Work, Assembly-CSharp
     - Name: _name
       Entry: 1
       Data: "\u6478\u9C7C\u9009\u624B"
@@ -10298,7 +10428,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 51|Config.Habbits.Work, Assembly-CSharp
+      Data: 61|Config.Habbits.Work, Assembly-CSharp
     - Name: _name
       Entry: 1
       Data: "\u51C6\u65F6\u4E0B\u73ED"
@@ -10346,7 +10476,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 52|Config.Habbits.Work, Assembly-CSharp
+      Data: 62|Config.Habbits.Work, Assembly-CSharp
     - Name: _name
       Entry: 1
       Data: "\u7A76\u6781\u5377\u738B"
@@ -11770,7 +11900,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 17
+      Data: 18
     - Name: 
       Entry: 7
       Data: 1|Config.Buffs.Buff, Assembly-CSharp
@@ -11839,7 +11969,7 @@ MonoBehaviour:
       Data: 500
     - Name: _sans
       Entry: 4
-      Data: -1
+      Data: -3
     - Name: _motor
       Entry: 4
       Data: -3
@@ -11890,7 +12020,7 @@ MonoBehaviour:
       Data: 200
     - Name: _sans
       Entry: 4
-      Data: -1
+      Data: -3
     - Name: _motor
       Entry: 4
       Data: 0
@@ -11941,7 +12071,7 @@ MonoBehaviour:
       Data: 0
     - Name: _sans
       Entry: 4
-      Data: -1
+      Data: -3
     - Name: _motor
       Entry: 4
       Data: 0
@@ -11992,7 +12122,7 @@ MonoBehaviour:
       Data: 100
     - Name: _sans
       Entry: 4
-      Data: -1
+      Data: -3
     - Name: _motor
       Entry: 4
       Data: 0
@@ -12043,7 +12173,7 @@ MonoBehaviour:
       Data: 100
     - Name: _sans
       Entry: 4
-      Data: -1
+      Data: -3
     - Name: _motor
       Entry: 4
       Data: -2
@@ -12094,7 +12224,7 @@ MonoBehaviour:
       Data: 1000
     - Name: _sans
       Entry: 4
-      Data: -2
+      Data: -3
     - Name: _motor
       Entry: 4
       Data: -3
@@ -12145,7 +12275,7 @@ MonoBehaviour:
       Data: 0
     - Name: _sans
       Entry: 4
-      Data: -1
+      Data: -3
     - Name: _motor
       Entry: 4
       Data: 0
@@ -12196,7 +12326,7 @@ MonoBehaviour:
       Data: 500
     - Name: _sans
       Entry: 4
-      Data: -1
+      Data: -3
     - Name: _motor
       Entry: 4
       Data: 0
@@ -12247,7 +12377,7 @@ MonoBehaviour:
       Data: 500
     - Name: _sans
       Entry: 4
-      Data: -1
+      Data: -3
     - Name: _motor
       Entry: 4
       Data: 0
@@ -12298,7 +12428,7 @@ MonoBehaviour:
       Data: 500
     - Name: _sans
       Entry: 4
-      Data: -2
+      Data: -3
     - Name: _motor
       Entry: 4
       Data: 0
@@ -12349,7 +12479,7 @@ MonoBehaviour:
       Data: 100
     - Name: _sans
       Entry: 4
-      Data: -1
+      Data: -3
     - Name: _motor
       Entry: 4
       Data: -2
@@ -12451,7 +12581,7 @@ MonoBehaviour:
       Data: 100
     - Name: _sans
       Entry: 4
-      Data: -1
+      Data: -2
     - Name: _motor
       Entry: 4
       Data: -1
@@ -12623,6 +12753,57 @@ MonoBehaviour:
     - Name: _digest
       Entry: 4
       Data: -1
+    - Name: _urinary
+      Entry: 4
+      Data: 0
+    - Name: _reprod
+      Entry: 4
+      Data: 0
+    - Name: _money
+      Entry: 4
+      Data: 0
+    - Name: _moneyChange
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 18|Config.Buffs.Buff, Assembly-CSharp
+    - Name: _name
+      Entry: 1
+      Data: "\u9AD8\u8840\u538B"
+    - Name: _remainYears
+      Entry: 4
+      Data: 0
+    - Name: _canCure
+      Entry: 5
+      Data: true
+    - Name: _moneyToCure
+      Entry: 4
+      Data: 500
+    - Name: _sans
+      Entry: 4
+      Data: -3
+    - Name: _motor
+      Entry: 4
+      Data: -1
+    - Name: _nerve
+      Entry: 4
+      Data: 0
+    - Name: _endoc
+      Entry: 4
+      Data: 0
+    - Name: _circul
+      Entry: 4
+      Data: -3
+    - Name: _breath
+      Entry: 4
+      Data: 0
+    - Name: _digest
+      Entry: 4
+      Data: 0
     - Name: _urinary
       Entry: 4
       Data: 0
@@ -13132,11 +13313,12 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
+    - {fileID: 1083123604}
+    - {fileID: 0}
     - {fileID: 802510780}
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
-    - {fileID: 1083123604}
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
@@ -13212,7 +13394,49 @@ MonoBehaviour:
         UnityEngine.CoreModule]], mscorlib
     - Name: 
       Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 5|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
+    - Name: m_Target
+      Entry: 10
       Data: 0
+    - Name: m_MethodName
+      Entry: 1
+      Data: TriggerRandEvent
+    - Name: m_Mode
+      Entry: 3
+      Data: 5
+    - Name: m_Arguments
+      Entry: 7
+      Data: 6|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
+    - Name: m_ObjectArgument
+      Entry: 10
+      Data: 1
+    - Name: m_ObjectArgumentAssemblyTypeName
+      Entry: 1
+      Data: UnityEngine.Object, UnityEngine
+    - Name: m_IntArgument
+      Entry: 3
+      Data: 0
+    - Name: m_FloatArgument
+      Entry: 4
+      Data: 0
+    - Name: m_StringArgument
+      Entry: 1
+      Data: "\u9152\u7CBE\u4E2D\u6BD2"
+    - Name: m_BoolArgument
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_CallState
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -13227,23 +13451,23 @@ MonoBehaviour:
       Data: 
     - Name: _buff
       Entry: 7
-      Data: 5|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
+      Data: 7|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
     - Name: m_PersistentCalls
       Entry: 7
-      Data: 6|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
+      Data: 8|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
     - Name: m_Calls
       Entry: 7
-      Data: 7|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
+      Data: 9|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
         UnityEngine.CoreModule]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 8|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
+      Data: 10|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
     - Name: m_Target
       Entry: 10
-      Data: 0
+      Data: 2
     - Name: m_MethodName
       Entry: 1
       Data: TriggerBuff
@@ -13252,10 +13476,10 @@ MonoBehaviour:
       Data: 5
     - Name: m_Arguments
       Entry: 7
-      Data: 9|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
+      Data: 11|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
     - Name: m_ObjectArgument
       Entry: 10
-      Data: 1
+      Data: 3
     - Name: m_ObjectArgumentAssemblyTypeName
       Entry: 1
       Data: UnityEngine.Object, UnityEngine
@@ -13300,7 +13524,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 10|Config.Behavious.Behaviour, Assembly-CSharp
+      Data: 12|Config.Behavious.Behaviour, Assembly-CSharp
     - Name: _name
       Entry: 1
       Data: "\u5438\u70DF"
@@ -13345,23 +13569,23 @@ MonoBehaviour:
       Data: 
     - Name: _buff
       Entry: 7
-      Data: 11|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
+      Data: 13|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
     - Name: m_PersistentCalls
       Entry: 7
-      Data: 12|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
+      Data: 14|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
     - Name: m_Calls
       Entry: 7
-      Data: 13|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
+      Data: 15|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
         UnityEngine.CoreModule]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 14|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
+      Data: 16|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
     - Name: m_Target
       Entry: 10
-      Data: 0
+      Data: 2
     - Name: m_MethodName
       Entry: 1
       Data: TriggerBuff
@@ -13370,10 +13594,10 @@ MonoBehaviour:
       Data: 5
     - Name: m_Arguments
       Entry: 7
-      Data: 15|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
+      Data: 17|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
     - Name: m_ObjectArgument
       Entry: 10
-      Data: 2
+      Data: 4
     - Name: m_ObjectArgumentAssemblyTypeName
       Entry: 1
       Data: UnityEngine.Object, UnityEngine
@@ -13418,7 +13642,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 16|Config.Behavious.Behaviour, Assembly-CSharp
+      Data: 18|Config.Behavious.Behaviour, Assembly-CSharp
     - Name: _name
       Entry: 1
       Data: "\u52A0\u9910"
@@ -13463,23 +13687,23 @@ MonoBehaviour:
       Data: 
     - Name: _buff
       Entry: 7
-      Data: 17|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
+      Data: 19|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
     - Name: m_PersistentCalls
       Entry: 7
-      Data: 18|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
+      Data: 20|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
     - Name: m_Calls
       Entry: 7
-      Data: 19|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
+      Data: 21|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
         UnityEngine.CoreModule]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 20|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
+      Data: 22|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
     - Name: m_Target
       Entry: 10
-      Data: 0
+      Data: 2
     - Name: m_MethodName
       Entry: 1
       Data: TriggerBuff
@@ -13488,10 +13712,10 @@ MonoBehaviour:
       Data: 5
     - Name: m_Arguments
       Entry: 7
-      Data: 21|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
+      Data: 23|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
     - Name: m_ObjectArgument
       Entry: 10
-      Data: 3
+      Data: 5
     - Name: m_ObjectArgumentAssemblyTypeName
       Entry: 1
       Data: UnityEngine.Object, UnityEngine
@@ -13536,7 +13760,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 22|Config.Behavious.Behaviour, Assembly-CSharp
+      Data: 24|Config.Behavious.Behaviour, Assembly-CSharp
     - Name: _name
       Entry: 1
       Data: "\u9605\u8BFB"
@@ -13578,23 +13802,23 @@ MonoBehaviour:
       Data: 0
     - Name: _randEvent
       Entry: 7
-      Data: 23|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
+      Data: 25|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
     - Name: m_PersistentCalls
       Entry: 7
-      Data: 24|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
+      Data: 26|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
     - Name: m_Calls
       Entry: 7
-      Data: 25|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
+      Data: 27|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
         UnityEngine.CoreModule]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 26|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
+      Data: 28|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
     - Name: m_Target
       Entry: 10
-      Data: 4
+      Data: 0
     - Name: m_MethodName
       Entry: 1
       Data: TriggerRandEvent
@@ -13603,10 +13827,10 @@ MonoBehaviour:
       Data: 5
     - Name: m_Arguments
       Entry: 7
-      Data: 27|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
+      Data: 29|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
     - Name: m_ObjectArgument
       Entry: 10
-      Data: 5
+      Data: 6
     - Name: m_ObjectArgumentAssemblyTypeName
       Entry: 1
       Data: UnityEngine.Object, UnityEngine
@@ -13654,7 +13878,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 28|Config.Behavious.Behaviour, Assembly-CSharp
+      Data: 30|Config.Behavious.Behaviour, Assembly-CSharp
     - Name: _name
       Entry: 1
       Data: "\u65C5\u884C"
@@ -13696,23 +13920,23 @@ MonoBehaviour:
       Data: -50
     - Name: _randEvent
       Entry: 7
-      Data: 29|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
+      Data: 31|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
     - Name: m_PersistentCalls
       Entry: 7
-      Data: 30|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
+      Data: 32|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
     - Name: m_Calls
       Entry: 7
-      Data: 31|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
+      Data: 33|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
         UnityEngine.CoreModule]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 32|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
+      Data: 34|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
     - Name: m_Target
       Entry: 10
-      Data: 4
+      Data: 0
     - Name: m_MethodName
       Entry: 1
       Data: TriggerRandEvent
@@ -13721,10 +13945,10 @@ MonoBehaviour:
       Data: 5
     - Name: m_Arguments
       Entry: 7
-      Data: 33|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
+      Data: 35|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
     - Name: m_ObjectArgument
       Entry: 10
-      Data: 6
+      Data: 7
     - Name: m_ObjectArgumentAssemblyTypeName
       Entry: 1
       Data: UnityEngine.Object, UnityEngine
@@ -13772,7 +13996,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 34|Config.Behavious.Behaviour, Assembly-CSharp
+      Data: 36|Config.Behavious.Behaviour, Assembly-CSharp
     - Name: _name
       Entry: 1
       Data: "\u7535\u5B50\u6E38\u620F"
@@ -13817,23 +14041,23 @@ MonoBehaviour:
       Data: 
     - Name: _buff
       Entry: 7
-      Data: 35|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
+      Data: 37|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
     - Name: m_PersistentCalls
       Entry: 7
-      Data: 36|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
+      Data: 38|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
     - Name: m_Calls
       Entry: 7
-      Data: 37|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
+      Data: 39|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
         UnityEngine.CoreModule]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 38|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
+      Data: 40|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
     - Name: m_Target
       Entry: 10
-      Data: 0
+      Data: 2
     - Name: m_MethodName
       Entry: 1
       Data: TriggerBuff
@@ -13842,10 +14066,10 @@ MonoBehaviour:
       Data: 5
     - Name: m_Arguments
       Entry: 7
-      Data: 39|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
+      Data: 41|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
     - Name: m_ObjectArgument
       Entry: 10
-      Data: 7
+      Data: 8
     - Name: m_ObjectArgumentAssemblyTypeName
       Entry: 1
       Data: UnityEngine.Object, UnityEngine
@@ -13890,7 +14114,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 40|Config.Behavious.Behaviour, Assembly-CSharp
+      Data: 42|Config.Behavious.Behaviour, Assembly-CSharp
     - Name: _name
       Entry: 1
       Data: "\u8FFD\u661F"
@@ -13935,23 +14159,23 @@ MonoBehaviour:
       Data: 
     - Name: _buff
       Entry: 7
-      Data: 41|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
+      Data: 43|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
     - Name: m_PersistentCalls
       Entry: 7
-      Data: 42|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
+      Data: 44|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
     - Name: m_Calls
       Entry: 7
-      Data: 43|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
+      Data: 45|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
         UnityEngine.CoreModule]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 44|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
+      Data: 46|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
     - Name: m_Target
       Entry: 10
-      Data: 4
+      Data: 0
     - Name: m_MethodName
       Entry: 1
       Data: TriggerRandEvent
@@ -13960,10 +14184,10 @@ MonoBehaviour:
       Data: 5
     - Name: m_Arguments
       Entry: 7
-      Data: 45|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
+      Data: 47|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
     - Name: m_ObjectArgument
       Entry: 10
-      Data: 8
+      Data: 9
     - Name: m_ObjectArgumentAssemblyTypeName
       Entry: 1
       Data: UnityEngine.Object, UnityEngine
@@ -14008,7 +14232,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 46|Config.Behavious.Behaviour, Assembly-CSharp
+      Data: 48|Config.Behavious.Behaviour, Assembly-CSharp
     - Name: _name
       Entry: 1
       Data: "\u7EB5\u6B32"
@@ -14053,23 +14277,23 @@ MonoBehaviour:
       Data: 
     - Name: _buff
       Entry: 7
-      Data: 47|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
+      Data: 49|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
     - Name: m_PersistentCalls
       Entry: 7
-      Data: 48|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
+      Data: 50|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
     - Name: m_Calls
       Entry: 7
-      Data: 49|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
+      Data: 51|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
         UnityEngine.CoreModule]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 50|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
+      Data: 52|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
     - Name: m_Target
       Entry: 10
-      Data: 0
+      Data: 2
     - Name: m_MethodName
       Entry: 1
       Data: TriggerBuff
@@ -14078,10 +14302,10 @@ MonoBehaviour:
       Data: 5
     - Name: m_Arguments
       Entry: 7
-      Data: 51|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
+      Data: 53|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
     - Name: m_ObjectArgument
       Entry: 10
-      Data: 9
+      Data: 10
     - Name: m_ObjectArgumentAssemblyTypeName
       Entry: 1
       Data: UnityEngine.Object, UnityEngine
@@ -14126,7 +14350,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 52|Config.Behavious.Behaviour, Assembly-CSharp
+      Data: 54|Config.Behavious.Behaviour, Assembly-CSharp
     - Name: _name
       Entry: 1
       Data: "\u6253\u9EBB\u5C06"
@@ -14168,23 +14392,23 @@ MonoBehaviour:
       Data: 50
     - Name: _randEvent
       Entry: 7
-      Data: 53|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
+      Data: 55|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
     - Name: m_PersistentCalls
       Entry: 7
-      Data: 54|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
+      Data: 56|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
     - Name: m_Calls
       Entry: 7
-      Data: 55|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
+      Data: 57|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
         UnityEngine.CoreModule]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 56|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
+      Data: 58|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
     - Name: m_Target
       Entry: 10
-      Data: 4
+      Data: 0
     - Name: m_MethodName
       Entry: 1
       Data: TriggerRandEvent
@@ -14193,10 +14417,10 @@ MonoBehaviour:
       Data: 5
     - Name: m_Arguments
       Entry: 7
-      Data: 57|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
+      Data: 59|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
     - Name: m_ObjectArgument
       Entry: 10
-      Data: 10
+      Data: 11
     - Name: m_ObjectArgumentAssemblyTypeName
       Entry: 1
       Data: UnityEngine.Object, UnityEngine
@@ -14244,7 +14468,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 58|Config.Behavious.Behaviour, Assembly-CSharp
+      Data: 60|Config.Behavious.Behaviour, Assembly-CSharp
     - Name: _name
       Entry: 1
       Data: "\u9493\u9C7C"
@@ -14286,13 +14510,13 @@ MonoBehaviour:
       Data: 0
     - Name: _randEvent
       Entry: 7
-      Data: 59|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
+      Data: 61|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
     - Name: m_PersistentCalls
       Entry: 7
-      Data: 60|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
+      Data: 62|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
     - Name: m_Calls
       Entry: 7
-      Data: 61|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
+      Data: 63|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
         UnityEngine.CoreModule]], mscorlib
     - Name: 
       Entry: 12
@@ -14320,7 +14544,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 62|Config.Behavious.Behaviour, Assembly-CSharp
+      Data: 64|Config.Behavious.Behaviour, Assembly-CSharp
     - Name: _name
       Entry: 1
       Data: "\u7092\u80A1"
@@ -14362,23 +14586,23 @@ MonoBehaviour:
       Data: 200
     - Name: _randEvent
       Entry: 7
-      Data: 63|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
+      Data: 65|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
     - Name: m_PersistentCalls
       Entry: 7
-      Data: 64|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
+      Data: 66|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
     - Name: m_Calls
       Entry: 7
-      Data: 65|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
+      Data: 67|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
         UnityEngine.CoreModule]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 66|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
+      Data: 68|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
     - Name: m_Target
       Entry: 10
-      Data: 4
+      Data: 0
     - Name: m_MethodName
       Entry: 1
       Data: TriggerRandEvent
@@ -14387,10 +14611,10 @@ MonoBehaviour:
       Data: 5
     - Name: m_Arguments
       Entry: 7
-      Data: 67|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
+      Data: 69|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
     - Name: m_ObjectArgument
       Entry: 10
-      Data: 11
+      Data: 12
     - Name: m_ObjectArgumentAssemblyTypeName
       Entry: 1
       Data: UnityEngine.Object, UnityEngine
@@ -14438,7 +14662,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 68|Config.Behavious.Behaviour, Assembly-CSharp
+      Data: 70|Config.Behavious.Behaviour, Assembly-CSharp
     - Name: _name
       Entry: 1
       Data: "\u4E70\u4FDD\u5065\u54C1"
@@ -14480,23 +14704,23 @@ MonoBehaviour:
       Data: -1000
     - Name: _randEvent
       Entry: 7
-      Data: 69|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
+      Data: 71|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
     - Name: m_PersistentCalls
       Entry: 7
-      Data: 70|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
+      Data: 72|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
     - Name: m_Calls
       Entry: 7
-      Data: 71|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
+      Data: 73|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
         UnityEngine.CoreModule]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 72|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
+      Data: 74|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
     - Name: m_Target
       Entry: 10
-      Data: 4
+      Data: 0
     - Name: m_MethodName
       Entry: 1
       Data: TriggerRandEvent
@@ -14505,10 +14729,10 @@ MonoBehaviour:
       Data: 5
     - Name: m_Arguments
       Entry: 7
-      Data: 73|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
+      Data: 75|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
     - Name: m_ObjectArgument
       Entry: 10
-      Data: 12
+      Data: 13
     - Name: m_ObjectArgumentAssemblyTypeName
       Entry: 1
       Data: UnityEngine.Object, UnityEngine
@@ -14556,7 +14780,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 74|Config.Behavious.Behaviour, Assembly-CSharp
+      Data: 76|Config.Behavious.Behaviour, Assembly-CSharp
     - Name: _name
       Entry: 1
       Data: "\u6E9C\u9E1F"
@@ -14598,23 +14822,23 @@ MonoBehaviour:
       Data: 0
     - Name: _randEvent
       Entry: 7
-      Data: 75|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
+      Data: 77|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
     - Name: m_PersistentCalls
       Entry: 7
-      Data: 76|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
+      Data: 78|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
     - Name: m_Calls
       Entry: 7
-      Data: 77|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
+      Data: 79|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
         UnityEngine.CoreModule]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 78|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
+      Data: 80|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
     - Name: m_Target
       Entry: 10
-      Data: 4
+      Data: 0
     - Name: m_MethodName
       Entry: 1
       Data: TriggerRandEvent
@@ -14623,10 +14847,10 @@ MonoBehaviour:
       Data: 5
     - Name: m_Arguments
       Entry: 7
-      Data: 79|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
+      Data: 81|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
     - Name: m_ObjectArgument
       Entry: 10
-      Data: 13
+      Data: 14
     - Name: m_ObjectArgumentAssemblyTypeName
       Entry: 1
       Data: UnityEngine.Object, UnityEngine
@@ -14674,7 +14898,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 80|Config.Behavious.Behaviour, Assembly-CSharp
+      Data: 82|Config.Behavious.Behaviour, Assembly-CSharp
     - Name: _name
       Entry: 1
       Data: "\u4E0B\u8C61\u68CB"
@@ -14944,9 +15168,9 @@ RectTransform:
   m_Father: {fileID: 1322232480}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 125, y: -25}
   m_SizeDelta: {x: 176, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &879734494
@@ -17620,6 +17844,8 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -17631,7 +17857,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 26
+      Data: 33
     - Name: 
       Entry: 7
       Data: 1|Config.RandEvents.RandEvent, Assembly-CSharp
@@ -19770,6 +19996,596 @@ MonoBehaviour:
     - Name: _money
       Entry: 4
       Data: 0
+    - Name: _buff
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 63|Config.RandEvents.RandEvent, Assembly-CSharp
+    - Name: _name
+      Entry: 1
+      Data: "\u4E0A\u73ED\u8FDF\u5230"
+    - Name: _chance
+      Entry: 4
+      Data: 0.1
+    - Name: _chanceMultiplier
+      Entry: 4
+      Data: 1
+    - Name: _happenNum
+      Entry: 3
+      Data: 2
+    - Name: _positive
+      Entry: 5
+      Data: false
+    - Name: _isCondition
+      Entry: 5
+      Data: true
+    - Name: _traitReq
+      Entry: 6
+      Data: 
+    - Name: _availibleStage
+      Entry: 1
+      Data: "\u4E2D\u5E74\u671F"
+    - Name: _desc
+      Entry: 1
+      Data: "\u4F60\u671B\u7740\u5835\u6210\u957F\u9F99\u7684\u4E3B\u5E72\u9053\uFF0C\u6B32\u54ED\u65E0\u6CEA\u3002\r"
+    - Name: _sans
+      Entry: 4
+      Data: -3
+    - Name: _motor
+      Entry: 4
+      Data: 0
+    - Name: _nerve
+      Entry: 4
+      Data: 0
+    - Name: _endoc
+      Entry: 4
+      Data: 0
+    - Name: _circul
+      Entry: 4
+      Data: 0
+    - Name: _breath
+      Entry: 4
+      Data: 0
+    - Name: _digest
+      Entry: 4
+      Data: 0
+    - Name: _urinary
+      Entry: 4
+      Data: 0
+    - Name: _reprod
+      Entry: 4
+      Data: 0
+    - Name: _money
+      Entry: 4
+      Data: 0
+    - Name: _buff
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 64|Config.RandEvents.RandEvent, Assembly-CSharp
+    - Name: _name
+      Entry: 1
+      Data: "\u5173\u8282\u632B\u4F24"
+    - Name: _chance
+      Entry: 4
+      Data: 0.1
+    - Name: _chanceMultiplier
+      Entry: 4
+      Data: 1
+    - Name: _happenNum
+      Entry: 3
+      Data: 99
+    - Name: _positive
+      Entry: 5
+      Data: false
+    - Name: _isCondition
+      Entry: 5
+      Data: true
+    - Name: _traitReq
+      Entry: 6
+      Data: 
+    - Name: _availibleStage
+      Entry: 1
+      Data: "\u5168\u9636\u6BB5"
+    - Name: _desc
+      Entry: 1
+      Data: "\u4F60\u957F\u671F\u672A\u7ECF\u8FD0\u52A8\u7684\u5173\u8282\u7EC8\u4E8E\u652F\u6491\u4E0D\u4F4F\u8EAB\u4F53\u7684\u91CD\u91CF\u3002\r"
+    - Name: _sans
+      Entry: 4
+      Data: -3
+    - Name: _motor
+      Entry: 4
+      Data: -3
+    - Name: _nerve
+      Entry: 4
+      Data: 0
+    - Name: _endoc
+      Entry: 4
+      Data: 0
+    - Name: _circul
+      Entry: 4
+      Data: 0
+    - Name: _breath
+      Entry: 4
+      Data: 0
+    - Name: _digest
+      Entry: 4
+      Data: 0
+    - Name: _urinary
+      Entry: 4
+      Data: 0
+    - Name: _reprod
+      Entry: 4
+      Data: 0
+    - Name: _money
+      Entry: 4
+      Data: -200
+    - Name: _buff
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 65|Config.RandEvents.RandEvent, Assembly-CSharp
+    - Name: _name
+      Entry: 1
+      Data: "\u9AD8\u8840\u538B"
+    - Name: _chance
+      Entry: 4
+      Data: 0.1
+    - Name: _chanceMultiplier
+      Entry: 4
+      Data: 1
+    - Name: _happenNum
+      Entry: 3
+      Data: 1
+    - Name: _positive
+      Entry: 5
+      Data: false
+    - Name: _isCondition
+      Entry: 5
+      Data: true
+    - Name: _traitReq
+      Entry: 6
+      Data: 
+    - Name: _availibleStage
+      Entry: 1
+      Data: "\u8001\u5E74\u671F"
+    - Name: _desc
+      Entry: 1
+      Data: "\u201C\u4E0D\u5F97\u4E0D\u670D\u8001\u554A\u2026\u2026\u201D\r"
+    - Name: _sans
+      Entry: 4
+      Data: -5
+    - Name: _motor
+      Entry: 4
+      Data: -1
+    - Name: _nerve
+      Entry: 4
+      Data: 0
+    - Name: _endoc
+      Entry: 4
+      Data: 0
+    - Name: _circul
+      Entry: 4
+      Data: -3
+    - Name: _breath
+      Entry: 4
+      Data: 0
+    - Name: _digest
+      Entry: 4
+      Data: 0
+    - Name: _urinary
+      Entry: 4
+      Data: 0
+    - Name: _reprod
+      Entry: 4
+      Data: 0
+    - Name: _money
+      Entry: 4
+      Data: 0
+    - Name: _buff
+      Entry: 7
+      Data: 66|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
+    - Name: m_PersistentCalls
+      Entry: 7
+      Data: 67|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
+    - Name: m_Calls
+      Entry: 7
+      Data: 68|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
+        UnityEngine.CoreModule]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 69|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
+    - Name: m_Target
+      Entry: 10
+      Data: 0
+    - Name: m_MethodName
+      Entry: 1
+      Data: TriggerBuff
+    - Name: m_Mode
+      Entry: 3
+      Data: 5
+    - Name: m_Arguments
+      Entry: 7
+      Data: 70|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
+    - Name: m_ObjectArgument
+      Entry: 10
+      Data: 7
+    - Name: m_ObjectArgumentAssemblyTypeName
+      Entry: 1
+      Data: UnityEngine.Object, UnityEngine
+    - Name: m_IntArgument
+      Entry: 3
+      Data: 0
+    - Name: m_FloatArgument
+      Entry: 4
+      Data: 0
+    - Name: m_StringArgument
+      Entry: 1
+      Data: "\u9AD8\u8840\u538B"
+    - Name: m_BoolArgument
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_CallState
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 71|Config.RandEvents.RandEvent, Assembly-CSharp
+    - Name: _name
+      Entry: 1
+      Data: "\u516C\u53F8\u88C1\u5458"
+    - Name: _chance
+      Entry: 4
+      Data: 0.1
+    - Name: _chanceMultiplier
+      Entry: 4
+      Data: 1
+    - Name: _happenNum
+      Entry: 3
+      Data: 1
+    - Name: _positive
+      Entry: 5
+      Data: false
+    - Name: _isCondition
+      Entry: 5
+      Data: false
+    - Name: _traitReq
+      Entry: 6
+      Data: 
+    - Name: _availibleStage
+      Entry: 1
+      Data: "\u4E2D\u5E74\u671F"
+    - Name: _desc
+      Entry: 1
+      Data: "\u8F9B\u8F9B\u82E6\u82E6\u5E72\u4E86\u5341\u591A\u5E74\uFF0C\u8FD8\u662F\u6CA1\u80FD\u9003\u8FC7\u516C\u53F8\u7684\u88C1\u5458\u51CF\u8D1F\u3002\r"
+    - Name: _sans
+      Entry: 4
+      Data: -10
+    - Name: _motor
+      Entry: 4
+      Data: 0
+    - Name: _nerve
+      Entry: 4
+      Data: 0
+    - Name: _endoc
+      Entry: 4
+      Data: 0
+    - Name: _circul
+      Entry: 4
+      Data: 0
+    - Name: _breath
+      Entry: 4
+      Data: 0
+    - Name: _digest
+      Entry: 4
+      Data: 0
+    - Name: _urinary
+      Entry: 4
+      Data: 0
+    - Name: _reprod
+      Entry: 4
+      Data: 0
+    - Name: _money
+      Entry: 4
+      Data: -2000
+    - Name: _buff
+      Entry: 7
+      Data: 72|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
+    - Name: m_PersistentCalls
+      Entry: 7
+      Data: 73|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
+    - Name: m_Calls
+      Entry: 7
+      Data: 74|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
+        UnityEngine.CoreModule]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 75|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
+    - Name: m_Target
+      Entry: 10
+      Data: 0
+    - Name: m_MethodName
+      Entry: 1
+      Data: TriggerBuff
+    - Name: m_Mode
+      Entry: 3
+      Data: 5
+    - Name: m_Arguments
+      Entry: 7
+      Data: 76|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
+    - Name: m_ObjectArgument
+      Entry: 10
+      Data: 8
+    - Name: m_ObjectArgumentAssemblyTypeName
+      Entry: 1
+      Data: UnityEngine.Object, UnityEngine
+    - Name: m_IntArgument
+      Entry: 3
+      Data: 0
+    - Name: m_FloatArgument
+      Entry: 4
+      Data: 0
+    - Name: m_StringArgument
+      Entry: 1
+      Data: "\u7CBE\u795E\u8870\u5F31"
+    - Name: m_BoolArgument
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_CallState
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 77|Config.RandEvents.RandEvent, Assembly-CSharp
+    - Name: _name
+      Entry: 1
+      Data: "\u5E02\u573A\u6253\u6298"
+    - Name: _chance
+      Entry: 4
+      Data: 0.1
+    - Name: _chanceMultiplier
+      Entry: 4
+      Data: 1
+    - Name: _happenNum
+      Entry: 3
+      Data: 99
+    - Name: _positive
+      Entry: 5
+      Data: true
+    - Name: _isCondition
+      Entry: 5
+      Data: false
+    - Name: _traitReq
+      Entry: 6
+      Data: 
+    - Name: _availibleStage
+      Entry: 1
+      Data: "\u8001\u5E74\u671F"
+    - Name: _desc
+      Entry: 1
+      Data: "\u201C\u7238\uFF0C\u4F60\u4E0D\u80FD\u56E0\u4E3A\u8D85\u5E02\u6253\u6298\uFF0C\u5C31\u4E70\u4E86\u5341\u7BB1\u9E21\u86CB\u554A\uFF01\u201D\r"
+    - Name: _sans
+      Entry: 4
+      Data: 3
+    - Name: _motor
+      Entry: 4
+      Data: 0
+    - Name: _nerve
+      Entry: 4
+      Data: 0
+    - Name: _endoc
+      Entry: 4
+      Data: 0
+    - Name: _circul
+      Entry: 4
+      Data: 0
+    - Name: _breath
+      Entry: 4
+      Data: 0
+    - Name: _digest
+      Entry: 4
+      Data: 0
+    - Name: _urinary
+      Entry: 4
+      Data: 0
+    - Name: _reprod
+      Entry: 4
+      Data: 0
+    - Name: _money
+      Entry: 4
+      Data: -50
+    - Name: _buff
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 78|Config.RandEvents.RandEvent, Assembly-CSharp
+    - Name: _name
+      Entry: 1
+      Data: "\u8DF3\u69FD\u5347\u804C"
+    - Name: _chance
+      Entry: 4
+      Data: 0.1
+    - Name: _chanceMultiplier
+      Entry: 4
+      Data: 1
+    - Name: _happenNum
+      Entry: 3
+      Data: 2
+    - Name: _positive
+      Entry: 5
+      Data: true
+    - Name: _isCondition
+      Entry: 5
+      Data: false
+    - Name: _traitReq
+      Entry: 6
+      Data: 
+    - Name: _availibleStage
+      Entry: 1
+      Data: "\u4E2D\u5E74\u671F"
+    - Name: _desc
+      Entry: 1
+      Data: "\u6628\u5929\u4F60\u9762\u8BD5\u7684\u4EBA\u5C31\u662F\u4ECA\u5929\u4F60\u7684\u9762\u8BD5\u5B98\uFF0C\u4E24\u4EBA\u7686\u5927\u6B22\u559C\u3002\r\n"
+    - Name: _sans
+      Entry: 4
+      Data: 4
+    - Name: _motor
+      Entry: 4
+      Data: 0
+    - Name: _nerve
+      Entry: 4
+      Data: 0
+    - Name: _endoc
+      Entry: 4
+      Data: 0
+    - Name: _circul
+      Entry: 4
+      Data: 0
+    - Name: _breath
+      Entry: 4
+      Data: 0
+    - Name: _digest
+      Entry: 4
+      Data: 0
+    - Name: _urinary
+      Entry: 4
+      Data: 0
+    - Name: _reprod
+      Entry: 4
+      Data: 0
+    - Name: _money
+      Entry: 4
+      Data: 1000
+    - Name: _buff
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 79|Config.RandEvents.RandEvent, Assembly-CSharp
+    - Name: _name
+      Entry: 1
+      Data: "\u6F14\u51FA\u73B0\u573A"
+    - Name: _chance
+      Entry: 4
+      Data: 0.1
+    - Name: _chanceMultiplier
+      Entry: 4
+      Data: 1
+    - Name: _happenNum
+      Entry: 3
+      Data: 3
+    - Name: _positive
+      Entry: 5
+      Data: true
+    - Name: _isCondition
+      Entry: 5
+      Data: false
+    - Name: _traitReq
+      Entry: 6
+      Data: 
+    - Name: _availibleStage
+      Entry: 1
+      Data: "\u9752\u5E74\u671F"
+    - Name: _desc
+      Entry: 1
+      Data: "\u201C\u6D77\u732B\uFF01Damedane\uFF01\u201D\r"
+    - Name: _sans
+      Entry: 4
+      Data: 3
+    - Name: _motor
+      Entry: 4
+      Data: 0
+    - Name: _nerve
+      Entry: 4
+      Data: 0
+    - Name: _endoc
+      Entry: 4
+      Data: 0
+    - Name: _circul
+      Entry: 4
+      Data: 0
+    - Name: _breath
+      Entry: 4
+      Data: 0
+    - Name: _digest
+      Entry: 4
+      Data: 0
+    - Name: _urinary
+      Entry: 4
+      Data: 0
+    - Name: _reprod
+      Entry: 4
+      Data: 0
+    - Name: _money
+      Entry: 4
+      Data: -30
     - Name: _buff
       Entry: 6
       Data: 
@@ -24251,9 +25067,9 @@ RectTransform:
   m_Father: {fileID: 333231021}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 125, y: -25}
   m_SizeDelta: {x: 176, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1424337257
@@ -28512,9 +29328,9 @@ RectTransform:
   m_Father: {fileID: 78109212}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 125, y: -25}
   m_SizeDelta: {x: 176, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1844280184

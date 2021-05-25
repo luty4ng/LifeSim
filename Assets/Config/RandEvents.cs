@@ -42,7 +42,7 @@ namespace Config.RandEvents
                     return;
                 }
             } 
-            Debug.Log("没有找到随机事件，名称：" + name + ". 请检查触发器和事件池中的名称是否一致."); 
+            // Debug.Log("没有找到随机事件，名称：" + name + ". 请检查触发器和事件池中的名称是否一致."); 
         }
 
     }

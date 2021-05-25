@@ -10,7 +10,13 @@ public class TraitPanel : MonoBehaviour
     void Start()
     {
         _protagonist = GameManager.instance.playerAgent.GetComponent<Protagonist>();
+        StartCoroutine(Init());
+        
+    }
 
+    IEnumerator Init()
+    {
+        yield return null;
         foreach (var name in _protagonist.GetTraitsList().Keys)
         {
 
