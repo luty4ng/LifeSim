@@ -146,6 +146,16 @@ public class Protagonist : MonoBehaviour
         else
             return "老年期";
     }
+
+    public string GetHealthState()
+    {
+        if(_overallHealth < normalModule)
+            return "受损";
+        else if(_overallHealth >= normalModule && _overallHealth < healthyModule)
+            return "正常";
+        else
+            return "健康";
+    }
     public void UpdateHabbitSelect(string eat, string sleep, string sport, string work)
     {
         if(_age == initAge)

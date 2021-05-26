@@ -57,29 +57,17 @@ public class TipsPanel : MonoBehaviour
             messageBox.GetComponent<MessageBox>().descTMPro.text = "点击任意处退出/开始新的人生";
             
             modal.OpenWindow();
+            StartCoroutine(RestartGame());
             Time.timeScale = 0f;
+
         });
     }
 
-    void Update()
+    IEnumerator RestartGame()
     {
-        if(Input.GetKeyDown(KeyCode.X))
-            modal.OpenWindow();
-        
-        if(Input.GetKeyDown(KeyCode.C))
-            modal.CloseWindow();
-        
-        if(Input.GetKeyDown(KeyCode.Z))
-        {
-            GameObject messageBox = ResourceManager.GetInstance().Load<GameObject>("UI/MessageBox");
-            messageBox.transform.SetParent(allBoxsObj.transform);
-            messageBox.transform.localScale = Vector3.one;
-
-            messageBox.GetComponent<MessageBox>().titleTMPro.text = "测试弹窗";
-            messageBox.GetComponent<MessageBox>().descTMPro.text = "测试弹窗描述";
-        }  
+        yield return new WaitForSeconds(5f);
+        ScenesManager.GetInstance().LoadScene("Enter", ()=>{});
     }
-
     public void CloseWindows()
     {
         modal.CloseWindow();

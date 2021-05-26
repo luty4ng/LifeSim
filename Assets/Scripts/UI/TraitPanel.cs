@@ -16,10 +16,9 @@ public class TraitPanel : MonoBehaviour
 
     IEnumerator Init()
     {
-        yield return null;
+        yield return new WaitForSeconds(0.02f);
         foreach (var name in _protagonist.GetTraitsList().Keys)
         {
-
             GameObject traitContent = ResourceManager.GetInstance().Load<GameObject>("UI/traitUI");
             traitContent.transform.SetParent(this.transform);
             traitContent.transform.localScale = Vector3.one;
