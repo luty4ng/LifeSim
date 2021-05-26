@@ -9,10 +9,13 @@ namespace Config.RandEvents
 {
     public class RandEvents : SerializedMonoBehaviour
     {
+        
         [LabelText("随机事件列表"), TableList]
         public List<RandEvent> _randEventList;
         [LabelText("随机事件概率系数（默认1）"), DisplayAsString]
         public float multiplier = 1f;
+        [LabelText("每回合随机事件数量上限"),  DisplayAsString]
+        public float eventNum;
 
         public void TriggerRandEvent(string name)
         {
@@ -35,8 +38,12 @@ namespace Config.RandEvents
                         tmpChange = tmpChange * multiplier;
                     if(rand <= tmpChange)
                     {
+                        if(eventNum <= 0)
+                            return;
+                        
                         EventCenter.GetInstance().EventTrigger<RandEvent>("随机事件影响", item);
                         EventCenter.GetInstance().EventTrigger<RandEvent>("随机事件弹窗", item);
+                        eventNum -= 1f;
                         //Debug.Log(name + "事件发生且弹框");
                     }
                     return;

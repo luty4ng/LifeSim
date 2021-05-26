@@ -20,10 +20,12 @@ public class Protagonist : MonoBehaviour
     public float maxSans;
     [LabelText("各模块值上限")]
     public float maxMoudle;
-    [LabelText("每回合恢复模块值（默认）")]
+    [LabelText("每回合恢复模块值（默认1）")]
     public float moduleChange;
-    [LabelText("每回合恢复精神值（默认）")]
+    [LabelText("每回合恢复精神值（默认2）")]
     public float sansChange;
+    [LabelText("每回合随机事件数量上限(默认2)")]
+    public float eventNum = 2;
     
     [LabelText("角色特性数目")]
     public float traitNum = 2;
@@ -60,8 +62,8 @@ public class Protagonist : MonoBehaviour
     private float _overallHealth;
     private float _overallSans;
     private float _motor, _nerve, _endoc, _circul, _breath, _digest, _urinary, _reprod;
-    private Dictionary<string, string> _habbitSelect = new Dictionary<string, string>();
-    private List<string> _behaviourSelect = new List<string>();
+    [ShowInInspector, FoldoutGroup("DEBUG")] private Dictionary<string, string> _habbitSelect = new Dictionary<string, string>();
+    [ShowInInspector, FoldoutGroup("DEBUG")] private List<string> _behaviourSelect = new List<string>();
     [ShowInInspector, FoldoutGroup("DEBUG")] private Dictionary<string, float> _behavBook = new Dictionary<string, float>(); 
     [ShowInInspector, FoldoutGroup("DEBUG")] private Dictionary<string, Config.Traits.Trait> _traitList = new Dictionary<string, Config.Traits.Trait>();
     [ShowInInspector, FoldoutGroup("DEBUG")] private Dictionary<string, Config.Buffs.Buff> _buffList = new Dictionary<string, Config.Buffs.Buff>();
@@ -91,7 +93,7 @@ public class Protagonist : MonoBehaviour
         behaviours = pools.GetComponentInChildren<Config.Behavious.Behaviours>();
         randEvents = pools.GetComponentInChildren<Config.RandEvents.RandEvents>();
         buffs = pools.GetComponentInChildren<Config.Buffs.Buffs>();
-         
+        randEvents.eventNum = eventNum;
         List<Config.Traits.Trait> tmpTraitList = new List<Config.Traits.Trait>(traits._traitList);
         for (int i = 0; i < traitNum; i++)
         {
@@ -116,6 +118,10 @@ public class Protagonist : MonoBehaviour
         EventCenter.GetInstance().AddEventListener<Config.Buffs.Buff>("新Buff触发", UpdateBuffList);
         EventCenter.GetInstance().AddEventListener("UpdateData", UpdateData);
         EventCenter.GetInstance().AddEventListener("Cure", Cure);
+        EventCenter.GetInstance().AddEventListener("UpdateUI", ()=>{
+            // Reset eventNum into pre-set value
+            randEvents.eventNum = eventNum;
+        });
     }
 
     public float GetAge() => _age;
@@ -531,6 +537,35 @@ public class Protagonist : MonoBehaviour
             }
             UpdateTrait(trait.Value);
         }
+    }
+
+    public void Reset()
+    {
+        randEvents.eventNum = eventNum;
+        _traitList.Clear();
+        _buffCount.Clear();
+        _buffList.Clear();
+        _behavBook.Clear();
+        _habbitSelect.Clear();
+        _behaviourSelect.Clear();
+
+        List<Config.Traits.Trait> tmpTraitList = new List<Config.Traits.Trait>(traits._traitList);
+        for (int i = 0; i < traitNum; i++)
+        {
+            int tmpIndex = Random.Range(0, (int)(tmpTraitList.Count-1));
+            _traitList.Add(tmpTraitList[tmpIndex]._name, tmpTraitList[tmpIndex]);
+            tmpTraitList.RemoveAt(tmpIndex);
+        }
+        Init();
+
+        foreach (var behav in behaviours._behaviourList)
+        {
+            if(!_behavBook.ContainsKey(behav._name))
+                _behavBook.Add(behav._name, 0f);
+            _behavBook[behav._name] = 0f;
+        }
+
+        EventCenter.GetInstance().EventTrigger("UpdateUI");
     }
     public void UpdateData()
     { 

@@ -1,24 +1,40 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
 using TMPro;
+using UnityEngine.Events;
 using Michsky.UI.ModernUIPack;
 
 public class TipsPanel : MonoBehaviour
 {
     // Start is called before the first frame update
-    public ModalWindowManagerCustom modal;
     public GameObject allBoxsObj;
     private bool hasEvent = false;
+
+    public Button confirmButton;
+    public Animator mwAnimator;
+    // Events
+    public UnityEvent onConfirm;
+    // Settings
+    public bool sharpAnimations = false;
+
+    public bool isOn = false;
     
     void Awake()
     {
-        modal = GetComponent<ModalWindowManagerCustom>();
+        //modal = GetComponent<ModalWindowManagerCustom>();
+        //allBoxsObj = GameObject.Find("AllBoxs");
     }
     
     void Start()
     {
+        allBoxsObj = GameObject.Find("AllBoxs");
+        if (mwAnimator == null)
+                mwAnimator = gameObject.GetComponent<Animator>();
+
+        if (confirmButton != null)
+            confirmButton.onClick.AddListener(onConfirm.Invoke);
 
         EventCenter.GetInstance().AddEventListener<(string title, string desc)>("TIPS", (info)=>{
             GameObject messageBox = ResourceManager.GetInstance().Load<GameObject>("UI/MessageBox");
@@ -28,10 +44,11 @@ public class TipsPanel : MonoBehaviour
             messageBox.GetComponent<MessageBox>().titleTMPro.text = info.title;
             messageBox.GetComponent<MessageBox>().descTMPro.text = info.desc;
 
-            modal.OpenWindow();
+            OpenWindow();
         });
 
         EventCenter.GetInstance().AddEventListener("随机事件弹窗", (Config.RandEvents.RandEvent randEvent)=>{
+                //CloseWindows();
                 GameObject messageBox = ResourceManager.GetInstance().Load<GameObject>("UI/MessageBox");
                 messageBox.transform.SetParent(allBoxsObj.transform);
                 messageBox.transform.localScale = Vector3.one;
@@ -43,12 +60,12 @@ public class TipsPanel : MonoBehaviour
 
         EventCenter.GetInstance().AddEventListener("UpdateUI",() => {
             if(hasEvent)
-                modal.OpenWindow();
+                OpenWindow();
             hasEvent = false;
         });
 
         EventCenter.GetInstance().AddEventListener("GAMEOVER",() => {
-            
+            //CloseWindows();
             GameObject messageBox = ResourceManager.GetInstance().Load<GameObject>("UI/MessageBox");
             messageBox.transform.SetParent(allBoxsObj.transform);
             messageBox.transform.localScale = Vector3.one;
@@ -56,25 +73,95 @@ public class TipsPanel : MonoBehaviour
             messageBox.GetComponent<MessageBox>().titleTMPro.text = "游戏结束";
             messageBox.GetComponent<MessageBox>().descTMPro.text = "点击任意处退出/开始新的人生";
             
-            modal.OpenWindow();
-            StartCoroutine(RestartGame());
+            OpenWindow();
+            // StartCoroutine(RestartGame());
+            
+            GameManager.instance.playerAgent.Reset();
+            
             Time.timeScale = 0f;
+            
 
         });
     }
 
+            
+
+        public void OpenWindow()
+        {
+            if (isOn == false)
+            {
+                if (sharpAnimations == false)
+                    mwAnimator.CrossFade("Fade-in", 0.1f);
+                else
+                    mwAnimator.Play("Fade-in");
+
+                isOn = true;
+            }
+        }
+
+        public void CloseWindow()
+        {
+            if (isOn == true)
+            {
+                if (sharpAnimations == false)
+                    mwAnimator.CrossFade("Fade-out", 0.1f);
+                else
+                    mwAnimator.Play("Fade-out");
+
+                isOn = false;
+            }
+        }
+
+        public void AnimateWindow()
+        {
+            if (isOn == false)
+            {
+                if (sharpAnimations == false)
+                    mwAnimator.CrossFade("Fade-in", 0.1f);
+                else
+                    mwAnimator.Play("Fade-in");
+
+                isOn = true;
+            }
+
+            else
+            {
+                if (sharpAnimations == false)
+                    mwAnimator.CrossFade("Fade-out", 0.1f);
+                else
+                    mwAnimator.Play("Fade-out");
+
+                isOn = false;
+            }
+        }
+
+
     IEnumerator RestartGame()
     {
-        yield return new WaitForSeconds(5f);
-        ScenesManager.GetInstance().LoadScene("Enter", ()=>{});
+        yield return new WaitForSeconds(0f);
+        GameManager.instance.cover.SetActive(true);
     }
     public void CloseWindows()
     {
-        modal.CloseWindow();
-        MessageBox[] boxComps = modal.GetComponentsInChildren<MessageBox>();
+        if(Time.timeScale == 0)
+        {
+            Time.timeScale = 1f;
+            StartCoroutine(RestartGame());
+        }
+        
+        CloseWindow();
+        MessageBox[] boxComps = GetComponentsInChildren<MessageBox>();
         foreach (var comp in boxComps)
         {
             Destroy(comp.gameObject);
+        }
+    }
+
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Q))
+        {
+            EventCenter.GetInstance().EventTrigger("GAMEOVER");
         }
     }
 }
