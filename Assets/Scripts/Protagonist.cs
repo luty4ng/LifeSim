@@ -360,9 +360,27 @@ public class Protagonist : MonoBehaviour
             }
         }
     }
+
+    public List<T> Shuffle<T>(List<T> original)
+    {
+        System.Random randomNum = new System.Random();
+        int index = 0;
+        T temp;
+        for (int i = 0; i < original.Count; i++)
+        {
+            index = randomNum.Next(0, original.Count - 1);
+            if (index != i)
+            {
+                temp = original[i];
+                original[i] = original[index];
+                original[index] = temp;
+            }
+        }
+        return original;
+    }
     private void UpdateByNonRestrictedEvents()
     {
-        foreach (var tmpEvent in randEvents._randEventList)
+        foreach (var tmpEvent in Shuffle<Config.RandEvents.RandEvent>(randEvents._randEventList))
         {
             if(!tmpEvent._isCondition)
             {
