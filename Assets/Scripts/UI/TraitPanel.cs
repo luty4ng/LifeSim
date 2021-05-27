@@ -16,7 +16,7 @@ public class TraitPanel : MonoBehaviour
 
     IEnumerator Init()
     {
-        yield return new WaitForSeconds(0.02f);
+        yield return new WaitForSeconds(0.01f);
         foreach (var name in _protagonist.GetTraitsList().Keys)
         {
             GameObject traitContent = ResourceManager.GetInstance().Load<GameObject>("UI/traitUI");

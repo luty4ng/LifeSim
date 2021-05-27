@@ -14,6 +14,13 @@ public class BuffPanel : MonoBehaviour
         _protagonist = GameManager.instance.playerAgent.GetComponent<Protagonist>(); 
         EventCenter.GetInstance().AddEventListener("UpdateUI", UpdateBuffUI);
         EventCenter.GetInstance().AddEventListener<string>("DestroyBuffObj", DestroyBuff);
+        EventCenter.GetInstance().AddEventListener("DestroyAllBuffOnUI", ()=>{
+            RectTransform[] tmpRects = this.GetComponentsInChildren<RectTransform>();
+            foreach (var item in tmpRects)
+            {
+                Destroy(item.gameObject);
+            }
+        });
     }
 
     void UpdateBuffUI()

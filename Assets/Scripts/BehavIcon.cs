@@ -27,6 +27,10 @@ public class BehavIcon : MonoBehaviour
             
             StartCoroutine(OutputAnimationList());
         });
+
+        EventCenter.GetInstance().AddEventListener("GAMEOVER", ()=>{
+            StopAllCoroutines();
+        });
     }
 
     IEnumerator OutputAnimationList()

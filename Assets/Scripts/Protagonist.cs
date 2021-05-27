@@ -566,6 +566,7 @@ public class Protagonist : MonoBehaviour
         }
 
         EventCenter.GetInstance().EventTrigger("UpdateUI");
+        EventCenter.GetInstance().EventTrigger("DestroyAllBuffOnUI");
     }
     public void UpdateData()
     { 
