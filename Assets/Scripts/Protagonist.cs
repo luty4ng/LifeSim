@@ -122,6 +122,8 @@ public class Protagonist : MonoBehaviour
             // Reset eventNum into pre-set value
             randEvents.eventNum = eventNum;
         });
+
+        AudioManager.GetInstance().PlayBGM("BGM");
     }
 
     public float GetAge() => _age;

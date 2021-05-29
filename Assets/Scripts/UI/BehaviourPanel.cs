@@ -53,4 +53,10 @@ public class BehaviourPanel : MonoBehaviour
         }
 
     }
+
+    public void BehaviourSound()
+    {
+        Debug.Log("Play Behaviour Sound");
+        AudioManager.GetInstance().PlaySound("Bahaviour", (AudioSource source) => {});
+    }
 }

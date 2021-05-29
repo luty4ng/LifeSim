@@ -40,7 +40,10 @@ namespace Config.RandEvents
                     {
                         if(eventNum <= 0)
                             return;
-                        
+                        if(item._positive)
+                            AudioManager.GetInstance().PlaySound("GoodThing", (AudioSource source)=>{});
+                        else
+                            AudioManager.GetInstance().PlaySound("BadThing", (AudioSource source)=>{});
                         EventCenter.GetInstance().EventTrigger<RandEvent>("随机事件影响", item);
                         EventCenter.GetInstance().EventTrigger<RandEvent>("随机事件弹窗", item);
                         eventNum -= 1f;
