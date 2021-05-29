@@ -2248,7 +2248,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &145587991
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2403,9 +2403,9 @@ RectTransform:
   m_Father: {fileID: 184109605}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 120, y: -25}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 176, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &153172508
@@ -4040,9 +4040,9 @@ RectTransform:
   m_Father: {fileID: 1144845973}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 120, y: -25}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 176, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &250241232
@@ -4174,9 +4174,9 @@ RectTransform:
   m_Father: {fileID: 2050493462}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 120, y: -25}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 176, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &257702110
@@ -12911,6 +12911,12 @@ MonoBehaviour:
     - Name: _moneyToCure
       Entry: 4
       Data: 0
+    - Name: _leftDesc
+      Entry: 1
+      Data: "\u8FD0\u52A8\u7CFB\u7EDF\uFF1A-1/\u5E74\uFF0C\u5185\u5206\u6CCC\u7CFB\u7EDF\uFF1A-1/\u5E74\uFF0C\u7CBE\u795E\uFF1A+1/\u5E74\uFF0C\u91D1\u94B1\u4EA7\u51FA\uFF1A50/\u5E74\uFF0C\u6301\u7EED10\u5E74\r\n"
+    - Name: _rightInf
+      Entry: 1
+      Data: "\u6765\u81EA\u4E8B\u4EF6\u201C\u7761\u7720\u5145\u8DB3\u201D\uFF0C\u65E0\u6CD5\u6CBB\u7597\r\n"
     - Name: _sans
       Entry: 4
       Data: 1
@@ -12962,6 +12968,12 @@ MonoBehaviour:
     - Name: _moneyToCure
       Entry: 4
       Data: 500
+    - Name: _leftDesc
+      Entry: 1
+      Data: "\u8FD0\u52A8\u7CFB\u7EDF\uFF1A-3/\u5E74\uFF0C\u7CBE\u795E\uFF1A-3/\u5E74\uFF0C\u91D1\u94B1\u4EA7\u51FA\uFF1A50/\u5E74\uFF0C\u6301\u7EED5\u5E74\r\n"
+    - Name: _rightInf
+      Entry: 1
+      Data: "\u6765\u81EA\u4E8B\u4EF6\u201C\u5065\u8EAB\u8FBE\u4EBA\u201D\uFF0C\u53EF\u6CBB\u7597\uFF0C\u6CBB\u7597\u6D88\u8017\uFF1A500\u91D1\u5E01\r\n"
     - Name: _sans
       Entry: 4
       Data: -3
@@ -13013,6 +13025,12 @@ MonoBehaviour:
     - Name: _moneyToCure
       Entry: 4
       Data: 200
+    - Name: _leftDesc
+      Entry: 1
+      Data: "\u7CBE\u795E\uFF1A-3/\u5E74\r\n"
+    - Name: _rightInf
+      Entry: 1
+      Data: "\u6765\u81EA\u4E8B\u4EF6\u201C\u9605\u8BFB\u201D\uFF0C\u53EF\u6CBB\u7597\uFF0C\u6CBB\u7597\u6D88\u8017\uFF1A200\u91D1\u5E01\r\n"
     - Name: _sans
       Entry: 4
       Data: -3
@@ -13064,6 +13082,12 @@ MonoBehaviour:
     - Name: _moneyToCure
       Entry: 4
       Data: 0
+    - Name: _leftDesc
+      Entry: 1
+      Data: "\u7CBE\u795E\uFF1A-3/\u5E74\uFF0C\u6301\u7EED5\u5E74\r\n"
+    - Name: _rightInf
+      Entry: 1
+      Data: "\u6765\u81EA\u4E8B\u4EF6\u201C\u6E05\u6DE1\u201D\uFF0C\u65E0\u6CD5\u6CBB\u7597\r\n"
     - Name: _sans
       Entry: 4
       Data: -3
@@ -13115,6 +13139,12 @@ MonoBehaviour:
     - Name: _moneyToCure
       Entry: 4
       Data: 100
+    - Name: _leftDesc
+      Entry: 1
+      Data: "\u5185\u5206\u6CCC\u7CFB\u7EDF\uFF1A-1/\u5E74\uFF0C\u6D88\u5316\u7CFB\u7EDF\uFF1A-3/\u5E74\uFF0C\u6CCC\u5C3F\u7CFB\u7EDF\uFF1A-1/\u5E74\uFF0C\u7CBE\u795E\uFF1A-3/\u5E74\uFF0C\u91D1\u94B1\u4EA7\u51FA\uFF1A50/\u5E74\uFF0C\u6301\u7EED10\u5E74\r\n"
+    - Name: _rightInf
+      Entry: 1
+      Data: "\u6765\u81EA\u4E8B\u4EF6\u201C\u91CD\u53E3\u201D\uFF0C\u53EF\u6CBB\u7597\uFF0C\u6CBB\u7597\u6D88\u8017\uFF1A100\u91D1\u5E01\r\n"
     - Name: _sans
       Entry: 4
       Data: -3
@@ -13166,6 +13196,12 @@ MonoBehaviour:
     - Name: _moneyToCure
       Entry: 4
       Data: 100
+    - Name: _leftDesc
+      Entry: 1
+      Data: "\u8FD0\u52A8\u7CFB\u7EDF\uFF1A-2/\u5E74\uFF0C\u795E\u7ECF\u7CFB\u7EDF\uFF1A-1\u5E74\uFF0C\u5185\u5206\u6CCC\u7CFB\u7EDF\uFF1A-1/\u5E74\uFF0C\u547C\u5438\u7CFB\u7EDF\uFF1A-1/\u5E74\uFF0C\u6D88\u5316\u7CFB\u7EDF\uFF1A-2/\u5E74\uFF0C\u751F\u6B96\u7CFB\u7EDF\uFF1A-1/\u5E74\uFF0C\u7CBE\u795E\uFF1A-3/\u5E74\r\n"
+    - Name: _rightInf
+      Entry: 1
+      Data: "\u6765\u81EA\u4E8B\u4EF6\u201C\u4ECE\u4E0D\u8FD0\u52A8\u201D/\u201C\u52A0\u9910\u201D\uFF0C\u53EF\u6CBB\u7597\uFF0C\u6CBB\u7597\u6D88\u8017\uFF1A100\u91D1\u5E01\r\n"
     - Name: _sans
       Entry: 4
       Data: -3
@@ -13217,6 +13253,12 @@ MonoBehaviour:
     - Name: _moneyToCure
       Entry: 4
       Data: 1000
+    - Name: _leftDesc
+      Entry: 1
+      Data: "\u8FD0\u52A8\u7CFB\u7EDF\uFF1A-3/\u5E74\uFF0C\u795E\u7ECF\u7CFB\u7EDF\uFF1A-1/\u5E74\uFF0C\u5FAA\u73AF\u7CFB\u7EDF\uFF1A-3/\u5E74\uFF0C\u7CBE\u795E\uFF1A-3/\u5E74\r\n"
+    - Name: _rightInf
+      Entry: 1
+      Data: "\u6765\u81EA\u4E8B\u4EF6\u201C\u4E25\u91CD\u4E0D\u8DB3\u201D\uFF0C\u53EF\u6CBB\u7597\uFF0C\u6CBB\u7597\u6D88\u8017\uFF1A1000\u91D1\u5E01\r\n"
     - Name: _sans
       Entry: 4
       Data: -3
@@ -13268,6 +13310,12 @@ MonoBehaviour:
     - Name: _moneyToCure
       Entry: 4
       Data: 0
+    - Name: _leftDesc
+      Entry: 1
+      Data: "\u7CBE\u795E\uFF1A-3/\u5E74\uFF0C\u6301\u7EED5\u5E74\r\n"
+    - Name: _rightInf
+      Entry: 1
+      Data: "\u53EF\u6765\u81EA\u591A\u4E2A\u4E8B\u4EF6\uFF0C\u65E0\u6CD5\u6CBB\u7597\r\n"
     - Name: _sans
       Entry: 4
       Data: -3
@@ -13319,6 +13367,12 @@ MonoBehaviour:
     - Name: _moneyToCure
       Entry: 4
       Data: 500
+    - Name: _leftDesc
+      Entry: 1
+      Data: "\u5185\u5206\u6CCC\u7CFB\u7EDF\uFF1A-3/\u5E74\uFF0C\u7CBE\u795E\uFF1A-3/\u5E74\r\n"
+    - Name: _rightInf
+      Entry: 1
+      Data: "\u6765\u81EA\u4E8B\u4EF6\u201C\u996E\u9152\u201D\uFF0C\u53EF\u6CBB\u7597\uFF0C\u6CBB\u7597\u6D88\u8017\uFF1A500\u91D1\u5E01\r\n"
     - Name: _sans
       Entry: 4
       Data: -3
@@ -13370,6 +13424,12 @@ MonoBehaviour:
     - Name: _moneyToCure
       Entry: 4
       Data: 500
+    - Name: _leftDesc
+      Entry: 1
+      Data: "\u547C\u5438\u7CFB\u7EDF\uFF1A-3/\u5E74\uFF0C\u7CBE\u795E\uFF1A-3/\u5E74\r\n"
+    - Name: _rightInf
+      Entry: 1
+      Data: "\u6765\u81EA\u4E8B\u4EF6\u201C\u5438\u70DF\u201D\uFF0C\u53EF\u6CBB\u7597\uFF0C\u6CBB\u7597\u6D88\u8017\uFF1A500\u91D1\u5E01\r\n"
     - Name: _sans
       Entry: 4
       Data: -3
@@ -13421,6 +13481,12 @@ MonoBehaviour:
     - Name: _moneyToCure
       Entry: 4
       Data: 500
+    - Name: _leftDesc
+      Entry: 1
+      Data: "\u751F\u6B96\u7CFB\u7EDF\uFF1A-3/\u5E74\uFF0C\u7CBE\u795E\uFF1A-3/\u5E74\r\n"
+    - Name: _rightInf
+      Entry: 1
+      Data: "\u6765\u81EA\u4E8B\u4EF6\u201C\u653E\u7EB5\u6B32\u671B\u201D\uFF0C\u53EF\u6CBB\u7597\uFF0C\u6CBB\u7597\u6D88\u8017\uFF1A500\u91D1\u5E01\r\n"
     - Name: _sans
       Entry: 4
       Data: -3
@@ -13472,6 +13538,12 @@ MonoBehaviour:
     - Name: _moneyToCure
       Entry: 4
       Data: 100
+    - Name: _leftDesc
+      Entry: 1
+      Data: "\u8FD0\u52A8\u7CFB\u7EDF\uFF1A-2/\u5E74\uFF0C\u7CBE\u795E\uFF1A-3/\u5E74\r\n"
+    - Name: _rightInf
+      Entry: 1
+      Data: "\u6765\u81EA\u4E8B\u4EF6\u201C\u7535\u5B50\u6E38\u620F\u201D\uFF0C\u53EF\u6CBB\u7597\uFF0C\u6CBB\u7597\u6D88\u8017\uFF1A100\u91D1\u5E01\r\n"
     - Name: _sans
       Entry: 4
       Data: -3
@@ -13523,6 +13595,12 @@ MonoBehaviour:
     - Name: _moneyToCure
       Entry: 4
       Data: -1
+    - Name: _leftDesc
+      Entry: 1
+      Data: "\u5168\u90E8\u5C5E\u6027\uFF1A-5/\u5E74\uFF0C\u65E0\u91D1\u94B1\u4EA7\u51FA\r\n"
+    - Name: _rightInf
+      Entry: 1
+      Data: "\u6765\u81EA\u4E8B\u4EF6\u201C\u764C\u75C7\u201D\uFF0C\u53EF\u6CBB\u7597\uFF0C\u6CBB\u7597\u6D88\u8017\uFF1A\u5F53\u524D\u5168\u90E8\u91D1\u94B1\r\n"
     - Name: _sans
       Entry: 4
       Data: -5
@@ -13574,6 +13652,12 @@ MonoBehaviour:
     - Name: _moneyToCure
       Entry: 4
       Data: 100
+    - Name: _leftDesc
+      Entry: 1
+      Data: "\u9664\u7CBE\u795E\u5176\u4ED6\u5C5E\u6027\uFF1A-1/\u5E74\uFF0C\u7CBE\u795E\uFF1A-2/\u5E74\uFF0C\u65E0\u91D1\u94B1\u4EA7\u51FA\uFF0C\u6301\u7EED\u4E24\u5E74\r\n"
+    - Name: _rightInf
+      Entry: 1
+      Data: "\u6765\u81EA\u4E8B\u4EF6\u201C\u8F7B\u578B\u4F20\u67D3\u75C5\u201D\uFF0C\u53EF\u6CBB\u7597\uFF0C\u6CBB\u7597\u6D88\u8017\uFF1A\u5F53\u524D\u5168\u90E8\u91D1\u94B1\r\n"
     - Name: _sans
       Entry: 4
       Data: -2
@@ -13625,6 +13709,12 @@ MonoBehaviour:
     - Name: _moneyToCure
       Entry: 4
       Data: 2000
+    - Name: _leftDesc
+      Entry: 1
+      Data: "\u5168\u90E8\u5C5E\u6027\uFF1A-4/\u5E74\uFF0C\u65E0\u91D1\u94B1\u4EA7\u51FA\r\n"
+    - Name: _rightInf
+      Entry: 1
+      Data: "\u6765\u81EA\u4E8B\u4EF6\u201C\u91CD\u5EA6\u4F20\u67D3\u75C5\u201D\uFF0C\u53EF\u6CBB\u7597\uFF0C\u6CBB\u7597\u6D88\u8017\uFF1A2000\u91D1\u5E01\r\n"
     - Name: _sans
       Entry: 4
       Data: -4
@@ -13676,6 +13766,12 @@ MonoBehaviour:
     - Name: _moneyToCure
       Entry: 4
       Data: 0
+    - Name: _leftDesc
+      Entry: 1
+      Data: "\u8FD0\u52A8\u7CFB\u7EDF\uFF1A-1/\u5E74\uFF0C\u5185\u5206\u6CCC\u7CFB\u7EDF\uFF1A-1/\u5E74\uFF0C\u6D88\u5316\u7CFB\u7EDF\uFF1A-1/\u5E74\uFF0C\u7CBE\u795E\uFF1A-4/\u5E74\uFF0C\u6301\u7EED2\u5E74\r\n"
+    - Name: _rightInf
+      Entry: 1
+      Data: "\u6765\u81EA\u6539\u53D8\u751F\u6D3B\u4E60\u60EF\u7684\u5F71\u54CD\r\n"
     - Name: _sans
       Entry: 4
       Data: -4
@@ -13727,6 +13823,12 @@ MonoBehaviour:
     - Name: _moneyToCure
       Entry: 4
       Data: 0
+    - Name: _leftDesc
+      Entry: 1
+      Data: "\u8FD0\u52A8\u7CFB\u7EDF\uFF1A-1/\u5E74\uFF0C\u795E\u7ECF\u7CFB\u7EDF\uFF1A-1/\u5E74\uFF0C\u5185\u5206\u6CCC\u7CFB\u7EDF\uFF1A-1/\u5E74\uFF0C\u547C\u5438\u7CFB\u7EDF\uFF1A-1/\u5E74\uFF0C\u7CBE\u795E\uFF1A-4/\u5E74\uFF0C\u6301\u7EED5\u5E74\r\n"
+    - Name: _rightInf
+      Entry: 1
+      Data: "\u6765\u81EA\u4E0A\u763E\u4E8B\u4EF6\u7684\u5F71\u54CD\r"
     - Name: _sans
       Entry: 4
       Data: -4
@@ -13778,6 +13880,12 @@ MonoBehaviour:
     - Name: _moneyToCure
       Entry: 4
       Data: 500
+    - Name: _leftDesc
+      Entry: 1
+      Data: "\u8FD0\u52A8\u7CFB\u7EDF\uFF1A-1/\u5E74\uFF0C\u5FAA\u73AF\u7CFB\u7EDF\uFF1A-3/\u5E74\uFF0C\u7CBE\u795E\uFF1A-3/\u5E74\r\n"
+    - Name: _rightInf
+      Entry: 1
+      Data: "\u6765\u81EA\u4E8B\u4EF6\u201C\u9AD8\u8840\u538B\u201D\uFF0C\u53EF\u6CBB\u7597\uFF0C\u6CBB\u7597\u6D88\u8017\uFF1A500\u91D1\u5E01\r\n"
     - Name: _sans
       Entry: 4
       Data: -3
@@ -16163,9 +16271,9 @@ RectTransform:
   m_Father: {fileID: 1322232480}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 120, y: -25}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 176, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &879734494
@@ -25524,9 +25632,9 @@ RectTransform:
   m_Father: {fileID: 333231021}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 120, y: -25}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 176, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1424337257
@@ -29644,9 +29752,9 @@ RectTransform:
   m_Father: {fileID: 78109212}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 120, y: -25}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 176, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1844280184

@@ -42,6 +42,10 @@ namespace Config.Buffs
         public bool _canCure;
         [LabelText("治疗价格"), FoldoutGroup("BUFF属性")]
         public float _moneyToCure;
+        [LabelText("左键描述"), TextArea, FoldoutGroup("BUFF属性")]
+        public string _leftDesc;
+        [LabelText("右键来源"), TextArea, FoldoutGroup("BUFF属性")]
+        public string _rightInf;
         [LabelText("精神影响"), FoldoutGroup("BUFF影响")]
         public float _sans;
         [LabelText("运动系统影响"), FoldoutGroup("BUFF影响")]

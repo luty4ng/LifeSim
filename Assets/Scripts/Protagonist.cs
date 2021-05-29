@@ -133,6 +133,16 @@ public class Protagonist : MonoBehaviour
     public float[] GetModule() => new float[8]{ _motor, _nerve, _endoc, _circul, _breath, _digest, _urinary, _reprod };
     public List<string> GetBehavSelect() => _behaviourSelect;
     public Dictionary<string, float> GetBuffCount() => new Dictionary<string, float>(_buffCount);
+    public string GetBuffDesc(string buffName, bool isLeft)
+    {
+        if(!_buffList.ContainsKey(buffName))
+            return null;
+        
+        if(isLeft)
+            return _buffList[buffName]._leftDesc; 
+        else 
+            return _buffList[buffName]._rightInf;
+    }
     public Dictionary<string, string> GetTraitsList()
     {
         Dictionary<string, string> traitDesc = new Dictionary<string, string>();

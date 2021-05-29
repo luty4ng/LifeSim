@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,17 +12,10 @@ namespace Michsky.UI.ModernUIPack
         // Resources
         public Button confirmButton;
         public Animator mwAnimator;
-
-        // Content
-        public Sprite icon;
-        public string titleText = "Title";
-        [TextArea] public string descriptionText = "Description here";
-
         // Events
         public UnityEvent onConfirm;
         // Settings
         public bool sharpAnimations = false;
-        public bool useCustomValues = false;
 
         public bool isOn = false;
 
@@ -34,11 +27,6 @@ namespace Michsky.UI.ModernUIPack
             if (confirmButton != null)
                 confirmButton.onClick.AddListener(onConfirm.Invoke);
     
-        }
-
-        public void UpdateUI()
-        {
-
         }
 
         public void OpenWindow()
