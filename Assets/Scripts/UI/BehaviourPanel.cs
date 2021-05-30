@@ -8,7 +8,8 @@ using Michsky.UI.ModernUIPack;
 public class BehaviourPanel : MonoBehaviour
 {
     [SerializeField] private Protagonist _protagonist;
-    [SerializeField] private  List<CustomToggle> _toggles;
+    [SerializeField] private List<CustomToggle> _toggles;
+    
     private Dictionary<string, List<string>> behavDic = new Dictionary<string, List<string>>();
     private CustomToggle[] viewers;
     void Start()
@@ -49,6 +50,8 @@ public class BehaviourPanel : MonoBehaviour
            {
                viewers[i].toggleObject.isOn = false;
                viewers[i].toggleSelection.text = tmpBebav[i];
+               viewers[i].behavIcon.sprite = _protagonist.behaviours.GetImage(tmpBebav[i]);
+               Debug.Log(viewers[i].behavIcon.sprite); 
            } 
         }
 

@@ -30,11 +30,11 @@ public class BuffPanel : MonoBehaviour
             if(_buffObj.Contains(name))
                 continue;
             
-            GameObject traitContent = ResourceManager.GetInstance().Load<GameObject>("UI/BuffUI");
-            traitContent.transform.SetParent(this.transform);
-            traitContent.transform.localScale = Vector3.one;
-            traitContent.GetComponentInChildren<TextMeshProUGUI>().text = name;
-            traitContent.name = name;
+            GameObject buffContent = ResourceManager.GetInstance().Load<GameObject>("UI/BuffUI");
+            buffContent.transform.SetParent(this.transform);
+            buffContent.transform.localScale = Vector3.one;
+            buffContent.GetComponentInChildren<TextMeshProUGUI>().text = name;
+            buffContent.name = name;
             _buffObj.Add(name);
         }
     }

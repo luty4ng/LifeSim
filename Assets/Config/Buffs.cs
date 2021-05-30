@@ -29,7 +29,6 @@ namespace Config.Buffs
                 }
             }
             Debug.Log("没有找到BUFF，名称：" + name + ". 请检查触发器和BUFF池中的名称是否一致.");
-            
         }
     }
 

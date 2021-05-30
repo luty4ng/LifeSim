@@ -10,6 +10,7 @@ namespace Michsky.UI.ModernUIPack
         public Toggle toggleObject;
         public Animator toggleAnimator;
         public TextMeshProUGUI toggleSelection;
+        public Image behavIcon;
 
         void Awake()
         {

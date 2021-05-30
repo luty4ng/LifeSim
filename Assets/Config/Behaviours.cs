@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 using Sirenix.OdinInspector;
 namespace Config.Behavious
 {
@@ -9,12 +10,21 @@ namespace Config.Behavious
     {
         [LabelText("固定事件（行为）列表"), TableList]
         public List<Behaviour> _behaviourList;
+        
+        public Sprite GetImage(string name)
+        {
+            Behaviour tmpBehav = _behaviourList.Find((Behaviour behaviour) => behaviour._name == name );
+            return tmpBehav._icon;
+        }
+        
     }
 
     public class Behaviour
     {
         private static string[] _stages = new string[] {"青年期","中年期","老年期","全阶段"}; 
         public string _name;
+        [LabelText("显示图标"), FoldoutGroup("行为属性")]
+        public Sprite _icon;
         [LabelText("可执行阶段"), ValueDropdown("_stages"), FoldoutGroup("行为属性")]
         public string _availibleStage;
         [LabelText("戒断年限"), FoldoutGroup("行为属性")]

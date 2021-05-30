@@ -31,9 +31,10 @@ public class PlayerAnimator : MonoBehaviour
                 // animator.SetTrigger("Old");
                 StartCoroutine(ChangeAnimation("Old"));
             }
+            EventCenter.GetInstance().EventTrigger<string>("切换角色", protagonist.GetStage());
         }
         tempStage = protagonist.GetStage();
-        EventCenter.GetInstance().EventTrigger<string>("切换角色", protagonist.GetStage());
+        
     }
 
     IEnumerator ChangeAnimation(string name)
