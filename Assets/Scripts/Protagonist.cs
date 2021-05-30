@@ -26,6 +26,8 @@ public class Protagonist : MonoBehaviour
     public float sansChange;
     [LabelText("每回合随机事件数量上限(默认2)")]
     public float eventNum = 2;
+    [LabelText("金钱为负时精神值变化（默认5）")]
+    public float sansDueToMoney = -5f;
     
     [LabelText("角色特性数目")]
     public float traitNum = 2;
@@ -510,7 +512,7 @@ public class Protagonist : MonoBehaviour
         if( _overallHealth < 0 || _overallSans < 0)
         {
             Debug.Log("GAME OVER");
-            EventCenter.GetInstance().EventTrigger("GAMEOVER");
+            //EventCenter.GetInstance().EventTrigger("GAMEOVER");
         }
         _overallSans = _overallSans > 30 ? 30 : _overallSans;
         _overallHealth = _overallHealth > 30 ? 30 : _overallHealth;
@@ -569,35 +571,6 @@ public class Protagonist : MonoBehaviour
         }
     }
 
-    public void Reset()
-    {
-        randEvents.eventNum = eventNum;
-        _traitList.Clear();
-        _buffCount.Clear();
-        _buffList.Clear();
-        _behavBook.Clear();
-        _habbitSelect.Clear();
-        _behaviourSelect.Clear();
-
-        List<Config.Traits.Trait> tmpTraitList = new List<Config.Traits.Trait>(traits._traitList);
-        for (int i = 0; i < traitNum; i++)
-        {
-            int tmpIndex = Random.Range(0, (int)(tmpTraitList.Count-1));
-            _traitList.Add(tmpTraitList[tmpIndex]._name, tmpTraitList[tmpIndex]);
-            tmpTraitList.RemoveAt(tmpIndex);
-        }
-        Init();
-
-        foreach (var behav in behaviours._behaviourList)
-        {
-            if(!_behavBook.ContainsKey(behav._name))
-                _behavBook.Add(behav._name, 0f);
-            _behavBook[behav._name] = 0f;
-        }
-
-        EventCenter.GetInstance().EventTrigger("UpdateUI");
-        EventCenter.GetInstance().EventTrigger("DestroyAllBuffOnUI");
-    }
     public void UpdateData()
     { 
         InitTempData();
@@ -619,6 +592,10 @@ public class Protagonist : MonoBehaviour
             randEvents.multiplier = 0.5f;
         }
 
+        if(_ownMoney < 0f)
+        {
+            _sansPer += sansDueToMoney;
+        }
         /*
             序列化框架内的更新  ↓
         */

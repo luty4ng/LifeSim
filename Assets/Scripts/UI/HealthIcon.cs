@@ -9,7 +9,8 @@ public class HealthIcon : MonoBehaviour
     private Protagonist _protagonist;
     void Start()
     {
-        _protagonist = GameManager.instance.playerAgent.GetComponent<Protagonist>();
+        _protagonist = GameObject.Find("Protagonist").GetComponent<Protagonist>();
+        
         EventCenter.GetInstance().AddEventListener("UpdateUI", () => {
             StartCoroutine(SetHealthText());
         });

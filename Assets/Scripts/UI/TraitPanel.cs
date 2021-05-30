@@ -9,14 +9,14 @@ public class TraitPanel : MonoBehaviour
     [SerializeField] private Protagonist _protagonist;
     void Start()
     {
-        _protagonist = GameManager.instance.playerAgent.GetComponent<Protagonist>();
+        _protagonist = GameObject.Find("Protagonist").GetComponent<Protagonist>();
         StartCoroutine(Init());
         
     }
 
     IEnumerator Init()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.05f);
         foreach (var name in _protagonist.GetTraitsList().Keys)
         {
             GameObject traitContent = ResourceManager.GetInstance().Load<GameObject>("UI/traitUI");

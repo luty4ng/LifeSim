@@ -3,15 +3,20 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 using Michsky.UI.ModernUIPack;
+using TMPro;
 public class ConditionPanel : MonoBehaviour
 {
     [SerializeField] private Protagonist _protagonist;
+    [SerializeField] private ProgressBar healthBar;
+    [SerializeField] private ProgressBar sansBar;
+    [SerializeField] private bool canDetect;
     private Dictionary<string, ProgressBar> _progressBar;
     private float[] module;
     void Start()
     {
+        canDetect = true;
         EventCenter.GetInstance().AddEventListener("UpdateUI", UpdateOnUI);
-        _protagonist = GameManager.instance.playerAgent.GetComponent<Protagonist>();
+        _protagonist = GameObject.Find("Protagonist").GetComponent<Protagonist>();
         _progressBar = new Dictionary<string, ProgressBar>();
 
         ProgressBar[] viewers = transform.Find("Content").GetComponentsInChildren<ProgressBar>();
@@ -64,4 +69,14 @@ public class ConditionPanel : MonoBehaviour
         _progressBar["PB - Reprod"].targetValue = module[7];
     }
 
+    void Update()
+    {
+        if(!canDetect)
+            return;
+        if( healthBar.currentPercent <= 0 || sansBar.currentPercent <= 0)
+        {
+            EventCenter.GetInstance().EventTrigger("GAMEOVER");
+            canDetect = false;
+        }
+    }
 }

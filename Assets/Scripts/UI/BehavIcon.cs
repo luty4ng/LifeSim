@@ -14,7 +14,7 @@ public class BehavIcon : MonoBehaviour
 
     void Start()
     {
-        _protagonist = GameManager.instance.playerAgent.GetComponent<Protagonist>();
+        _protagonist = GameObject.Find("Protagonist").GetComponent<Protagonist>();
         iconBGAnimator.SetBool("Finished", false);
         EventCenter.GetInstance().AddEventListener("UpdateICON", ()=>{
             try
@@ -39,6 +39,8 @@ public class BehavIcon : MonoBehaviour
         List<string> animationList = _protagonist.GetBehavSelect();
         foreach (var behav in animationList)
         {
+            if(!behavBook.ContainsKey(behav))
+                continue;
             iconAnimator.SetTrigger(behavBook[behav]);
             yield return new WaitForSeconds(2f);
         }

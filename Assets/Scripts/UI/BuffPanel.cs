@@ -11,15 +11,11 @@ public class BuffPanel : MonoBehaviour
     [ShowInInspector] private List<string> _buffObj = new List<string>();
     void Start()
     {
-        _protagonist = GameManager.instance.playerAgent.GetComponent<Protagonist>(); 
+        _protagonist = GameObject.Find("Protagonist").GetComponent<Protagonist>(); 
         EventCenter.GetInstance().AddEventListener("UpdateUI", UpdateBuffUI);
-        EventCenter.GetInstance().AddEventListener<string>("DestroyBuffObj", DestroyBuff);
-        EventCenter.GetInstance().AddEventListener("DestroyAllBuffOnUI", ()=>{
-            RectTransform[] tmpRects = this.GetComponentsInChildren<RectTransform>();
-            foreach (var item in tmpRects)
-            {
-                Destroy(item.gameObject);
-            }
+        EventCenter.GetInstance().AddEventListener("DestroyBuffObj", (string buffName)=>{
+            _buffObj.Remove(buffName);
+        Destroy(this.transform.Find(buffName).gameObject);
         });
     }
 
@@ -39,9 +35,6 @@ public class BuffPanel : MonoBehaviour
         }
     }
 
-    void DestroyBuff(string buffName)
-    {
-        _buffObj.Remove(buffName);
-        Destroy(this.transform.Find(buffName).gameObject);
-    }
+
+
 }

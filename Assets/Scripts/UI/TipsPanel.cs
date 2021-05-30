@@ -20,12 +20,8 @@ public class TipsPanel : MonoBehaviour
     public bool sharpAnimations = false;
 
     public bool isOn = false;
+    public bool isOver = false;
     
-    void Awake()
-    {
-        //modal = GetComponent<ModalWindowManagerCustom>();
-        //allBoxsObj = GameObject.Find("AllBoxs");
-    }
     
     void Start()
     {
@@ -75,8 +71,9 @@ public class TipsPanel : MonoBehaviour
             
             OpenWindow();
             // StartCoroutine(RestartGame());
+            isOver = true;
             
-            GameManager.instance.playerAgent.Reset();
+            // GameManager.instance.playerAgent.Reset();
             
             Time.timeScale = 0f;
             
@@ -109,6 +106,13 @@ public class TipsPanel : MonoBehaviour
                     mwAnimator.Play("Fade-out");
 
                 isOn = false;
+            }
+
+            if(isOver)
+            {
+                EventCenter.GetInstance().Clear();
+                StopAllCoroutines();
+                ScenesManager.GetInstance().LoadScene("Main", ()=>{});
             }
         }
 
@@ -157,11 +161,4 @@ public class TipsPanel : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Q))
-        {
-            EventCenter.GetInstance().EventTrigger("GAMEOVER");
-        }
-    }
 }

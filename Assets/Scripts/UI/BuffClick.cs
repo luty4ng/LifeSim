@@ -20,7 +20,7 @@ public class BuffClick : MonoBehaviour, IPointerClickHandler
     {
         leftClick.AddListener(new UnityAction(ButtonLeftClick));
         rightClick.AddListener(new UnityAction(ButtonRightClick));
-        _protagonist = GameManager.instance.playerAgent.GetComponent<Protagonist>();
+        _protagonist = GameObject.Find("Protagonist").GetComponent<Protagonist>();
     }
 
 

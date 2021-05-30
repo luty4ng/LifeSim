@@ -12,6 +12,17 @@ public class AudioManager : BaseManager<AudioManager>
     private GameObject soundObj = null;
     private List<AudioSource> soundList = new List<AudioSource>();
 
+    public void ChangeVolumeByUnit(float unit)
+    {
+        BGMVolume += unit;
+        if(BGM == null)
+            return;
+        BGM.volume += BGMVolume;
+
+        soundVolume += unit;
+        for(int i =0;i < soundList.Count; ++i )
+            soundList[i].volume += unit;
+    }
 
     public AudioManager()
     {

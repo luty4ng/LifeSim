@@ -20,7 +20,7 @@ public class HabbitPanel : MonoBehaviour
             _protagonist.UpdateHabbitSelect(_eatSelection.text, _sleepSelection.text, _sportSelection.text, _workSelection.text);
         });
 
-        _protagonist = GameManager.instance.playerAgent.GetComponent<Protagonist>();
+        _protagonist = GameObject.Find("Protagonist").GetComponent<Protagonist>();
         _selector = new Dictionary<string, HorizontalSelector>();
     
         HorizontalSelector[] viewers = transform.Find("Content").GetComponentsInChildren<HorizontalSelector>();
