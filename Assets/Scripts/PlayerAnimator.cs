@@ -23,13 +23,22 @@ public class PlayerAnimator : MonoBehaviour
         {
             if(protagonist.GetStage() == "中年期")
             {
-                animator.SetTrigger("Middle");
+                // animator.SetTrigger("Middle");
+                StartCoroutine(ChangeAnimation("Middle"));
             }
             else if(protagonist.GetStage() == "老年期")
             {
-                animator.SetTrigger("Old");
+                // animator.SetTrigger("Old");
+                StartCoroutine(ChangeAnimation("Old"));
             }
         }
         tempStage = protagonist.GetStage();
+        EventCenter.GetInstance().EventTrigger<string>("切换角色", protagonist.GetStage());
+    }
+
+    IEnumerator ChangeAnimation(string name)
+    {
+        yield return new WaitForSeconds(4f);
+        animator.SetTrigger(name);
     }
 }

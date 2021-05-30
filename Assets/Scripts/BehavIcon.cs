@@ -15,6 +15,7 @@ public class BehavIcon : MonoBehaviour
     void Start()
     {
         _protagonist = GameManager.instance.playerAgent.GetComponent<Protagonist>();
+        iconBGAnimator.SetBool("Finished", false);
         EventCenter.GetInstance().AddEventListener("UpdateICON", ()=>{
             try
             {
@@ -36,13 +37,12 @@ public class BehavIcon : MonoBehaviour
     IEnumerator OutputAnimationList()
     {
         List<string> animationList = _protagonist.GetBehavSelect();
-        iconBGAnimator.SetBool("Finished", false);
         foreach (var behav in animationList)
         {
             iconAnimator.SetTrigger(behavBook[behav]);
             yield return new WaitForSeconds(2f);
         }
-        iconBGAnimator.SetBool("Finished", true);
+        
     }
 
 }
