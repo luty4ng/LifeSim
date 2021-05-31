@@ -13,6 +13,7 @@ public class HabbitPanel : MonoBehaviour
     public TextMeshProUGUI _eatSelection;
     public TextMeshProUGUI _sleepSelection;
     public TextMeshProUGUI _sportSelection;
+
   
     void Start()
     {
@@ -36,6 +37,7 @@ public class HabbitPanel : MonoBehaviour
             _selector["SleepSelector"].itemList[i].itemTitle = _protagonist.habbits.habbitDic["Sleep"][i]._name;
             _selector["SportSelector"].itemList[i].itemTitle = _protagonist.habbits.habbitDic["Sport"][i]._name;
         }
+
     }
 
     public bool CheckSelection(string select)
@@ -44,6 +46,28 @@ public class HabbitPanel : MonoBehaviour
             return true;
         else
             return false;
+    }
+
+    public void GetHabbitInfo(string typeName)
+    {
+        string selectionName = "";
+        if(typeName == "Eat")
+            selectionName = _eatSelection.text;
+        else if(typeName == "Work")
+            selectionName = _workSelection.text;
+        else if(typeName == "Sleep")
+            selectionName = _sleepSelection.text;
+        else if(typeName == "Sport")
+            selectionName = _sportSelection.text;
+
+        for(int i = 0; i < 3; i++)
+        {
+            // Debug.Log(_protagonist.habbits.habbitDic[typeName][i]._name.Trim());
+            if(_protagonist.habbits.habbitDic[typeName][i]._name.Trim() == selectionName.Trim())
+            {
+                EventCenter.GetInstance().EventTrigger<(string, string)>("TIPS", (selectionName.Trim(), _protagonist.habbits.habbitDic[typeName][i]._desc.Trim()));
+            }
+        }
     }
 
     

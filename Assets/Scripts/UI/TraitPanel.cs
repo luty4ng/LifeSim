@@ -10,7 +10,17 @@ public class TraitPanel : MonoBehaviour
     void Start()
     {
         _protagonist = GameObject.Find("Protagonist").GetComponent<Protagonist>();
-        StartCoroutine(Init());
+        foreach (var name in _protagonist.GetTraitsList().Keys)
+        {
+            GameObject traitContent = ResourceManager.GetInstance().Load<GameObject>("UI/traitUI");
+            traitContent.transform.SetParent(this.transform);
+            traitContent.transform.localScale = Vector3.one;
+            traitContent.GetComponentInChildren<TextMeshProUGUI>().text = name;
+            traitContent.GetComponent<Button>().onClick.AddListener(() => {
+                EventCenter.GetInstance().EventTrigger<(string, string)>("TIPS", (name, _protagonist.GetTraitsList()[name]));
+            });
+        }
+        // StartCoroutine(Init());
         
     }
 

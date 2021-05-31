@@ -44,7 +44,7 @@ public class EnvController : MonoBehaviour
             else if(this.transform.localPosition.x <= 8.67f + errorCoef && this.transform.localPosition.x >= 8.67f - errorCoef)
                 StartCoroutine(MoveBKG(0f, movePeriod));
         
-            GenerateStuff();
+            // GenerateStuff();
         }
 
         if(this.transform.localPosition.x >= -8.67f - errorCoef && this.transform.localPosition.x <= -8.67f + errorCoef)
@@ -74,7 +74,7 @@ public class EnvController : MonoBehaviour
     {
         if(mode != "触发性")
             return;
-        GenerateStuff();
+        // GenerateStuff();
         if(this.transform.localPosition.x <= 0f + errorCoef && this.transform.localPosition.x >= 0f - errorCoef)
             this.transform.DOLocalMoveX(-8.67f, moveTime);
         else if(this.transform.localPosition.x <= 8.67f + errorCoef && this.transform.localPosition.x >= 8.67f - errorCoef)

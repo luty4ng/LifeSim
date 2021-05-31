@@ -26,12 +26,13 @@ public class ChangeObj : MonoBehaviour
             mySeq.Append(spriteRenderer.DOBlendableColor(new Color(1,1,1,1), 1f)).Append(transform.DOBlendableScaleBy(new Vector3(0.242f/2,0.242f/2,0.242f/2), 1f));
             StartCoroutine(MoveAway(3f));
         });
+        EventCenter.GetInstance().EventTrigger<string>("切换角色", "青年期");
     }
 
     void Reset()
     {
         spriteRenderer.color = new Color(1,1,1,0);
-        this.transform.position = new Vector3(0.1f, 2.73f, 0f);
+        this.transform.position = new Vector3(0.1f, 2.8f, 0f);
         this.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
     }
 

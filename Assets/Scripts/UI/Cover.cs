@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Cover : MonoBehaviour
 {
+    void Start()
+    {
+        Time.timeScale = 0f;
+    }
     public void ClickCover()
     {
         // ScenesManager.GetInstance().LoadScene("Main", ()=>{});

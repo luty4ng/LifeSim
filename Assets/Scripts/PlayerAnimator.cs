@@ -21,6 +21,8 @@ public class PlayerAnimator : MonoBehaviour
     {
         if(protagonist.GetStage() != tempStage)
         {
+            NextYearButton nextYearButton = GameObject.Find("NextYearButton").GetComponent<NextYearButton>();
+            nextYearButton.ResetRemain();
             if(protagonist.GetStage() == "中年期")
             {
                 // animator.SetTrigger("Middle");

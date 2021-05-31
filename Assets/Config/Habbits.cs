@@ -18,6 +18,8 @@ namespace Config.Habbits
     {
         [LabelText("名称")]
         public string _name;
+        [LabelText("习惯描述"), TextArea]
+        public string _desc;
         [LabelText("精神影响"), FoldoutGroup("习惯影响")]
         public float _sans;
         [LabelText("运动系统影响"), FoldoutGroup("习惯影响")]

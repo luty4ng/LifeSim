@@ -31,6 +31,7 @@ public class BehavIcon : MonoBehaviour
 
         EventCenter.GetInstance().AddEventListener("GAMEOVER", ()=>{
             StopAllCoroutines();
+            EventCenter.GetInstance().Clear();
         });
     }
 
